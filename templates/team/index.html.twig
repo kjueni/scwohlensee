@@ -1,0 +1,9 @@
+<ul>
+    {% for team in teams %}
+        <li>
+            <a href="{{ path('team-show', {'id': team.id}) }}">
+                {{ team.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

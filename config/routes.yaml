@@ -1,0 +1,15 @@
+index:
+    path: /
+    defaults: { _controller: 'App\Controller\DefaultController::index' }
+team:
+    path: /team
+    controller: 'App\Controller\TeamController:indexAction'
+team-create:
+    path: /team/create
+    controller: 'App\Controller\TeamController:createAction'
+team-update:
+    path: /team/update/{id}
+    controller: 'App\Controller\TeamController:updateAction'
+team-show:
+    path: /team/{id}
+    controller: 'App\Controller\TeamController:showAction'
