@@ -3,48 +3,105 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TeamRepository")
+ * @ORM\Table(name="teams")
  */
-class Team
+class Team implements
+    EntityInterface
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @var string
      */
-    private $name;
+    protected $name;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @ORM\Column(type="string", length=1000, nullable=true)
+     * @var string
      */
-    private $description;
+    protected $description;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
-    private $league;
+    protected $league;
 
     /**
-     * @param string $name
-     * @param string $description
-     * @param string $league
+     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
-    public function __construct(
-        $name,
-        $description,
-        $league
-    )
+    protected $pictureUrl;
+
+    /**
+     * Many Teams have Many Employees.
+     *
+     * @ORM\ManyToMany(targetEntity="Employee")
+     * @ORM\JoinTable(name="teams_employees",
+     *      joinColumns={@ORM\JoinColumn(name="team_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="employee_id", referencedColumnName="id")}
+     *      )
+     * @var Employee[]
+     */
+    protected $employees;
+
+    /**
+     * @param array $params
+     * @return Team
+     * @throws \Exception
+     */
+    public static function fromArray(array $params)
     {
-        $this->setName($name);
-        $this->setDescription($description);
-        $this->setLeague($league);
+        $requiredParams = array(
+            'name'
+        );
+
+        foreach ($requiredParams as $param) {
+            if (array_key_exists($param, $params) !== true) {
+                throw new \Exception(
+                    sprintf('Required paramter "%s" was not provided', $param)
+                );
+            }
+        }
+
+        $team = new self();
+
+        foreach ($params as $key => $param) {
+            switch ($key) {
+                case  'name':
+                    $team->setName($param);
+                    break;
+
+                case 'description':
+                    $team->setDescription($param);
+                    break;
+
+                case 'league':
+                    $team->setLeague($param);
+                    break;
+
+                case 'picture_url':
+                    $team->setPictureUrl($param);
+                    break;
+
+                case 'employees':
+                    $team->setEmployees($param);
+                    break;
+            }
+        }
+
+        return $team;
     }
 
     /**
@@ -101,5 +158,37 @@ class Team
     public function setLeague($league)
     {
         $this->league = $league;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPictureUrl()
+    {
+        return $this->pictureUrl;
+    }
+
+    /**
+     * @param string $pictureUrl
+     */
+    public function setPictureUrl($pictureUrl)
+    {
+        $this->pictureUrl = $pictureUrl;
+    }
+
+    /**
+     * @return Employee[]
+     */
+    public function getEmployees()
+    {
+        return $this->employees;
+    }
+
+    /**
+     * @param Employee[] $employees
+     */
+    public function setEmployees($employees)
+    {
+        $this->employees = $employees;
     }
 }

@@ -22,28 +22,7 @@ class TeamRepository extends ServiceEntityRepository
      */
     public function create(array $params)
     {
-        $requiredParams = array(
-            'name',
-            'description',
-            'league'
-        );
-
-        foreach ($requiredParams as $param) {
-            if (array_key_exists($param, $params) !== true) {
-                throw new \Exception(
-                    sprintf(
-                        'Required parameter was not provided: "%s"',
-                        $param
-                    )
-                );
-            }
-        }
-
-        $team = new Team(
-            $params['name'],
-            $params['description'],
-            $params['league']
-        );
+        $team = Team::fromArray($params);
 
         return $team;
     }
@@ -65,6 +44,12 @@ class TeamRepository extends ServiceEntityRepository
                     break;
                 case 'league':
                     $team->setLeague($param);
+                    break;
+                case 'picture_url':
+                    $team->setPictureUrl($param);
+                    break;
+                case 'employees':
+                    $team->setEmployees($param);
                     break;
             }
         }

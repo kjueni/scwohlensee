@@ -13,3 +13,13 @@ framework:
     #fragments: ~
     php_errors:
         log: true
+
+aws:
+    version: latest
+    region: eu-west-1
+    bucket: scwohlensee
+    credentials:
+        key: AKIAI2AWTOOIUDETQ35Q
+        secret: 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
+    S3:
+        version: '2006-03-01'
