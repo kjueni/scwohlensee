@@ -7,10 +7,10 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Employee;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\EmployeeTypeRepository")
- * @ORM\Table(name="employee_types")
+ * @ORM\Entity(repositoryClass="App\Repository\PlayerPositionRepository")
+ * @ORM\Table(name="player_positions")
  */
-class EmployeeType implements
+class PlayerPosition implements
     EntityInterface
 {
     /**
@@ -28,26 +28,26 @@ class EmployeeType implements
     protected $name;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
-     * @var boolean
-     */
-    protected $executive;
-
-    /**
      * @ORM\Column(type="integer", length=1000, nullable=true)
      * @var integer
      */
     protected $sortIndex;
 
     /**
+     * One PlayerPosition has Many Players.
+     * @ORM\OneToMany(targetEntity="PlayerPosition", mappedBy="position")
+     */
+    protected $players;
+
+    /**
      * @param array $params
-     * @return EmployeeType
+     * @return PlayerPosition
      * @throws \Exception
      */
     public static function fromArray(array $params)
     {
         $requiredParams = array(
-            'name'
+            'name',
         );
 
         foreach ($requiredParams as $param) {
@@ -58,25 +58,21 @@ class EmployeeType implements
             }
         }
 
-        $type = new self();
+        $position = new self();
 
         foreach ($params as $key => $param) {
             switch ($key) {
                 case  'name':
-                    $type->setName($param);
+                    $position->setName($param);
                     break;
 
-                case 'description':
-                    $type->setExecutive($param);
-                    break;
-
-                case 'league':
-                    $type->setSortIndex($param);
+                case 'sort_index':
+                    $position->setSortIndex($param);
                     break;
             }
         }
 
-        return $type;
+        return $position;
     }
 
     /**
@@ -101,22 +97,6 @@ class EmployeeType implements
     public function setName($name)
     {
         $this->name = $name;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getExecutive()
-    {
-        return $this->executive;
-    }
-
-    /**
-     * @param boolean $executive
-     */
-    public function setExecutive($executive)
-    {
-        $this->executive = $executive;
     }
 
     /**

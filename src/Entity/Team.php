@@ -57,6 +57,18 @@ class Team implements
     protected $employees;
 
     /**
+     * Many Teams have Many Players.
+     *
+     * @ORM\ManyToMany(targetEntity="Player")
+     * @ORM\JoinTable(name="teams_players",
+     *      joinColumns={@ORM\JoinColumn(name="team_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="player_id", referencedColumnName="id")}
+     *      )
+     * @var Player[]
+     */
+    protected $players;
+
+    /**
      * @param array $params
      * @return Team
      * @throws \Exception
@@ -97,6 +109,10 @@ class Team implements
 
                 case 'employees':
                     $team->setEmployees($param);
+                    break;
+
+                case 'players':
+                    $team->setPlayers($param);
                     break;
             }
         }
@@ -190,5 +206,21 @@ class Team implements
     public function setEmployees($employees)
     {
         $this->employees = $employees;
+    }
+
+    /**
+     * @return Player[]
+     */
+    public function getPlayers()
+    {
+        return $this->players;
+    }
+
+    /**
+     * @param Player[] $players
+     */
+    public function setPlayers($players)
+    {
+        $this->players = $players;
     }
 }

@@ -72,7 +72,7 @@ class Employee implements
     /**
      * Many Employees have Many Types.
      * @ORM\ManyToMany(targetEntity="EmployeeType")
-     * @ORM\JoinTable(name="employees_employeeTypes",
+     * @ORM\JoinTable(name="employees_employee_types",
      *      joinColumns={@ORM\JoinColumn(name="employee_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="type_id", referencedColumnName="id")}
      *      )
