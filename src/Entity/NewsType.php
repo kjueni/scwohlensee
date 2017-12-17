@@ -4,13 +4,13 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-use App\Entity\Employee;
+use App\Entity\News;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\EmployeeTypeRepository")
- * @ORM\Table(name="employee_types")
+ * @ORM\Entity(repositoryClass="App\Repository\NewsTypeRepository")
+ * @ORM\Table(name="news_types")
  */
-class EmployeeType implements
+class NewsType implements
     EntityInterface
 {
     /**
@@ -28,20 +28,8 @@ class EmployeeType implements
     protected $name;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
-     * @var boolean
-     */
-    protected $executive;
-
-    /**
-     * @ORM\Column(type="integer", length=1000, nullable=true)
-     * @var integer
-     */
-    protected $sortIndex;
-
-    /**
      * @param array $params
-     * @return EmployeeType
+     * @return NewsType
      * @throws \Exception
      */
     public static function fromArray(array $params)
@@ -64,14 +52,6 @@ class EmployeeType implements
             switch ($key) {
                 case  'name':
                     $type->setName($param);
-                    break;
-
-                case 'executive':
-                    $type->setExecutive($param);
-                    break;
-
-                case 'sort_index':
-                    $type->setSortIndex($param);
                     break;
             }
         }
@@ -101,37 +81,5 @@ class EmployeeType implements
     public function setName($name)
     {
         $this->name = $name;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getExecutive()
-    {
-        return $this->executive;
-    }
-
-    /**
-     * @param boolean $executive
-     */
-    public function setExecutive($executive)
-    {
-        $this->executive = $executive;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getSortIndex()
-    {
-        return $this->sortIndex;
-    }
-
-    /**
-     * @param integer $sortIndex
-     */
-    public function setSortIndex($sortIndex)
-    {
-        $this->sortIndex = $sortIndex;
     }
 }

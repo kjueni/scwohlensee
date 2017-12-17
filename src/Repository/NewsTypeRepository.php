@@ -6,46 +6,38 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-use App\Entity\EmployeeType;
+use App\Entity\NewsType;
 
-class EmployeeTypeRepository extends ServiceEntityRepository
+class NewsTypeRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, EmployeeType::class);
+        parent::__construct($registry, NewsType::class);
     }
 
     /**
      * @param array $params
-     * @return EmployeeType
+     * @return NewsType
      * @throws \Exception if some required parameters are not provided
      */
     public function create(array $params)
     {
-        $type = EmployeeType::fromArray($params);
+        $type = NewsType::fromArray($params);
 
         return $type;
     }
 
     /**
-     * @param EmployeeType $type
+     * @param NewsType $type
      * @param array $params
-     * @return EmployeeType
+     * @return NewsType
      */
-    public function hydrate(EmployeeType $type, $params)
+    public function hydrate(NewsType $type, $params)
     {
         foreach ($params as $key => $param) {
             switch ($key) {
                 case  'name':
                     $type->setName($param);
-                    break;
-
-                case 'executive':
-                    $type->setExecutive($param);
-                    break;
-
-                case 'sort_index':
-                    $type->setSortIndex($param);
                     break;
             }
         }

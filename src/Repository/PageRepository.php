@@ -6,50 +6,48 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-use App\Entity\EmployeeType;
+use App\Entity\Page;
 
-class EmployeeTypeRepository extends ServiceEntityRepository
+class PageRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, EmployeeType::class);
+        parent::__construct($registry, Page::class);
     }
 
     /**
      * @param array $params
-     * @return EmployeeType
+     * @return Page
      * @throws \Exception if some required parameters are not provided
      */
     public function create(array $params)
     {
-        $type = EmployeeType::fromArray($params);
+        $page = Page::fromArray($params);
 
-        return $type;
+        return $page;
     }
 
     /**
-     * @param EmployeeType $type
+     * @param Page $page
      * @param array $params
-     * @return EmployeeType
+     * @return Page
      */
-    public function hydrate(EmployeeType $type, $params)
+    public function hydrate(Page $page, $params)
     {
         foreach ($params as $key => $param) {
             switch ($key) {
-                case  'name':
-                    $type->setName($param);
+                case  'title':
+                    $page->setTitle($param);
                     break;
-
-                case 'executive':
-                    $type->setExecutive($param);
+                case  'description':
+                    $page->setDescription($param);
                     break;
-
-                case 'sort_index':
-                    $type->setSortIndex($param);
+                case  'text':
+                    $page->setText($param);
                     break;
             }
         }
 
-        return $type;
+        return $page;
     }
 }

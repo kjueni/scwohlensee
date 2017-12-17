@@ -14,6 +14,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 use App\Entity\Employee;
 use App\Entity\EmployeeType;
+use App\Entity\News;
+use App\Entity\NewsType;
+use App\Entity\Page;
 use App\Entity\Player;
 use App\Entity\PlayerPosition;
 use App\Entity\Team;
@@ -58,6 +61,9 @@ class ImportLegacyDataCommand extends Command
                 array(
                     'employee-types',
                     'employees',
+                    'news-types',
+                    'news',
+                    'pages',
                     'positions',
                     'players',
                     'teams',
@@ -92,13 +98,21 @@ class ImportLegacyDataCommand extends Command
             );
 
             switch ($type) {
-
                 case 'employee-types':
                     $this->importEmployeeTypes($output);
                     break;
 
                 case 'employees':
                     $this->importEmployees($output);
+                    break;
+                case 'news-types':
+                    $this->importNewsTypes($output);
+                    break;
+                case 'news':
+                    $this->importNews($output);
+                    break;
+                case 'pages':
+                    $this->importPages($output);
                     break;
                 case 'players':
                     $this->importPlayers($output);
@@ -237,6 +251,155 @@ class ImportLegacyDataCommand extends Command
                         '%s - %s',
                         $new ? 'created' : 'updated',
                         $type->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importNews(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/news'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $newsRepository = $entityManager->getRepository(News::class);
+        $newsTypeRepository = $entityManager->getRepository(NewsType::class);
+
+        foreach ($data['news'] as $newsData) {
+            $new = false;
+
+            $news = $newsRepository->findOneBy(
+                array(
+                    'title' => $newsData['title'],
+                )
+            );
+
+            if (array_key_exists('types', $newsData) !== true) {
+                // If the news has no type let it go
+                continue;
+            }
+
+            $newsData['types'] = $newsTypeRepository->findBy(
+                array(
+                    'name' => $newsData['types'],
+                )
+            );
+
+            if ($news === null) {
+                $news = News::fromArray($newsData);
+                $new = true;
+            } else {
+                $news = $newsRepository->hydrate($news, $newsData);
+            }
+
+            if (array_key_exists('picture', $newsData) === true) {
+                $picturePath = self::BASE_PATH_PICTURES . 'news/';
+
+                $news->setPictureUrl(
+                    $this->moveFile($newsData['picture'], $picturePath, $news->getTitle())
+                );
+            }
+
+            $entityManager->persist($news);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $news->getTitle()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importNewsTypes(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/news-types'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $typeRepository = $entityManager->getRepository(NewsType::class);
+
+        foreach ($data['types'] as $typeData) {
+            $new = false;
+
+            $type = $typeRepository->findOneBy(
+                array(
+                    'name' => $typeData['name'],
+                )
+            );
+
+            if ($type === null) {
+                $type = NewsType::fromArray($typeData);
+                $new = true;
+            } else {
+                $type = $typeRepository->hydrate($type, $typeData);
+            }
+
+            $entityManager->persist($type);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $type->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importPages(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/pages'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $pageRepository = $entityManager->getRepository(Page::class);
+
+        foreach ($data['pages'] as $pageData) {
+            $new = false;
+
+            $page = $pageRepository->findOneBy(
+                array(
+                    'title' => $pageData['title'],
+                )
+            );
+
+            if ($page === null) {
+                $page = Page::fromArray($pageData);
+                $new = true;
+            } else {
+                $page = $pageRepository->hydrate($page, $pageData);
+            }
+
+            $entityManager->persist($page);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $page->getTitle()
                     ),
                 )
             );
