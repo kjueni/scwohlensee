@@ -1,1 +1,7 @@
-<h1>Your lucky number is {{ number }}</h1>
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    {% for entry in news %}
+        {{ include('news/short.html.twig', { 'news': entry }) }}
+    {% endfor %}
+{% endblock %}

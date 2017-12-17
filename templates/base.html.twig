@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% trans %}SC Wohlensee{% endtrans %}{% endblock %}</title>
+
+        <!-- @todo that can't be right, check the correct way -->
+        <link rel="icon" href="{{ asset('build/images/favicon.9c4ac701.ico') }}" type="image/ico" />
+    </head>
+    <body>
+        <nav>
+            {% block navigation %}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            {% endblock %}
+        </nav>
+
+        <section id="content">
+            {% block content %}{% endblock %}
+        </section>
+        <aside>
+            {% block sidebar %}
+
+            {% endblock %}
+        </aside>
+        <footer>
+            {% block footer %}
+
+            {% endblock %}
+        </footer>
+    </body>
+</html>

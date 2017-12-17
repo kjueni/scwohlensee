@@ -7,3 +7,6 @@ team:
 team-detail:
     path: /team/{id}
     controller: 'App\Controller\TeamController:detailAction'
+news-detail:
+    path: /news/{id}
+    controller: 'App\Controller\NewsController:detailAction'

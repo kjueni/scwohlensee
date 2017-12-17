@@ -13,6 +13,8 @@ use App\Entity\News;
 class NewsType implements
     EntityInterface
 {
+    const TYPE_HOME = 1;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
