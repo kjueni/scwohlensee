@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\PersistentCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\NavigationEntryRepository")
@@ -33,14 +34,14 @@ class NavigationEntry implements
 
     /**
      * @ORM\Column(type="integer", length=10, nullable=true)
-     * @var string
+     * @var integer
      */
     protected $sortIndex;
 
     /**
      * One NavigationEntry has Many NavigationEntry.
      * @ORM\OneToMany(targetEntity="NavigationEntry", mappedBy="parent")
-     * @var NavigationEntry
+     * @var NavigationEntry[]|PersistentCollection
      */
     protected $children;
 
@@ -118,49 +119,49 @@ class NavigationEntry implements
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl()
     {
         return $this->url;
     }
 
     /**
-     * @param string $url
+     * @param string|null $url
      */
-    public function setUrl(string $url)
+    public function setUrl(string $url = null)
     {
         $this->url = $url;
     }
 
     /**
-     * @return string
+     * @return integer|null
      */
-    public function getSortIndex(): string
+    public function getSortIndex()
     {
         return $this->sortIndex;
     }
 
     /**
-     * @param string $sortIndex
+     * @param integer|null $sortIndex
      */
-    public function setSortIndex(string $sortIndex)
+    public function setSortIndex(integer $sortIndex = null)
     {
         $this->sortIndex = $sortIndex;
     }
 
     /**
-     * @return NavigationEntry
+     * @return NavigationEntry|PersistentCollection|null
      */
-    public function getChildren(): NavigationEntry
+    public function getChildren()
     {
         return $this->children;
     }
 
     /**
-     * @param NavigationEntry $children
+     * @param NavigationEntry|PersistentCollection|null $children
      */
-    public function setChildren(NavigationEntry $children)
+    public function setChildren($children)
     {
         $this->children = $children;
     }

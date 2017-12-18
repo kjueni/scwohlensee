@@ -1,0 +1,25 @@
+<ul>
+    {% for entry in entries %}
+        <li>
+            <a href="{{ entry.url ? entry.url : 'javascript:' }}">{{ entry.title }}</a>
+            {% if entry.children %}
+                <ul>
+                    {% for subEntry in entry.children %}
+                        <li>
+                            <a href="{{ subEntry.url ? subEntry.url : 'javascript:' }}">{{ subEntry.title }}</a>
+                            {% if subEntry.children %}
+                                <ul>
+                                    {% for subSubEntry in subEntry.children %}
+                                        <li>
+                                            <a href="{{ subSubEntry.url ? subSubEntry.url : 'javascript:' }}">{{ subSubEntry.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

@@ -10,10 +10,9 @@
     <body>
         <nav>
             {% block navigation %}
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                </ul>
+                {{ render(controller(
+                 'App\\Controller\\NavigationController::indexAction'
+                )) }}
             {% endblock %}
         </nav>
 

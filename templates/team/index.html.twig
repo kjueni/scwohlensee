@@ -1,7 +1,7 @@
 <ul>
     {% for team in teams %}
         <li>
-            <a href="{{ path('team-show', {'id': team.id}) }}">
+            <a href="{{ path('team-detail', {'id': team.id}) }}">
                 {{ team.name }}
             </a>
         </li>
