@@ -10,10 +10,12 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 use App\Entity\Employee;
 use App\Entity\EmployeeType;
+use App\Entity\NavigationEntry;
 use App\Entity\News;
 use App\Entity\NewsType;
 use App\Entity\Page;
@@ -54,6 +56,13 @@ class ImportLegacyDataCommand extends Command
     {
         $this->setName('app:import-legacy-data')
             ->setDescription('Imports data from the legacy system')
+            ->addOption(
+                'images',
+                'i',
+                InputOption::VALUE_OPTIONAL,
+                'Defines if images should be imported or not',
+                0
+            )
             ->addArgument(
                 'types',
                 InputArgument::IS_ARRAY,
@@ -61,6 +70,7 @@ class ImportLegacyDataCommand extends Command
                 array(
                     'employee-types',
                     'employees',
+                    'navigation-entries',
                     'news-types',
                     'news',
                     'pages',
@@ -101,27 +111,29 @@ class ImportLegacyDataCommand extends Command
                 case 'employee-types':
                     $this->importEmployeeTypes($output);
                     break;
-
                 case 'employees':
-                    $this->importEmployees($output);
+                    $this->importEmployees($output, $input->getOption('images') === 1);
+                    break;
+                case 'navigation-entries':
+                    $this->importNavigationEntries($output);
                     break;
                 case 'news-types':
                     $this->importNewsTypes($output);
                     break;
                 case 'news':
-                    $this->importNews($output);
+                    $this->importNews($output, $input->getOption('images') === 1);
                     break;
                 case 'pages':
                     $this->importPages($output);
                     break;
                 case 'players':
-                    $this->importPlayers($output);
+                    $this->importPlayers($output, $input->getOption('images') === 1);
                     break;
                 case 'positions':
                     $this->importPositions($output);
                     break;
                 case 'teams':
-                    $this->importTeams($output);
+                    $this->importTeams($output, $input->getOption('images') === 1);
                     break;
                 default:
                     throw new \InvalidArgumentException(
@@ -154,8 +166,9 @@ class ImportLegacyDataCommand extends Command
 
     /**
      * @param OutputInterface $output
+     * @param boolean $importImages
      */
-    protected function importEmployees(OutputInterface $output)
+    protected function importEmployees(OutputInterface $output, $importImages = false)
     {
         $data = $this->import(
             self::BASE_URL . '/employees'
@@ -188,7 +201,7 @@ class ImportLegacyDataCommand extends Command
                 $employee = $employeeRepository->hydrate($employee, $employeeData);
             }
 
-            if (array_key_exists('picture', $employeeData) === true) {
+            if (array_key_exists('picture', $employeeData) === true && $importImages === true) {
                 $picturePath = self::BASE_PATH_PICTURES . 'employees/';
 
                 $employee->setPictureUrl(
@@ -260,7 +273,69 @@ class ImportLegacyDataCommand extends Command
     /**
      * @param OutputInterface $output
      */
-    protected function importNews(OutputInterface $output)
+    protected function importNavigationEntries(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/navigations'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $navigationEntryRepository = $entityManager->getRepository(NavigationEntry::class);
+
+        /**
+         * @param array $data
+         * @param NavigationEntry|null $parent
+         */
+        $createItem = function ($data, NavigationEntry $parent = null) use (&$createItem, $entityManager, $navigationEntryRepository, $output) {
+            $new = false;
+
+            $entry = $navigationEntryRepository->findOneBy(
+                array(
+                    'title' => $data['title'],
+                )
+            );
+
+            if ($entry === null) {
+                $entry = NavigationEntry::fromArray($data);
+                $new = true;
+            } else {
+                $entry = $navigationEntryRepository->hydrate($entry, $data);
+            }
+
+            if ($parent !== null) {
+                $entry->setParent($parent);
+            }
+
+            $entityManager->persist($entry);
+            $entityManager->flush();
+
+            if (array_key_exists('children', $data)) {
+                foreach ($data['children'] as $childrenData) {
+                    $createItem($childrenData, $entry);
+                }
+            }
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $entry->getTitle()
+                    ),
+                )
+            );
+        };
+
+        foreach ($data['navigations'] as $navigationData) {
+            $createItem($navigationData, null);
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     * @param boolean $importImages
+     */
+    protected function importNews(OutputInterface $output, $importImages = false)
     {
         $data = $this->import(
             self::BASE_URL . '/news'
@@ -297,7 +372,7 @@ class ImportLegacyDataCommand extends Command
                 $news = $newsRepository->hydrate($news, $newsData);
             }
 
-            if (array_key_exists('picture', $newsData) === true) {
+            if (array_key_exists('picture', $newsData) === true && $importImages === true) {
                 $picturePath = self::BASE_PATH_PICTURES . 'news/';
 
                 $news->setPictureUrl(
@@ -408,8 +483,9 @@ class ImportLegacyDataCommand extends Command
 
     /**
      * @param OutputInterface $output
+     * @param boolean $importImages
      */
-    protected function importPlayers(OutputInterface $output)
+    protected function importPlayers(OutputInterface $output, $importImages = false)
     {
         $data = $this->import(
             self::BASE_URL . '/players'
@@ -447,7 +523,7 @@ class ImportLegacyDataCommand extends Command
                 $player = $playerRepository->hydrate($player, $playerData);
             }
 
-            if (array_key_exists('picture', $playerData) === true) {
+            if (array_key_exists('picture', $playerData) === true && $importImages === true) {
                 $picturePath = self::BASE_PATH_PICTURES . 'players/';
 
                 $player->setPictureUrl(
@@ -515,8 +591,9 @@ class ImportLegacyDataCommand extends Command
 
     /**
      * @param OutputInterface $output
+     * @param boolean $importImages
      */
-    protected function importTeams(OutputInterface $output)
+    protected function importTeams(OutputInterface $output, $importImages = false)
     {
         $data = $this->import(
             self::BASE_URL . '/teams'
@@ -578,7 +655,7 @@ class ImportLegacyDataCommand extends Command
                 $team = $teamRepository->hydrate($team, $teamData);
             }
 
-            if (array_key_exists('picture', $teamData) === true) {
+            if (array_key_exists('picture', $teamData) === true && $importImages === true) {
                 $picturePath = self::BASE_PATH_PICTURES . 'teams/';
 
                 $team->setPictureUrl(
