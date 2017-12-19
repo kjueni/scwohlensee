@@ -1,5 +1,5 @@
 @import '~foundation-sites/scss/util/util';
-@import '~foundation-sites/scss/settings/settings';
+@import 'foundationSettings.scss';
 @import '~foundation-sites/scss/foundation';
 
 @include foundation-global-styles;
@@ -42,3 +42,16 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
+
+//SCW-Styles
+header {
+  padding: 1rem;
+}
+
+div.scw-logo a {
+  width: 7rem;
+  height: 7rem;
+  display: block;
+  background-image: url(../img/logo.svg);
+  background-size: 7rem 7rem;
+}

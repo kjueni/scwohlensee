@@ -2,6 +2,6 @@
 
 {% block content %}
     {% for entry in news %}
-        {{ include('news/short.html.twig', { 'news': entry }) }}
+        {{ include('news/short.html.twig', { 'entry': entry }) }}
     {% endfor %}
 {% endblock %}
