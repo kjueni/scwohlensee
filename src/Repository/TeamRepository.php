@@ -48,6 +48,9 @@ class TeamRepository extends ServiceEntityRepository
                 case 'picture_url':
                     $team->setPictureUrl($param);
                     break;
+                case 'url':
+                    $team->setUrl($param);
+                    break;
                 case 'employees':
                     $team->setEmployees($param);
                     break;

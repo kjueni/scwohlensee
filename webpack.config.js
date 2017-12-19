@@ -12,7 +12,11 @@ Encore
     .addEntry('favicon', './assets/img/favicon.ico')
 
     // allow sass/scss files to be processed
-    .enableSassLoader()
+    .enableSassLoader(function(sassOptions) {
+        sassOptions.includePaths = ['node_modules/foundation-sites/scss'];
+    }/*, {
+        resolveUrlLoader: false
+     }*/)
 
     // allow legacy applications to use $/jQuery as a global variable
     .autoProvidejQuery()

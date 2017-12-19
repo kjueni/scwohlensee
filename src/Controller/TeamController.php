@@ -4,41 +4,30 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-//use App\Entity\Team;
+use App\Entity\Team;
 use App\Repository\TeamRepository;
 
 class TeamController extends Controller
 {
     /**
+     * @param string $url
      * @param TeamRepository $repository
      * @return Response
      */
-    public function indexAction(TeamRepository $repository)
+    public function detailAction($url, TeamRepository $repository)
     {
-        $teams = $repository->findAll();
-
-        return $this->render(
-            'team/index.html.twig',
+        /** @var Team $team */
+        $team = $repository->findOneBy(
             array(
-                'teams' => $teams,
+                'url' => $url
             )
         );
-    }
-
-    /**
-     * @param string $id
-     * @param TeamRepository $repository
-     * @return Response
-     */
-    public function detailAction($id, TeamRepository $repository)
-    {
-        $team = $repository->find($id);
 
         if (!$team) {
             throw $this->createNotFoundException(
                 sprintf(
-                    'No team found for id: "%s"',
-                    $id
+                    'No team found for url: "%s"',
+                    $url
                 )
             );
         }

@@ -105,7 +105,7 @@ class NavigationEntry implements
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->title;
     }
@@ -113,7 +113,7 @@ class NavigationEntry implements
     /**
      * @param string $title
      */
-    public function setTitle(string $title)
+    public function setTitle($title)
     {
         $this->title = $title;
     }
@@ -129,7 +129,7 @@ class NavigationEntry implements
     /**
      * @param string|null $url
      */
-    public function setUrl(string $url = null)
+    public function setUrl($url = null)
     {
         $this->url = $url;
     }
@@ -145,7 +145,7 @@ class NavigationEntry implements
     /**
      * @param integer|null $sortIndex
      */
-    public function setSortIndex(integer $sortIndex = null)
+    public function setSortIndex($sortIndex = null)
     {
         $this->sortIndex = $sortIndex;
     }

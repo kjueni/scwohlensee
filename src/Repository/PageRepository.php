@@ -45,6 +45,9 @@ class PageRepository extends ServiceEntityRepository
                 case  'text':
                     $page->setText($param);
                     break;
+                case 'url':
+                    $page->setUrl($param);
+                    break;
             }
         }
 

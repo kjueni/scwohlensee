@@ -1,12 +1,12 @@
 index:
     path: /
     defaults: { _controller: 'App\Controller\DefaultController::indexAction' }
-team:
-    path: /team
-    controller: 'App\Controller\TeamController:indexAction'
 team-detail:
-    path: /team/{id}
+    path: /team/detail/{url}
     controller: 'App\Controller\TeamController:detailAction'
 news-detail:
-    path: /news/{id}
+    path: /news/detail/{url}
     controller: 'App\Controller\NewsController:detailAction'
+page-detail:
+    path: /page/detail/{url}
+    controller: 'App\Controller\PageController:detailAction'

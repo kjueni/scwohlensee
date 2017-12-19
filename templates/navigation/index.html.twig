@@ -1,25 +1,38 @@
-<ul>
-    {% for entry in entries %}
-        <li>
-            <a href="{{ entry.url ? entry.url : 'javascript:' }}">{{ entry.title }}</a>
-            {% if entry.children %}
-                <ul>
-                    {% for subEntry in entry.children %}
-                        <li>
-                            <a href="{{ subEntry.url ? subEntry.url : 'javascript:' }}">{{ subEntry.title }}</a>
-                            {% if subEntry.children %}
-                                <ul>
-                                    {% for subSubEntry in subEntry.children %}
-                                        <li>
-                                            <a href="{{ subSubEntry.url ? subSubEntry.url : 'javascript:' }}">{{ subSubEntry.title }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </li>
-    {% endfor %}
-</ul>
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+    <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="responsive-menu">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            {% for entry in entries %}
+                <li{{ (entry.url != '/' and active starts with entry.url) or (active == entry.url and entry.url == '/') ? ' class="active"': '' }}>
+                    {% if entry.children.count %}
+                        <a href="javascript:">{{ entry.title }}</a>
+                        <ul class="menu">
+                            {% for subEntry in entry.children %}
+                                <li>
+                                    {% if subEntry.children.count %}
+                                        <a href="javascript:">{{ subEntry.title }}</a>
+                                        <ul class="menu">
+                                            {% for subSubEntry in subEntry.children %}
+                                                <li>
+                                                    <a href="{{ subSubEntry.url }}">{{ subSubEntry.title }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                        <a href="{{ subEntry.url }}" class="dropdown-item">{{ subEntry.title }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <a href="{{ entry.url }}" {{ active == entry.url ? 'class="is-active"': '' }}>{{ entry.title }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

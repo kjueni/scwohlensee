@@ -45,6 +45,12 @@ class Team implements
     protected $pictureUrl;
 
     /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
+     */
+    protected $url;
+
+    /**
      * Many Teams have Many Employees.
      *
      * @ORM\ManyToMany(targetEntity="Employee")
@@ -76,7 +82,8 @@ class Team implements
     public static function fromArray(array $params)
     {
         $requiredParams = array(
-            'name'
+            'name',
+            'url'
         );
 
         foreach ($requiredParams as $param) {
@@ -94,23 +101,21 @@ class Team implements
                 case  'name':
                     $team->setName($param);
                     break;
-
                 case 'description':
                     $team->setDescription($param);
                     break;
-
                 case 'league':
                     $team->setLeague($param);
                     break;
-
                 case 'picture_url':
                     $team->setPictureUrl($param);
                     break;
-
+                case 'url':
+                    $team->setUrl($param);
+                    break;
                 case 'employees':
                     $team->setEmployees($param);
                     break;
-
                 case 'players':
                     $team->setPlayers($param);
                     break;
@@ -222,5 +227,21 @@ class Team implements
     public function setPlayers($players)
     {
         $this->players = $players;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
     }
 }

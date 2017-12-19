@@ -52,6 +52,9 @@ class NewsRepository extends ServiceEntityRepository
                 case 'picture_url':
                     $news->setPictureUrl($param);
                     break;
+                case 'url':
+                    $news->setUrl($param);
+                    break;
                 case 'types':
                     $news->setTypes($param);
                     break;

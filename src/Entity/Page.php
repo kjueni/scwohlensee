@@ -38,6 +38,12 @@ class Page implements
     protected $text;
 
     /**
+     * @ORM\Column(type="string", length=100)
+     * @var string
+     */
+    protected $url;
+
+    /**
      * @param array $params
      * @return Page
      * @throws \Exception
@@ -46,6 +52,7 @@ class Page implements
     {
         $requiredParams = array(
             'title',
+            'url',
         );
 
         foreach ($requiredParams as $param) {
@@ -68,6 +75,9 @@ class Page implements
                     break;
                 case  'text':
                     $page->setText($param);
+                    break;
+                case  'url':
+                    $page->setUrl($param);
                     break;
             }
         }
@@ -129,5 +139,21 @@ class Page implements
     public function setText($text)
     {
         $this->text = $text;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
     }
 }

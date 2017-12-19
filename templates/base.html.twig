@@ -6,17 +6,23 @@
 
         <!-- @todo that can't be right, check the correct way -->
         <link rel="icon" href="{{ asset('build/images/favicon.9c4ac701.ico') }}" type="image/ico" />
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     </head>
     <body>
+        <header>
+            {% block header %}
+                header
+            {% endblock %}
+        </header>
         <nav>
             {% block navigation %}
                 {{ render(controller(
-                 'App\\Controller\\NavigationController::indexAction'
+                'App\\Controller\\NavigationController::indexAction'
                 )) }}
             {% endblock %}
         </nav>
 
-        <section id="content">
+        <section id="content" class="container">
             {% block content %}{% endblock %}
         </section>
         <aside>
@@ -26,8 +32,9 @@
         </aside>
         <footer>
             {% block footer %}
-
+                footer
             {% endblock %}
         </footer>
+        <script src="{{ asset('build/app.js') }}"></script>
     </body>
 </html>

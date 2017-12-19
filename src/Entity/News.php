@@ -52,6 +52,12 @@ class News implements
     protected $pictureUrl;
 
     /**
+     * @ORM\Column(type="string", length=100)
+     * @var string
+     */
+    protected $url;
+
+    /**
      * Many News have Many Types.
      * @ORM\ManyToMany(targetEntity="NewsType")
      * @ORM\JoinTable(name="news_news_types",
@@ -73,6 +79,7 @@ class News implements
             'author',
             'title',
             'text',
+            'url',
         );
 
         foreach ($requiredParams as $param) {
@@ -101,6 +108,9 @@ class News implements
                     break;
                 case 'picture_url':
                     $news->setPictureUrl($param);
+                    break;
+                case 'url':
+                    $news->setUrl($param);
                     break;
                 case 'types':
                     $news->setTypes($param);
@@ -213,5 +223,21 @@ class News implements
     public function setTypes($types)
     {
         $this->types = $types;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
     }
 }
