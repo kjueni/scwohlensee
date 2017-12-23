@@ -13,16 +13,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use App\Entity\Employee;
-use App\Entity\EmployeeType;
-use App\Entity\GameType;
-use App\Entity\NavigationEntry;
-use App\Entity\News;
-use App\Entity\NewsType;
-use App\Entity\Page;
-use App\Entity\Player;
-use App\Entity\PlayerPosition;
-use App\Entity\Team;
+use App\Entity;
 use App\Service\Import\Import;
 
 class ImportLegacyDataCommand extends Command
@@ -79,6 +70,9 @@ class ImportLegacyDataCommand extends Command
                     'positions',
                     'players',
                     'teams',
+                    'ad-types',
+                    'ads',
+                    'boxes',
                 )
             );
     }
@@ -110,6 +104,15 @@ class ImportLegacyDataCommand extends Command
             );
 
             switch ($type) {
+                case 'ad-types':
+                    $this->importAdTypes($output);
+                    break;
+                case 'ads':
+                    $this->importAds($output, $input->getOption('images') === 1);
+                    break;
+                case 'boxes':
+                    $this->importBoxes($output);
+                    break;
                 case 'employee-types':
                     $this->importEmployeeTypes($output);
                     break;
@@ -173,6 +176,175 @@ class ImportLegacyDataCommand extends Command
      * @param OutputInterface $output
      * @param boolean $importImages
      */
+    protected function importAds(OutputInterface $output, $importImages = false)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/ads'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $adRepository = $entityManager->getRepository(Entity\Ad::class);
+        $adTypeRepository = $entityManager->getRepository(Entity\AdType::class);
+        $teamRepository = $entityManager->getRepository(Entity\Team::class);
+
+        foreach ($data['ads'] as $adData) {
+            $new = false;
+
+            /** @var Entity\Ad $ad */
+            $ad = $adRepository->findOneBy(
+                array(
+                    'pictureUrl' => $adData['picture'],
+                    'description' => $adData['description'],
+                    'url' => array_key_exists('url', $adData) === true ? $adData['url'] : null,
+                )
+            );
+
+            $adData['types'] = $adTypeRepository->findBy(
+                array(
+                    'name' => $adData['types'],
+                )
+            );
+
+            if (array_key_exists('teams', $adData) === true) {
+                $adData['teams'] = $teamRepository->findBy(
+                    array(
+                        'name' => $adData['teams'],
+                    )
+                );
+            }
+
+            if ($ad === null) {
+                $ad = Entity\Ad::fromArray($adData);
+                $new = true;
+            } else {
+                $ad = $adRepository->hydrate($ad, $adData);
+            }
+
+            if (array_key_exists('picture', $adData) === true && $importImages === true) {
+                $picturePath = self::BASE_PATH_PICTURES . 'ads/';
+
+                $ad->setPictureUrl(
+                    $this->moveFile($adData['picture'], $picturePath, $ad->getDescription())
+                );
+            }
+
+            $entityManager->persist($ad);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        sprintf(
+                            '%s %s',
+                            $ad->getUrl(),
+                            $ad->getDescription())
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importAdTypes(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/ad-types'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $typeRepository = $entityManager->getRepository(Entity\AdType::class);
+
+        foreach ($data['types'] as $typeData) {
+            $new = false;
+
+            $type = $typeRepository->findOneBy(
+                array(
+                    'name' => $typeData['name'],
+                )
+            );
+
+            $typeData['height'] = (int) (array_key_exists('height', $typeData) ? $typeData['height'] : 0);
+
+            if ($type === null) {
+                $type = Entity\AdType::fromArray($typeData);
+                $new = true;
+            } else {
+                $type = $typeRepository->hydrate($type, $typeData);
+            }
+
+            $entityManager->persist($type);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $type->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importBoxes(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/boxes'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $boxRepository = $entityManager->getRepository(Entity\Box::class);
+        $navigationEntryRepository = $entityManager->getRepository(Entity\NavigationEntry::class);
+
+        foreach ($data['boxes'] as $boxData) {
+            $new = false;
+
+            $box = $boxRepository->findOneBy(
+                array(
+                    'title' => $boxData['title'],
+                )
+            );
+
+            $adData['navigation_entries'] = $navigationEntryRepository->findBy(
+                array(
+                    'title' => $boxData['navigation_entries'],
+                )
+            );
+
+            if ($box === null) {
+                $box = Entity\Box::fromArray($boxData);
+                $new = true;
+            } else {
+                $box = $boxRepository->hydrate($box, $boxData);
+            }
+
+            $entityManager->persist($box);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $box->getTitle()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     * @param boolean $importImages
+     */
     protected function importEmployees(OutputInterface $output, $importImages = false)
     {
         $data = $this->import(
@@ -180,8 +352,8 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $employeeRepository = $entityManager->getRepository(Employee::class);
-        $employeeTypeRepository = $entityManager->getRepository(EmployeeType::class);
+        $employeeRepository = $entityManager->getRepository(Entity\Employee::class);
+        $employeeTypeRepository = $entityManager->getRepository(Entity\EmployeeType::class);
 
         foreach ($data['employees'] as $employeeData) {
             $new = false;
@@ -200,7 +372,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($employee === null) {
-                $employee = Employee::fromArray($employeeData);
+                $employee = Entity\Employee::fromArray($employeeData);
                 $new = true;
             } else {
                 $employee = $employeeRepository->hydrate($employee, $employeeData);
@@ -242,7 +414,7 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $typeRepository = $entityManager->getRepository(EmployeeType::class);
+        $typeRepository = $entityManager->getRepository(Entity\EmployeeType::class);
 
         foreach ($data['types'] as $typeData) {
             $new = false;
@@ -254,7 +426,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($type === null) {
-                $type = EmployeeType::fromArray($typeData);
+                $type = Entity\EmployeeType::fromArray($typeData);
                 $new = true;
             } else {
                 $type = $typeRepository->hydrate($type, $typeData);
@@ -296,7 +468,7 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $typeRepository = $entityManager->getRepository(GameType::class);
+        $typeRepository = $entityManager->getRepository(Entity\GameType::class);
 
         foreach ($data as $typeData) {
             $new = false;
@@ -308,7 +480,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($type === null) {
-                $type = GameType::fromArray($typeData);
+                $type = Entity\GameType::fromArray($typeData);
                 $new = true;
             } else {
                 $type = $typeRepository->hydrate($type, $typeData);
@@ -339,13 +511,13 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $navigationEntryRepository = $entityManager->getRepository(NavigationEntry::class);
+        $navigationEntryRepository = $entityManager->getRepository(Entity\NavigationEntry::class);
 
         /**
          * @param array $data
-         * @param NavigationEntry|null $parent
+         * @param Entity\NavigationEntry|null $parent
          */
-        $createItem = function ($data, NavigationEntry $parent = null) use (&$createItem, $entityManager, $navigationEntryRepository, $output) {
+        $createItem = function ($data, Entity\NavigationEntry $parent = null) use (&$createItem, $entityManager, $navigationEntryRepository, $output) {
             $new = false;
 
             $entry = $navigationEntryRepository->findOneBy(
@@ -355,7 +527,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($entry === null) {
-                $entry = NavigationEntry::fromArray($data);
+                $entry = Entity\NavigationEntry::fromArray($data);
                 $new = true;
             } else {
                 $entry = $navigationEntryRepository->hydrate($entry, $data);
@@ -401,8 +573,8 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $newsRepository = $entityManager->getRepository(News::class);
-        $newsTypeRepository = $entityManager->getRepository(NewsType::class);
+        $newsRepository = $entityManager->getRepository(Entity\News::class);
+        $newsTypeRepository = $entityManager->getRepository(Entity\NewsType::class);
 
         foreach ($data['news'] as $newsData) {
             $new = false;
@@ -425,7 +597,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($news === null) {
-                $news = News::fromArray($newsData);
+                $news = Entity\News::fromArray($newsData);
                 $new = true;
             } else {
                 $news = $newsRepository->hydrate($news, $newsData);
@@ -464,7 +636,7 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $typeRepository = $entityManager->getRepository(NewsType::class);
+        $typeRepository = $entityManager->getRepository(Entity\NewsType::class);
 
         foreach ($data['types'] as $typeData) {
             $new = false;
@@ -476,7 +648,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($type === null) {
-                $type = NewsType::fromArray($typeData);
+                $type = Entity\NewsType::fromArray($typeData);
                 $new = true;
             } else {
                 $type = $typeRepository->hydrate($type, $typeData);
@@ -507,7 +679,7 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $pageRepository = $entityManager->getRepository(Page::class);
+        $pageRepository = $entityManager->getRepository(Entity\Page::class);
 
         foreach ($data['pages'] as $pageData) {
             $new = false;
@@ -519,7 +691,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($page === null) {
-                $page = Page::fromArray($pageData);
+                $page = Entity\Page::fromArray($pageData);
                 $new = true;
             } else {
                 $page = $pageRepository->hydrate($page, $pageData);
@@ -551,8 +723,8 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $playerRepository = $entityManager->getRepository(Player::class);
-        $positionRepository = $entityManager->getRepository(PlayerPosition::class);
+        $playerRepository = $entityManager->getRepository(Entity\Player::class);
+        $positionRepository = $entityManager->getRepository(Entity\PlayerPosition::class);
 
         foreach ($data['players'] as $playerData) {
             $new = false;
@@ -576,7 +748,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if ($player === null) {
-                $player = Player::fromArray($playerData);
+                $player = Entity\Player::fromArray($playerData);
                 $new = true;
             } else {
                 $player = $playerRepository->hydrate($player, $playerData);
@@ -615,7 +787,7 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $positionRepository = $entityManager->getRepository(PlayerPosition::class);
+        $positionRepository = $entityManager->getRepository(Entity\PlayerPosition::class);
 
         foreach ($data['positions'] as $positionData) {
             $new = false;
@@ -627,7 +799,7 @@ class ImportLegacyDataCommand extends Command
             );
 
             if ($position === null) {
-                $position = PlayerPosition::fromArray($positionData);
+                $position = Entity\PlayerPosition::fromArray($positionData);
                 $new = true;
             } else {
                 $position = $positionRepository->hydrate($position, $positionData);
@@ -659,9 +831,9 @@ class ImportLegacyDataCommand extends Command
         );
 
         $entityManager = $this->getEntityManager();
-        $teamRepository = $entityManager->getRepository(Team::class);
-        $employeeRepository = $entityManager->getRepository(Employee::class);
-        $playerRepository = $entityManager->getRepository(Player::class);
+        $teamRepository = $entityManager->getRepository(Entity\Team::class);
+        $employeeRepository = $entityManager->getRepository(Entity\Employee::class);
+        $playerRepository = $entityManager->getRepository(Entity\Player::class);
 
         foreach ($data['teams'] as $teamData) {
             $new = false;
@@ -708,7 +880,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if ($team === null) {
-                $team = Team::fromArray($teamData);
+                $team = Entity\Team::fromArray($teamData);
                 $new = true;
             } else {
                 $team = $teamRepository->hydrate($team, $teamData);

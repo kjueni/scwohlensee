@@ -54,6 +54,17 @@ class NavigationEntry implements
     protected $parent;
 
     /**
+     * Many NavigationEntries have Many Boxes.
+     * @ORM\ManyToMany(targetEntity="Box")
+     * @ORM\JoinTable(name="navigation_entries_boxes",
+     *      joinColumns={@ORM\JoinColumn(name="box_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="entry_id", referencedColumnName="id")}
+     *      )
+     * @var Box[]
+     */
+    protected $boxes;
+
+    /**
      * @param array $params
      * @return NavigationEntry
      * @throws \Exception
@@ -87,6 +98,9 @@ class NavigationEntry implements
                     break;
                 case  'parent':
                     $entry->setParent($param);
+                    break;
+                case  'boxes':
+                    $entry->setBoxes($param);
                     break;
             }
         }
@@ -180,5 +194,21 @@ class NavigationEntry implements
     public function setParent(NavigationEntry $parent)
     {
         $this->parent = $parent;
+    }
+
+    /**
+     * @return Box[]
+     */
+    public function getBoxes(): array
+    {
+        return $this->boxes;
+    }
+
+    /**
+     * @param Box[] $boxes
+     */
+    public function setBoxes(array $boxes)
+    {
+        $this->boxes = $boxes;
     }
 }

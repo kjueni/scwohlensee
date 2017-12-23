@@ -65,17 +65,4 @@ class TeamRepository extends ServiceEntityRepository
 
         return $team;
     }
-
-    /*
-    public function findBySomething($value)
-    {
-        return $this->createQueryBuilder('t')
-            ->where('t.something = :value')->setParameter('value', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
 }

@@ -48,6 +48,9 @@ class NavigationEntryRepository extends ServiceEntityRepository
                 case  'parent':
                     $entry->setParent($param);
                     break;
+                case  'boxes':
+                    $entry->setBoxes($param);
+                    break;
             }
         }
 
