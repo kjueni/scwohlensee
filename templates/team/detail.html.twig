@@ -2,4 +2,15 @@
 
 {% block content %}
     <h1>{{ team.name }}</h1>
+    {%  if team.league %}
+        <h2>{{ team.league }}</h2>
+    {% endif %}
+    <section>
+        <h2>{% trans %}Games{% endtrans %}</h2>
+        {{ include('game/list.html.twig', { 'games': futureGames}) }}
+    </section>
+    <section>
+        <h2>{% trans %}Results{% endtrans %}</h2>
+        {{ include('game/list.html.twig', { 'games': pastGames}) }}
+    </section>
 {% endblock %}

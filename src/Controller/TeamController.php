@@ -11,13 +11,13 @@ class TeamController extends Controller
 {
     /**
      * @param string $url
-     * @param TeamRepository $repository
+     * @param TeamRepository $teamRepository
      * @return Response
      */
-    public function detailAction($url, TeamRepository $repository)
+    public function detailAction($url, TeamRepository $teamRepository)
     {
         /** @var Team $team */
-        $team = $repository->findOneBy(
+        $team = $teamRepository->findOneBy(
             array(
                 'url' => $url
             )
@@ -32,10 +32,23 @@ class TeamController extends Controller
             );
         }
 
+        $pastGames = array();
+        $futureGames = array();
+
+        foreach ($team->getGames() as $game) {
+            if ($game->isPastGame()) {
+                $pastGames[] = $game;
+            } else {
+                $futureGames[] = $game;
+            }
+        }
+
         return $this->render(
             'team/detail.html.twig',
             array(
                 'team' => $team,
+                'pastGames' => $pastGames,
+                'futureGames' => $futureGames,
             )
         );
     }

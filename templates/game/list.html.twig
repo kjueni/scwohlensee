@@ -1,0 +1,8 @@
+<div class="scw-game-list grid-container fluid">
+    {% for game in games %}
+        <div class="scw-game-date grid-x">
+            {{ game.getStartsOn()|date('D d.m.Y') }}
+        </div>
+        {{ include('game/item.html.twig', { 'game': game }) }}
+    {% endfor %}
+</div>

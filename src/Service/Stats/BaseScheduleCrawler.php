@@ -16,26 +16,38 @@ abstract class BaseScheduleCrawler Extends BaseCrawler implements
 
         /**
          * @param Crawler $gameNode
+         * @param int $index
          * @return array
          */
-        $getGames = function (Crawler $gameNode) use ($games): array {
-            return $this->parseGame($gameNode);
+        $getGames = function (Crawler $gameNode, int $index): array {
+            return $this->parseGame($gameNode, $index);
         };
 
-        $games = $this->getNodes()->each($getGames);
+        /** @var Crawler|array $nodes */
+        $nodes = $this->getNodes();
+
+        if ($nodes instanceof Crawler) {
+            $games = $this->getNodes()->each($getGames);
+        } elseif (is_array($nodes)) {
+            $index = 0;
+            foreach ($nodes as $node) {
+                $games[] = $getGames($node, $index);
+                $index++;
+            }
+        }
 
         return $games;
     }
 
     /**
      * @param Crawler $gameNode
+     * @param int $index
      * @return array
      */
-    protected function parseGame(Crawler $gameNode): array
+    protected function parseGame(Crawler $gameNode, int $index): array
     {
-        die(var_dump($gameNode));
         $game = array(
-            'type' => $this->getType($gameNode),
+            'type' => $this->getType($gameNode, $index),
             'date' => $this->getDate($gameNode),
             'home_team' => $this->getHomeTeam($gameNode),
             'away_team' => $this->getAwayTeam($gameNode),

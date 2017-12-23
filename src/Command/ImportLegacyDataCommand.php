@@ -15,6 +15,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 use App\Entity\Employee;
 use App\Entity\EmployeeType;
+use App\Entity\GameType;
 use App\Entity\NavigationEntry;
 use App\Entity\News;
 use App\Entity\NewsType;
@@ -70,6 +71,7 @@ class ImportLegacyDataCommand extends Command
                 array(
                     'employee-types',
                     'employees',
+                    'game-types',
                     'navigation-entries',
                     'news-types',
                     'news',
@@ -113,6 +115,9 @@ class ImportLegacyDataCommand extends Command
                     break;
                 case 'employees':
                     $this->importEmployees($output, $input->getOption('images') === 1);
+                    break;
+                case 'game-types':
+                    $this->importGameTypes($output);
                     break;
                 case 'navigation-entries':
                     $this->importNavigationEntries($output);
@@ -250,6 +255,60 @@ class ImportLegacyDataCommand extends Command
 
             if ($type === null) {
                 $type = EmployeeType::fromArray($typeData);
+                $new = true;
+            } else {
+                $type = $typeRepository->hydrate($type, $typeData);
+            }
+
+            $entityManager->persist($type);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $type->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importGameTypes(OutputInterface $output)
+    {
+        $data = array(
+            array(
+                'name' => 'Cup',
+            ),
+            array(
+                'name' => 'Meisterschaft',
+            ),
+            array(
+                'name' => 'Trainingsspiele',
+            ),
+            array(
+                'name' => 'Turnier',
+            )
+        );
+
+        $entityManager = $this->getEntityManager();
+        $typeRepository = $entityManager->getRepository(GameType::class);
+
+        foreach ($data as $typeData) {
+            $new = false;
+
+            $type = $typeRepository->findOneBy(
+                array(
+                    'name' => $typeData['name'],
+                )
+            );
+
+            if ($type === null) {
+                $type = GameType::fromArray($typeData);
                 $new = true;
             } else {
                 $type = $typeRepository->hydrate($type, $typeData);

@@ -11,13 +11,14 @@ interface ScheduleCrawlerInterface
     /**
      * @return Crawler
      */
-    public function getNodes(): Crawler;
+    public function getNodes();
 
     /**
      * @param Crawler $gameNode
-     * @return string|null
+     * @param int $index
+     * @return null|string
      */
-    public function getType(Crawler $gameNode): ?string;
+    public function getType(Crawler $gameNode, int $index): ?string;
 
     /**
      * @param Crawler $gameNode

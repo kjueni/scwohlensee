@@ -8,27 +8,72 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class SFVScheduleCrawler extends BaseScheduleCrawler
 {
+    protected $typeMapping = array();
+
     /**
      * @return array|Crawler
      */
-    public function getNodes(): Crawler
+    public function getNodes()
     {
-        return $this->getCrawler()->evaluate('//div[contains(@class, "spiel")]');
+        $allNodes = $this->getCrawler()->evaluate('//div[contains(@class, "list-group-item")]');
+        $lastType = null;
+        $index = 0;
+
+        /**
+         * @param Crawler $node
+         * @return Crawler|null
+         */
+        $getNode = function ($node) use (&$lastType, &$index): ?Crawler {
+            if (strpos($node->attr('class'), 'sppTitel') !== false) {
+                $lastType = trim(
+                    $node->text()
+                );
+            } elseif ($node->children()->filterXPath('//div[contains(@class, "spiel")]')->count()) {
+                $this->addToMapping($index, $lastType);
+                $index++;
+                return $node;
+            }
+
+            return null;
+        };
+
+        /** @var Crawler[] $gameNodes */
+        $gameNodes = array_filter(
+            $allNodes->each($getNode),
+            function ($value) {
+                return $value !== null;
+            }
+        );
+
+        return $gameNodes;
     }
 
     /**
-     * @param Crawler $node
-     * @return string|null
+     * @param int $index
+     * @param string $lastType
      */
-    public function getType(Crawler $gameNode): ?string
+    protected function addToMapping(int $index, string $lastType)
     {
-        $type = $gameNode->parents()->previousAll();
+        $this->typeMapping[$index] = $lastType;
+    }
 
-        if ($type && strpos($type->attr('class'), 'sppTitel') !== false) {
-            return trim($type->text());
-        }
+    /**
+     * @param int $index
+     * @return string
+     */
+    protected function getMappedType(int $index): string
+    {
+        return $this->typeMapping[$index];
+    }
 
-        return null;
+    /**
+     * @param Crawler $gameNode
+     * @param int $index
+     * @return null|string
+     */
+    public function getType(Crawler $gameNode, int $index): ?string
+    {
+        return $this->getMappedType($index);
     }
 
     /**
@@ -38,7 +83,7 @@ class SFVScheduleCrawler extends BaseScheduleCrawler
     public function getHomeTeam(Crawler $gameNode): string
     {
         return trim(
-            $gameNode->evaluate('//div[contains(@class, "teams")]/div[contains(@class, "teamA")]')->text()
+            $gameNode->filterXPath('//div[contains(@class, "teams")]/div[contains(@class, "teamA")]')->text()
         );
     }
 
@@ -49,7 +94,7 @@ class SFVScheduleCrawler extends BaseScheduleCrawler
     public function getAwayTeam(Crawler $gameNode): string
     {
         return trim(
-            $gameNode->evaluate('//div[contains(@class, "teams")]/div[contains(@class, "teamB")]')->text()
+            $gameNode->filterXPath('//div[contains(@class, "teams")]/div[contains(@class, "teamB")]')->text()
         );
     }
 
@@ -60,9 +105,9 @@ class SFVScheduleCrawler extends BaseScheduleCrawler
     public function getHomeScore(Crawler $gameNode): ?int
     {
 
-        $node = $gameNode->evaluate('//div[contains(@class, "goals")]/div[contains(@class, "torA")]');
+        $node = $gameNode->filterXPath('//div[contains(@class, "goals")]/div[contains(@class, "torA")]');
 
-        if ($node) {
+        if ($node && $node->count()) {
             return intval(
                 trim(
                     $node->text()
@@ -79,10 +124,9 @@ class SFVScheduleCrawler extends BaseScheduleCrawler
      */
     public function getAwayScore(Crawler $gameNode): ?int
     {
+        $node = $gameNode->filterXPath('//div[contains(@class, "goals")]/div[contains(@class, "torB")]');
 
-        $node = $gameNode->evaluate('//div[contains(@class, "goals")]/div[contains(@class, "torB")]');
-
-        if ($node) {
+        if ($node && $node->count()) {
             return intval(
                 trim(
                     $node->text()
@@ -99,9 +143,9 @@ class SFVScheduleCrawler extends BaseScheduleCrawler
      */
     public function getGameUrl(Crawler $gameNode): ?string
     {
-        $node = $gameNode->evaluate('//div[contains(@class, "telegramm-link")]/a');
+        $node = $gameNode->filterXPath('//div[contains(@class, "telegramm-link")]/a');
 
-        if ($node && $node->attr('href')) {
+        if ($node && $node->count() && $node->attr('href') && $this->getAwayScore($gameNode) !== null) {
             return $gameNode->getBaseHref() . $node->attr('href');
         }
 
@@ -114,14 +158,20 @@ class SFVScheduleCrawler extends BaseScheduleCrawler
      */
     public function getDate(Crawler $gameNode): ?DateTime
     {
-        $node = $gameNode->evaluate('//div[contains(@class, "date")]');
+        $node = $gameNode->filterXPath('//div[contains(@class, "date")]');
 
         if ($node) {
-            $dateString = trim(
+            $dateTimeString = trim(
                 $node->text()
             );
 
-            $date = DateTime::createFromFormat('d.m.YH:i', substr($dateString, 3, strlen($dateString)));
+            $dateString = substr($dateTimeString, 3, 10);
+            $timeString = substr($dateTimeString, 13, strlen($dateTimeString));
+
+            $date = DateTime::createFromFormat(
+                'd.m.Y H:i',
+                $dateString . ' ' . ($timeString ? $timeString : '00:00')
+            );
 
             if ($date) {
                 return $date;
