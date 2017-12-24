@@ -67,9 +67,11 @@ class ImportLegacyDataCommand extends Command
                     'news-types',
                     'news',
                     'pages',
+                    'pitches',
                     'positions',
                     'players',
                     'teams',
+                    'training-sessions',
                     'ad-types',
                     'ads',
                     'boxes',
@@ -134,6 +136,9 @@ class ImportLegacyDataCommand extends Command
                 case 'pages':
                     $this->importPages($output);
                     break;
+                case 'pitches':
+                    $this->importPitches($output);
+                    break;
                 case 'players':
                     $this->importPlayers($output, $input->getOption('images') === 1);
                     break;
@@ -142,6 +147,9 @@ class ImportLegacyDataCommand extends Command
                     break;
                 case 'teams':
                     $this->importTeams($output, $input->getOption('images') === 1);
+                    break;
+                case 'training-sessions':
+                    $this->importTrainingSessions($output);
                     break;
                 default:
                     throw new \InvalidArgumentException(
@@ -714,6 +722,49 @@ class ImportLegacyDataCommand extends Command
 
     /**
      * @param OutputInterface $output
+     */
+    protected function importPitches(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/pitches'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $pitchRepository = $entityManager->getRepository(Entity\Pitch::class);
+
+        foreach ($data['pitches'] as $pitchData) {
+            $new = false;
+
+            $pitch = $pitchRepository->findOneBy(
+                array(
+                    'name' => $pitchData['name'],
+                )
+            );
+
+            if ($pitch === null) {
+                $pitch = Entity\Pitch::fromArray($pitchData);
+                $new = true;
+            } else {
+                $pitch = $pitchRepository->hydrate($pitch, $pitchData);
+            }
+
+            $entityManager->persist($pitch);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $pitch->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
      * @param boolean $importImages
      */
     protected function importPlayers(OutputInterface $output, $importImages = false)
@@ -903,6 +954,72 @@ class ImportLegacyDataCommand extends Command
                         '%s - %s',
                         $new ? 'created' : 'updated',
                         $team->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     */
+    protected function importTrainingSessions(OutputInterface $output)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/training-sessions'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $sessionRepository = $entityManager->getRepository(Entity\TrainingSession::class);
+        $teamRepository = $entityManager->getRepository(Entity\Team::class);
+        $pitchRepository = $entityManager->getRepository(Entity\Pitch::class);
+
+        foreach ($data['sessions'] as $sessionData) {
+            $new = false;
+
+            $session = $sessionRepository->findOneBy(
+                array(
+                    'weekday' => $sessionData['weekday'],
+                    'startsOn' => $sessionData['starts_on'],
+                )
+            );
+
+            if (array_key_exists('pitch', $sessionData) === true) {
+                $pitch = $pitchRepository->findOneBy(
+                    array(
+                        'name' => $sessionData['pitch'],
+                    )
+                );
+
+                $sessionData['pitch'] = $pitch;
+            }
+
+            if (array_key_exists('team', $sessionData) === true) {
+                $team = $teamRepository->findOneBy(
+                    array(
+                        'name' => $sessionData['team'],
+                    )
+                );
+
+                $sessionData['team'] = $team;
+            }
+
+            if ($session === null) {
+                $session = Entity\TrainingSession::fromArray($sessionData);
+                $new = true;
+            } else {
+                $session = $sessionRepository->hydrate($session, $sessionData);
+            }
+
+            $entityManager->persist($session);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $session->getWeekday()
                     ),
                 )
             );

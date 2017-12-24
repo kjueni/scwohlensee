@@ -44,7 +44,7 @@ class Player implements
     protected $pictureUrl;
 
     /**
-     * One Player has one PlayerPosition.
+     * Many Players have one PlayerPosition.
      *
      * @ORM\ManyToOne(targetEntity="PlayerPosition", inversedBy="players")
      * @ORM\JoinColumn(name="position_id", referencedColumnName="id")

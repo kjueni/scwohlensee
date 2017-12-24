@@ -96,6 +96,15 @@ class Team implements
     protected $games;
 
     /**
+     * One Team has many TrainingSessions.
+     *
+     * @ORM\OneToMany(targetEntity="TrainingSession", mappedBy="team")
+     * @ORM\JoinColumn(name="team_id", referencedColumnName="id")
+     * @var TrainingSession[]
+     */
+    protected $trainingSessions;
+
+    /**
      * @param array $params
      * @return Team
      * @throws \Exception
@@ -321,5 +330,13 @@ class Team implements
     public function setGames(array $games)
     {
         $this->games = $games;
+    }
+
+    /**
+     * @return TrainingSession[]
+     */
+    public function getTrainingSessions(): array
+    {
+        return $this->trainingSessions;
     }
 }

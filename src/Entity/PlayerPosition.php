@@ -28,7 +28,7 @@ class PlayerPosition implements
     protected $name;
 
     /**
-     * @ORM\Column(type="integer", length=1000, nullable=true)
+     * @ORM\Column(type="integer", length=10, nullable=true)
      * @var integer
      */
     protected $sortIndex;
