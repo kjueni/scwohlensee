@@ -2,6 +2,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'de'
+    filesystem_adapter: 'default_local_adapter'
 
 services:
     # default configuration for services in *this* file
@@ -26,8 +27,7 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-
-    acme.s3_client:
+    s3_client:
         class: Aws\S3\S3Client
         arguments:
             -

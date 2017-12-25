@@ -1053,8 +1053,6 @@ class ImportLegacyDataCommand extends Command
 
         $this->getFilesystem()->put($path, $content);
 
-        //die($this->getFilesystem()->has($path));
-
         return $destination . $fileName;
     }
 
