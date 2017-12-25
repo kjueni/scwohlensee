@@ -7,17 +7,17 @@
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
             {% for entry in entries %}
-                <li{{ (entry.url != '/' and active starts with entry.url) or (active == entry.url and entry.url == '/') ? ' class="active"': '' }}>
-                    {% if entry.children.count %}
+                <li{{ entry.active == true ? ' class="active"': '' }}>
+                    {% if entry.children is defined %}
                         <a href="javascript:">{{ entry.title }}</a>
                         <ul class="menu">
                             {% for subEntry in entry.children %}
-                                <li>
-                                    {% if subEntry.children.count %}
+                                <li{{ subEntry.active ? ' class="active"': '' }}>
+                                    {% if subEntry.children is defined %}
                                         <a href="javascript:">{{ subEntry.title }}</a>
                                         <ul class="menu">
                                             {% for subSubEntry in subEntry.children %}
-                                                <li>
+                                                <li{{ subSubEntry.active ? ' class="active"': '' }}>
                                                     <a href="{{ subSubEntry.url }}">{{ subSubEntry.title }}</a>
                                                 </li>
                                             {% endfor %}
@@ -29,7 +29,7 @@
                             {% endfor %}
                         </ul>
                     {% else %}
-                        <a href="{{ entry.url }}" {{ active == entry.url ? 'class="is-active"': '' }}>{{ entry.title }}</a>
+                        <a href="{{ entry.url }}">{{ entry.title }}</a>
                     {% endif %}
                 </li>
             {% endfor %}
