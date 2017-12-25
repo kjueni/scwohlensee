@@ -32,6 +32,14 @@ class Box implements
     protected $text;
 
     /**
+     * Many Boxes have Many NavigationEntries.
+     * @ORM\ManyToMany(targetEntity="NavigationEntry", inversedBy="boxes")
+     * @ORM\JoinTable(name="navigation_entries_boxes")
+     * @var NavigationEntry[]
+     */
+    protected $navigationEntries;
+
+    /**
      * @param array $params
      * @return Box
      * @throws \Exception
@@ -59,6 +67,9 @@ class Box implements
                     break;
                 case 'text':
                     $box->setText($param);
+                    break;
+                case 'navigation_entries':
+                    $box->setNavigationEntries($param);
                     break;
             }
         }
@@ -104,5 +115,21 @@ class Box implements
     public function setText(string $text = null)
     {
         $this->text = $text;
+    }
+
+    /**
+     * @return NavigationEntry[]
+     */
+    public function getNavigationEntries(): array
+    {
+        return $this->navigationEntries;
+    }
+
+    /**
+     * @param NavigationEntry[] $navigationEntries
+     */
+    public function setNavigationEntries(array $navigationEntries)
+    {
+        $this->navigationEntries = $navigationEntries;
     }
 }

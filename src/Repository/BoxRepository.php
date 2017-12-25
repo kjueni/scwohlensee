@@ -42,6 +42,9 @@ class BoxRepository extends ServiceEntityRepository
                 case 'text':
                     $box->setText($param);
                     break;
+                case 'navigation_entries':
+                    $box->setNavigationEntries($param);
+                    break;
             }
         }
 

@@ -34,7 +34,7 @@ class NavigationEntry implements
 
     /**
      * @ORM\Column(type="integer", length=10, nullable=true)
-     * @var integer
+     * @var int
      */
     protected $sortIndex;
 
@@ -55,14 +55,17 @@ class NavigationEntry implements
 
     /**
      * Many NavigationEntries have Many Boxes.
-     * @ORM\ManyToMany(targetEntity="Box")
-     * @ORM\JoinTable(name="navigation_entries_boxes",
-     *      joinColumns={@ORM\JoinColumn(name="box_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="entry_id", referencedColumnName="id")}
-     *      )
+     * @ORM\ManyToMany(targetEntity="Box", mappedBy="navigationEntries")
      * @var Box[]
      */
     protected $boxes;
+
+    /**
+     * Many NavigationEntries have Many Files.
+     * @ORM\ManyToMany(targetEntity="File", mappedBy="navigationEntries")
+     * @var File[]
+     */
+    protected $files;
 
     /**
      * @param array $params

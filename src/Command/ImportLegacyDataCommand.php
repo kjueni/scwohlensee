@@ -20,7 +20,7 @@ use App\Service\Import\Import;
 class ImportLegacyDataCommand extends Command
 {
     const BASE_URL = 'http://scwohlensee.ch/export';
-    const BASE_PATH_PICTURES = 'pictures/';
+    const BASE_PATH_FILES = 'files/';
 
     /**
      * @var EntityManagerInterface
@@ -64,6 +64,7 @@ class ImportLegacyDataCommand extends Command
                     'employees',
                     'game-types',
                     'navigation-entries',
+                    'files',
                     'news-types',
                     'news',
                     'pages',
@@ -122,6 +123,9 @@ class ImportLegacyDataCommand extends Command
                     break;
                 case 'employees':
                     $this->importEmployees($output, $importImages);
+                    break;
+                case 'files':
+                    $this->importFiles($output, $importImages);
                     break;
                 case 'game-types':
                     $this->importGameTypes($output);
@@ -203,7 +207,6 @@ class ImportLegacyDataCommand extends Command
             /** @var Entity\Ad $ad */
             $ad = $adRepository->findOneBy(
                 array(
-                    'pictureUrl' => $adData['picture'],
                     'description' => $adData['description'],
                     'url' => array_key_exists('url', $adData) === true ? $adData['url'] : null,
                 )
@@ -231,7 +234,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if (array_key_exists('picture', $adData) === true && $importImages === true) {
-                $picturePath = self::BASE_PATH_PICTURES . 'ads/';
+                $picturePath = self::BASE_PATH_FILES . 'ads/';
 
                 $ad->setPictureUrl(
                     $this->moveFile($adData['picture'], $picturePath, $ad->getDescription())
@@ -323,7 +326,7 @@ class ImportLegacyDataCommand extends Command
                 )
             );
 
-            $adData['navigation_entries'] = $navigationEntryRepository->findBy(
+            $boxData['navigation_entries'] = $navigationEntryRepository->findBy(
                 array(
                     'title' => $boxData['navigation_entries'],
                 )
@@ -389,7 +392,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if (array_key_exists('picture', $employeeData) === true && $importImages === true) {
-                $picturePath = self::BASE_PATH_PICTURES . 'employees/';
+                $picturePath = self::BASE_PATH_FILES . 'employees/';
 
                 $employee->setPictureUrl(
                     $this->moveFile($employeeData['picture'], $picturePath, $employee->getFirstName() . $employee->getLastName())
@@ -451,6 +454,67 @@ class ImportLegacyDataCommand extends Command
                         '%s - %s',
                         $new ? 'created' : 'updated',
                         $type->getName()
+                    ),
+                )
+            );
+        }
+    }
+
+    /**
+     * @param OutputInterface $output
+     * @param bool $importImages
+     */
+    protected function importFiles(OutputInterface $output, $importImages = false)
+    {
+        $data = $this->import(
+            self::BASE_URL . '/files'
+        );
+
+        $entityManager = $this->getEntityManager();
+        $fileRepository = $entityManager->getRepository(Entity\File::class);
+        $navigationEntryRepository = $entityManager->getRepository(Entity\NavigationEntry::class);
+
+        foreach ($data['files'] as $fileData) {
+            $new = false;
+
+            $file = $fileRepository->findOneBy(
+                array(
+                    'title' => $fileData['title'],
+                )
+            );
+
+            if (array_key_exists('navigation_entries', $fileData) === true) {
+                $fileData['navigation_entries'] = $navigationEntryRepository->findBy(
+                    array(
+                        'title' => $fileData['navigation_entries'],
+                    )
+                );
+            }
+
+            if ($file === null) {
+                $file = Entity\File::fromArray($fileData);
+                $new = true;
+            } else {
+                $file = $fileRepository->hydrate($file, $fileData);
+            }
+
+            if (array_key_exists('url', $fileData) === true && $importImages === true) {
+                $picturePath = self::BASE_PATH_FILES . 'uploads/';
+
+                $file->setUrl(
+                    $this->moveFile($fileData['url'], $picturePath, $file->getTitle())
+                );
+            }
+
+            $entityManager->persist($file);
+            $entityManager->flush();
+
+            $output->writeln(
+                array(
+                    sprintf(
+                        '%s - %s',
+                        $new ? 'created' : 'updated',
+                        $file->getTitle()
                     ),
                 )
             );
@@ -614,7 +678,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if (array_key_exists('picture', $newsData) === true && $importImages === true) {
-                $picturePath = self::BASE_PATH_PICTURES . 'news/';
+                $picturePath = self::BASE_PATH_FILES . 'news/';
 
                 $news->setPictureUrl(
                     $this->moveFile($newsData['picture'], $picturePath, $news->getTitle())
@@ -808,7 +872,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if (array_key_exists('picture', $playerData) === true && $importImages === true) {
-                $picturePath = self::BASE_PATH_PICTURES . 'players/';
+                $picturePath = self::BASE_PATH_FILES . 'players/';
 
                 $player->setPictureUrl(
                     $this->moveFile($playerData['picture'], $picturePath, $player->getName())
@@ -940,7 +1004,7 @@ class ImportLegacyDataCommand extends Command
             }
 
             if (array_key_exists('picture', $teamData) === true && $importImages === true) {
-                $picturePath = self::BASE_PATH_PICTURES . 'teams/';
+                $picturePath = self::BASE_PATH_FILES . 'teams/';
 
                 $team->setPictureUrl(
                     $this->moveFile($teamData['picture'], $picturePath, $team->getName())
