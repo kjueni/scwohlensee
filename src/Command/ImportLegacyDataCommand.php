@@ -3,7 +3,8 @@ namespace App\Command;
 
 use DateTime;
 
-use Aws\S3\S3Client;
+//use Aws\S3\S3Client;
+use League\Flysystem\Filesystem;
 
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -20,7 +21,6 @@ class ImportLegacyDataCommand extends Command
 {
     const BASE_URL = 'http://scwohlensee.ch/export';
     const BASE_PATH_PICTURES = 'pictures/';
-    const BUCKET_NAME = 'scwohlensee';
 
     /**
      * @var EntityManagerInterface
@@ -28,18 +28,18 @@ class ImportLegacyDataCommand extends Command
     protected $entityManager;
 
     /**
-     * @var S3Client
+     * @var Filesystem
      */
-    protected $s3Client;
+    protected $filesystem;
 
     /**
      * @param EntityManagerInterface $entityManager
-     * @param S3Client $s3Client
+     * @param Filesystem $filesystem
      */
-    public function __construct(EntityManagerInterface $entityManager, S3Client $s3Client)
+    public function __construct(EntityManagerInterface $entityManager, Filesystem $filesystem)
     {
-        $this->entityManager = $entityManager;
-        $this->s3Client = $s3Client;
+        $this->setEntityManager($entityManager);
+        $this->setFilesystem($filesystem);
 
         parent::__construct();
     }
@@ -95,6 +95,8 @@ class ImportLegacyDataCommand extends Command
 
         $types = $input->getArgument('types');
 
+        $importImages = (int) $input->getOption('images') === 1;
+
         foreach ($types as $type) {
             $output->writeln(
                 array(
@@ -110,7 +112,7 @@ class ImportLegacyDataCommand extends Command
                     $this->importAdTypes($output);
                     break;
                 case 'ads':
-                    $this->importAds($output, $input->getOption('images') === 1);
+                    $this->importAds($output, $importImages);
                     break;
                 case 'boxes':
                     $this->importBoxes($output);
@@ -119,7 +121,7 @@ class ImportLegacyDataCommand extends Command
                     $this->importEmployeeTypes($output);
                     break;
                 case 'employees':
-                    $this->importEmployees($output, $input->getOption('images') === 1);
+                    $this->importEmployees($output, $importImages);
                     break;
                 case 'game-types':
                     $this->importGameTypes($output);
@@ -131,7 +133,7 @@ class ImportLegacyDataCommand extends Command
                     $this->importNewsTypes($output);
                     break;
                 case 'news':
-                    $this->importNews($output, $input->getOption('images') === 1);
+                    $this->importNews($output, $importImages);
                     break;
                 case 'pages':
                     $this->importPages($output);
@@ -140,13 +142,13 @@ class ImportLegacyDataCommand extends Command
                     $this->importPitches($output);
                     break;
                 case 'players':
-                    $this->importPlayers($output, $input->getOption('images') === 1);
+                    $this->importPlayers($output, $importImages);
                     break;
                 case 'positions':
                     $this->importPositions($output);
                     break;
                 case 'teams':
-                    $this->importTeams($output, $input->getOption('images') === 1);
+                    $this->importTeams($output, $importImages);
                     break;
                 case 'training-sessions':
                     $this->importTrainingSessions($output);
@@ -1047,14 +1049,11 @@ class ImportLegacyDataCommand extends Command
             strtolower($fileName)
         ) . '.jpg';
 
-        $this->getS3Client()->putObject(
-            array(
-                'Bucket' => self::BUCKET_NAME,
-                'Key'    => $destination . $fileName,
-                'Body'   => $content,
-                'ACL'    => 'public-read',
-            )
-        );
+        $path = $destination . $fileName;
+
+        $this->getFilesystem()->put($path, $content);
+
+        //die($this->getFilesystem()->has($path));
 
         return $destination . $fileName;
     }
@@ -1072,7 +1071,7 @@ class ImportLegacyDataCommand extends Command
     /**
      * @return EntityManagerInterface
      */
-    public function getEntityManager()
+    public function getEntityManager(): EntityManagerInterface
     {
         return $this->entityManager;
     }
@@ -1080,24 +1079,24 @@ class ImportLegacyDataCommand extends Command
     /**
      * @param EntityManagerInterface $entityManager
      */
-    public function setEntityManager($entityManager)
+    public function setEntityManager(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
     }
 
     /**
-     * @return S3Client
+     * @return Filesystem
      */
-    public function getS3Client()
+    public function getFilesystem(): Filesystem
     {
-        return $this->s3Client;
+        return $this->filesystem;
     }
 
     /**
-     * @param S3Client $s3Client
+     * @param Filesystem $filesystem
      */
-    public function setS3Client($s3Client)
+    public function setFilesystem(Filesystem $filesystem)
     {
-        $this->s3Client = $s3Client;
+        $this->filesystem = $filesystem;
     }
 }

@@ -33,5 +33,13 @@ Encore
 // .enableVersioning()
 ;
 
+//const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+var config = Encore.getWebpackConfig();
+
+/*config.plugins = [
+    new UglifyJSPlugin()
+];*/
+
 // export the final configuration
-module.exports = Encore.getWebpackConfig();
+module.exports = config;

@@ -14,12 +14,30 @@ framework:
     php_errors:
         log: true
 
-aws:
-    version: latest
-    region: eu-west-1
-    bucket: scwohlensee
-    credentials:
-        key: AKIAI2AWTOOIUDETQ35Q
-        secret: 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
-    S3:
-        version: '2006-03-01'
+oneup_flysystem:
+    adapters:
+        local_adapter:
+            local:
+                directory: public/filesystem
+        acme.flysystem_adapter:
+                    awss3v3:
+                        client: acme.s3_client
+                        bucket: scwohlensee
+                        prefix: ''
+    filesystems:
+        local:
+            adapter: local_adapter
+            alias: League\Flysystem\Filesystem
+
+            # optional - defines the default visibility of the filesystem: `public` or `private`(default)
+            visibility: private
+
+#aws:
+##    version: latest
+#    region: eu-west-1
+#    bucket: scwohlensee
+#    credentials:
+#        key: AKIAI2AWTOOIUDETQ35Q
+#        secret: 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
+#    S3:
+#        version: '2006-03-01'

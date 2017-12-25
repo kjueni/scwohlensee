@@ -1,7 +1,7 @@
 <?php
 namespace App\Command;
 
-use DateTime;
+//use DateTime;
 
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -122,10 +122,11 @@ class ImportStatsCommand extends Command
 
     /**
      * @param Team $team
-     * @param GameType[] $gameTypes
+     * @param array $gameTypes
      * @param OutputInterface $output
+     * @throws \Exception if an error occurs on import
      */
-    protected function importScheduleForTeam(Team $team, array $gameTypes, $output)
+    protected function importScheduleForTeam(Team $team, array $gameTypes, OutputInterface $output)
     {
         $output->writeln(
             array(
@@ -210,6 +211,7 @@ class ImportStatsCommand extends Command
             }
 
         } catch (\Exception $e) {
+            // @todo add error handling
             throw $e;
         }
 
