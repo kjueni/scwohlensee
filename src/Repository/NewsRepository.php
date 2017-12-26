@@ -65,11 +65,11 @@ class NewsRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param int $limit
-     * @param int $offset
+     * @param int|null $limit
+     * @param int|null $offset
      * @return News[]
      */
-    public function findLatestNews(int $limit = 10, int $offset = 0): array
+    public function findLatestNews(int $limit = null, int $offset = null): array
     {
         return $this->findBy(
             array(),

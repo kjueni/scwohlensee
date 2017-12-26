@@ -1,15 +1,15 @@
 <div class="scw-game-item grid-x">
-    <div class="scw-game-home cell small-3">
+    <div class="scw-game-home cell small-4">
         {{ game.isAway() ? game.getOpponent() : game.getTeam().getName() }}
     </div>
-    <div class="scw-game-away cell small-3">
+    <div class="scw-game-away cell small-4">
         {{ game.isAway() ? game.getTeam().getName() : game.getOpponent() }}
     </div>
     <div class="scw-game-type cell small-3">
         {{ game.getType().getName() }}
     </div>
     {% if game.hasScore() %}
-        <div class="scw-game-result cell small-3">
+        <div class="cell small-1">
             {% if game.getUrl() %}
                 <a href="{{ game.getUrl() }}" target="_blank">
                     {{ game.getHomeScore() }} : {{ game.getAwayScore() }}
@@ -19,7 +19,7 @@
             {% endif %}
         </div>
     {% else %}
-        <div class="scw-game-date cell small-3">
+        <div class="cell small-1">
             {% if game.getStartsOn()|date('H:i') != '00:00' %}
                 {{ game.getStartsOn()|date('H:i') }}
             {% else %}

@@ -17,12 +17,14 @@
         <h1>{% trans %}Last results{% endtrans %}</h1>
         <div class="scw-game-list grid-container fluid">
             {% for date in pastGames %}
-                <div class="scw-game-date grid-x">
-                    {{ date.starts_on|date('D d.m.Y') }}
+                <div class="scw-game-container">
+                    <div class="scw-game-date grid-x">
+                        {{ date.starts_on|date('D d.m.Y') }}
+                    </div>
+                    {% for game in date.games %}
+                        {{ include('game/item.html.twig', { 'game': game }) }}
+                    {% endfor %}
                 </div>
-                {% for game in date.games %}
-                    {{ include('game/item.html.twig', { 'game': game }) }}
-                {% endfor %}
             {% endfor %}
         </div>
     </section>
@@ -30,12 +32,14 @@
         <h1>{% trans %}Future games{% endtrans %}</h1>
         <div class="scw-game-list grid-container fluid">
             {% for date in futureGames %}
-                <div class="scw-game-date grid-x">
-                    {{ date.starts_on|date('D d.m.Y') }}
+                <div class="scw-game-container">
+                    <div class="scw-game-date grid-x">
+                        {{ date.starts_on|date('D d.m.Y') }}
+                    </div>
+                    {% for game in date.games %}
+                        {{ include('game/item.html.twig', { 'game': game }) }}
+                    {% endfor %}
                 </div>
-                {% for game in date.games %}
-                    {{ include('game/item.html.twig', { 'game': game }) }}
-                {% endfor %}
             {% endfor %}
         </div>
     </section>

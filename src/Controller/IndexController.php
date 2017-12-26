@@ -18,7 +18,7 @@ class IndexController extends Controller
      */
     public function indexAction(NewsRepository $newsRepository, GameRepository $gameRepository)
     {
-        $news = $newsRepository->findLatestNews();
+        $news = $newsRepository->findLatestNews(4);
         $pastGameRows = $gameRepository->findPastGames(null, 10);
         $futureGameRows = $gameRepository->findFutureGames(null, 10);
 
