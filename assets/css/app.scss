@@ -65,7 +65,7 @@ header {
       background-size: 6rem 6rem;
     }
     padding: 1rem;
-    background: $background-gray;
+    background: $white;
   }
   background: $black;
   height: 8rem;
@@ -82,15 +82,29 @@ main.scw-base-container {
   width: 65rem;
   margin: 0 auto;
   background: $white;
-  //border: 1px solid $light-gray;
 }
 
 section.scw-content-container {
-  border-left: 1px solid $scw-yellow;
+  section {
+    background: $white;
+  }
+  //border-left: 1px solid $scw-yellow;
+  background: $medium-gray;
+  font-size: 0.8125rem;
+  padding: 1rem;
 }
 
 aside {
-  border-right: 1px solid $scw-yellow;
+  //border-right: 1px solid $scw-yellow;
+  padding: 1rem;
+  background: $white;
+}
+
+footer {
+  border-top: 0.5rem solid #feeb35;
+  background: $scw-blue;
+  padding: 1rem;
+  color: $white;
 }
 
 span.scw-placeholder {
@@ -103,17 +117,17 @@ span.scw-placeholder {
 
 section {
   > h1 {
-    font-size: 1.5rem;
-    margin: 0 1rem 1rem 1rem;
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    padding: 0.7rem 0 0  0.7rem;
   }
 }
-
 
 // News
 section.scw-news {
   article {
     h1 {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       padding: 0.75rem 1rem 0.5rem 1rem;
     }
     p {
@@ -143,8 +157,7 @@ div.scw-game-list {
   div.scw-game-container {
     div.scw-game-date {
       font-weight: bold;
-      border-bottom: 1px solid $black;
     }
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 }
