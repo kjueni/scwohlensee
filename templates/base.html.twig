@@ -12,7 +12,6 @@
         <main class="scw-base-container">
             <header>
                 {% block header %}
-                    <div class="scw-ads"></div>
                     <div class="scw-logo">
                         <a href="{{ path('index') }}"></a>
                     </div>
@@ -25,14 +24,20 @@
                     )) }}
                 {% endblock %}
             </nav>
-            <section id="content" class="scw-content-container container">
-                {% block content %}{% endblock %}
-            </section>
-            <aside>
-                {% block sidebar %}
 
-                {% endblock %}
-            </aside>
+            <section id="content" class="scw-content-container container">
+                <div class="grid-x">
+                    <div class="small-8 cell">
+                        {% block content %}{% endblock %}
+                    </div>
+                    <aside class="small-4 cell">
+                        {% block sidebar %}
+                            sidebar
+                        {% endblock %}
+                    </aside>
+                </div>
+            </section>
+
             <footer>
                 {% block footer %}
                     footer

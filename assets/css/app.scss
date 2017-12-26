@@ -46,14 +46,16 @@ $scw-yellow: #feeb35;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+// Overwrites
+.top-bar {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border-bottom: 0.5rem solid $scw-yellow;
+}
+
 // SCW-Styles
 //------------------------------
 // Header
 header {
-  div.scw-ads {
-    height: 4rem;
-    background: $white;
-  }
   div.scw-logo{
     a {
       width: 6rem;
@@ -61,19 +63,12 @@ header {
       display: inline-block;
       background-image: url(../img/logo.svg);
       background-size: 6rem 6rem;
-      margin-top: -3rem;
     }
-
-    text-align: center;
-    height: 4rem;
-    background: $scw-yellow;
+    padding: 1rem;
+    background: $background-gray;
   }
   background: $black;
   height: 8rem;
-}
-
-body {
-  background: $white;
 }
 
 nav {
@@ -87,11 +82,15 @@ main.scw-base-container {
   width: 65rem;
   margin: 0 auto;
   background: $white;
-  border: 1px solid $light-gray;
+  //border: 1px solid $light-gray;
 }
 
 section.scw-content-container {
-  width: 40rem;
+  border-left: 1px solid $scw-yellow;
+}
+
+aside {
+  border-right: 1px solid $scw-yellow;
 }
 
 span.scw-placeholder {
