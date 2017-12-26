@@ -3,10 +3,12 @@
 namespace App\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 use App\Entity\Game;
+use App\Entity\Team;
 
 class GameRepository extends ServiceEntityRepository
 {
@@ -64,5 +66,72 @@ class GameRepository extends ServiceEntityRepository
         }
 
         return $game;
+    }
+
+    /**
+     * @param Team|null $team
+     * @param int|null $limit
+     * @param int|null $offset
+     * @return Game[]
+     */
+    public function findPastGames(Team $team = null, int $limit = null, int $offset = null): array
+    {
+        $queryBuilder = $this->prepareQueryBuilder($team, $limit, $offset);
+
+        $queryBuilder->where(
+            $queryBuilder->expr()->isNotNull("g.homeScore")
+        );
+        $queryBuilder->orderBy('g.startsOn', 'DESC');
+
+        return $queryBuilder->getQuery()->getResult();
+    }
+
+    /**
+     * @param Team|null $team
+     * @param int|null $limit
+     * @param int|null $offset
+     * @return Game[]
+     */
+    public function findFutureGames(Team $team = null, int $limit = null, int $offset = null): array
+    {
+        $queryBuilder = $this->prepareQueryBuilder($team, $limit, $offset);
+
+        $queryBuilder->where(
+            $queryBuilder->expr()->isNull("g.homeScore")
+        );
+        $queryBuilder->orderBy('g.startsOn', 'ASC');
+
+        return $queryBuilder->getQuery()->getResult();
+    }
+
+    /**
+     * @param Team|null $team
+     * @param int|null $limit
+     * @param int|null $offset
+     * @return QueryBuilder
+     */
+    protected function prepareQueryBuilder(Team $team = null, int $limit = null, int $offset = null): QueryBuilder
+    {
+        $queryBuilder = $this->getEntityManager()->createQueryBuilder();
+
+        $queryBuilder->select("g")->from(Game::Class, 'g');
+
+        if ($team !== null) {
+            $queryBuilder->where(
+                array(
+                    'team' => $team,
+                )
+            );
+        }
+
+        if ($limit !== null) {
+            $queryBuilder->setMaxResults($limit);
+        }
+
+        if ($offset !== null) {
+            $queryBuilder->setFirstResult($offset);
+        }
+
+        return $queryBuilder;
     }
 }

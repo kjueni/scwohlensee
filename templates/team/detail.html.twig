@@ -6,11 +6,25 @@
         <h2>{{ team.league }}</h2>
     {% endif %}
     <section>
-        <h2>{% trans %}Games{% endtrans %}</h2>
-        {{ include('game/list.html.twig', { 'games': futureGames}) }}
+        <h1>{% trans %}Games{% endtrans %}</h1>
+        <div class="scw-game-list grid-container fluid">
+            {% for game in futureGames %}
+                <div class="scw-game-date grid-x">
+                    {{ game.getStartsOn()|date('D d.m.Y') }}
+                </div>
+                {{ include('game/item.html.twig', { 'game': game }) }}
+            {% endfor %}
+        </div>
     </section>
     <section>
-        <h2>{% trans %}Results{% endtrans %}</h2>
-        {{ include('game/list.html.twig', { 'games': pastGames}) }}
+        <h1>{% trans %}Results{% endtrans %}</h1>
+        <div class="scw-game-list grid-container fluid">
+            {% for game in pastGames %}
+                <div class="scw-game-date grid-x">
+                    {{ game.getStartsOn()|date('D d.m.Y') }}
+                </div>
+                {{ include('game/item.html.twig', { 'game': game }) }}
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}

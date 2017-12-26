@@ -1,14 +1,19 @@
 <article>
-    <a href="{{ path('news-detail', {'url': entry.url}) }}">
-        {% if entry.pictureUrl %}
-            <img src="{{ entry.pictureUrl }}" alt="{{ entry.title }}" />
-        {% else %}
-
-        {% endif %}
+    <div class="scw-news-image-container">
+        <a href="{{ path('news-detail', {'url': entry.url}) }}">
+            {% if entry.pictureUrl %}
+                <img src="{{ entry.pictureUrl }}" alt="{{ entry.title }}" />
+            {% else %}
+                <span class="scw-placeholder"></span>
+            {% endif %}
+        </a>
+    </div>
     <h1>
         <a href="{{ path('news-detail', {'url': entry.url}) }}">
             {{ entry.title }}
         </a>
     </h1>
-    <p>{{ entry.lead }}</p>
+    {% if entry.lead %}
+        <p>{{ entry.lead }}</p>
+    {% endif %}
 </article>

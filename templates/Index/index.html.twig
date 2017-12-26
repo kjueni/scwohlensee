@@ -1,13 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <div class="grid-container fluid">
-        <div class="grid-x grid-margin-x">
-        {% for entry in news %}
-            <div class="cell small-4">
-                {{ include('news/item.html.twig', { 'entry': entry }) }}
+    <section class="scw-news">
+        <h1>{% trans %}News{% endtrans %}</h1>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x grid-margin-y">
+            {% for entry in news %}
+                <div class="cell small-6">
+                    {{ include('news/item.html.twig', { 'entry': entry }) }}
+                </div>
+            {% endfor %}
             </div>
-        {% endfor %}
         </div>
-    </div>
+    </section>
+    <section class="scw-games">
+        <h1>{% trans %}Last results{% endtrans %}</h1>
+        <div class="scw-game-list grid-container fluid">
+            {% for date in pastGames %}
+                <div class="scw-game-date grid-x">
+                    {{ date.starts_on|date('D d.m.Y') }}
+                </div>
+                {% for game in date.games %}
+                    {{ include('game/item.html.twig', { 'game': game }) }}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+    <section class="scw-games">
+        <h1>{% trans %}Future games{% endtrans %}</h1>
+        <div class="scw-game-list grid-container fluid">
+            {% for date in futureGames %}
+                <div class="scw-game-date grid-x">
+                    {{ date.starts_on|date('D d.m.Y') }}
+                </div>
+                {% for game in date.games %}
+                    {{ include('game/item.html.twig', { 'game': game }) }}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
