@@ -65,7 +65,7 @@ header {
       background-size: 6rem 6rem;
     }
     padding: 1rem;
-    background: $white;
+    background: $background-gray;
   }
   background: $black;
   height: 8rem;
@@ -87,21 +87,19 @@ main.scw-base-container {
 section.scw-content-container {
   section {
     background: $white;
+    margin: 0.5rem;
   }
   //border-left: 1px solid $scw-yellow;
-  background: $medium-gray;
+  background: $light-gray;
   font-size: 0.8125rem;
-  padding: 1rem;
 }
 
 aside {
   //border-right: 1px solid $scw-yellow;
-  padding: 1rem;
-  background: $white;
 }
 
 footer {
-  border-top: 0.5rem solid #feeb35;
+  border-top: 0.5rem solid $scw-yellow;
   background: $scw-blue;
   padding: 1rem;
   color: $white;
@@ -119,7 +117,8 @@ section {
   > h1 {
     font-size: 1.25rem;
     margin: 0 0 1rem 0;
-    padding: 0.7rem 0 0  0.7rem;
+    padding: 0.7rem 0 0.7rem  0.7rem;
+    border-bottom: 1px solid $light-gray;
   }
 }
 
@@ -128,7 +127,7 @@ section.scw-news {
   article {
     h1 {
       font-size: 0.9rem;
-      padding: 0.75rem 1rem 0.5rem 1rem;
+      padding: 0.5rem 0.75rem 0rem 0.75rem;
     }
     p {
       font-size: 1rem;
@@ -149,6 +148,7 @@ section.scw-news {
 
     border: 1px solid $light-gray;
     background: $white;
+    margin-bottom: 1rem;
   }
 }
 
@@ -160,4 +160,17 @@ div.scw-game-list {
     }
     padding-bottom: 1rem;
   }
+}
+
+// Boxes
+div.scw-box {
+  table {
+    td {
+      vertical-align: top;
+      padding-right: 1rem;
+    }
+    max-width: 100%;
+    width: auto !important;
+  }
+  padding-bottom: 1rem;
 }

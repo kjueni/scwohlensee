@@ -202,7 +202,7 @@ class NavigationEntry implements
     /**
      * @return Box[]
      */
-    public function getBoxes(): array
+    public function getBoxes()
     {
         return $this->boxes;
     }
@@ -213,5 +213,13 @@ class NavigationEntry implements
     public function setBoxes(array $boxes)
     {
         $this->boxes = $boxes;
+    }
+
+    /**
+     * @return File[]|PersistentCollection
+     */
+    public function getFiles()
+    {
+        return $this->files;
     }
 }

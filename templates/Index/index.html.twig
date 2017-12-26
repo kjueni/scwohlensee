@@ -4,7 +4,7 @@
     <section class="scw-news">
         <h1>{% trans %}News{% endtrans %}</h1>
         <div class="grid-container">
-            <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="grid-x grid-margin-x">
             {% for entry in news %}
                 <div class="cell small-4">
                     {{ include('news/item.html.twig', { 'entry': entry }) }}

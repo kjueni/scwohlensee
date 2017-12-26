@@ -10,6 +10,7 @@
     </head>
     <body>
         <main class="scw-base-container">
+            {% set activeItem = null %}
             <header>
                 {% block header %}
                     <div class="scw-logo">
@@ -19,20 +20,38 @@
             </header>
             <nav>
                 {% block navigation %}
-                    {{ render(controller(
-                    'App\\Controller\\NavigationController::indexAction'
-                    )) }}
+                    {{ include('navigation/index.html.twig', { 'entries': navigation.entries }) }}
                 {% endblock %}
             </nav>
-
             <section id="content" class="scw-content-container">
-                <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="grid-x">
                     <div class="small-8 cell">
                         {% block content %}{% endblock %}
                     </div>
                     <aside class="small-4 cell">
                         {% block sidebar %}
-                            sidebar
+                            {% for box in navigation.activeItem.boxes %}
+                                <section>
+                                    <h1>{{ box.title }}</h1>
+                                    <div class="scw-box grid-container fluid">
+                                        {{ box.text|raw }}
+                                    </div>
+                                </section>
+                            {% endfor %}
+                            {% if navigation.activeItem.files.count() %}
+                                <section>
+                                    <h1>{% trans %}Files{% endtrans %}</h1>
+                                    <div class="scw-box grid-container fluid">
+                                        <ul>
+                                            {% for file in navigation.activeItem.files %}
+                                                <li>
+                                                    <a href="{{ file.url }}" target="_blank">{{ file.title }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </section>
+                            {% endif %}
                         {% endblock %}
                     </aside>
                 </div>
