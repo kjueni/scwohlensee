@@ -3,7 +3,9 @@ namespace App\Command;
 
 use DateTime;
 
-//use Aws\S3\S3Client;
+use League\Flysystem\AdapterInterface;
+use League\Flysystem\Adapter\Local as LocalAdapter;
+use League\Flysystem\AwsS3v3\AwsS3Adapter;
 use League\Flysystem\Filesystem;
 
 use Doctrine\ORM\EntityManagerInterface;
@@ -1114,10 +1116,31 @@ class ImportLegacyDataCommand extends Command
         ) . '.jpg';
 
         $path = $destination . $fileName;
+        $publicUrl = $this->getPublicUrl($path, $this->getFilesystem()->getAdapter());
 
         $this->getFilesystem()->put($path, $content);
 
-        return $destination . $fileName;
+        return $publicUrl;
+    }
+
+    /**
+     * @param string $path
+     * @param AdapterInterface $adapter
+     * @return string
+     * @throws \Exception if invalid adapter was provided
+     */
+    protected function getPublicUrl(string $path, AdapterInterface $adapter)
+    {
+        // @todo move to plugin or similar
+        if ($adapter instanceof LocalAdapter) {
+            $url = '/filesystem/' . $path;
+        } elseif ($adapter instanceof AwsS3Adapter) {
+            $url = $adapter->getClient()->getObjectUrl($adapter->getBucket(), $path);
+        } else {
+            throw new \Exception('Invalid adapter provided');
+        }
+
+        return $url;
     }
 
     /**

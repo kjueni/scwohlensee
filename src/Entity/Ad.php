@@ -34,7 +34,7 @@ class Ad implements
     protected $address;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=200, nullable=true)
      * @var string
      */
     protected $pictureUrl;

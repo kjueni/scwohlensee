@@ -39,7 +39,7 @@ class Team implements
     protected $league;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=200, nullable=true)
      * @var string|null
      */
     protected $pictureUrl;

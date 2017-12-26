@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    {% for entry in news %}
-        {{ include('news/item.html.twig', { 'entry': entry }) }}
-    {% endfor %}
+    <div class="grid-container fluid">
+        <div class="grid-x grid-margin-x">
+        {% for entry in news %}
+            <div class="cell small-4">
+                {{ include('news/item.html.twig', { 'entry': entry }) }}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
 {% endblock %}

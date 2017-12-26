@@ -30,5 +30,5 @@ oneup_flysystem:
             alias: League\Flysystem\Filesystem
 
             # optional - defines the default visibility of the filesystem: `public` or `private`(default)
-            visibility: private
+            visibility: public
 
