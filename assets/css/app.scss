@@ -46,6 +46,11 @@ $scw-yellow: #feeb35;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+$fontello-font-path : "../fonts";
+$fontello-font-name : "fontello";
+
+@import "~fontello-sass/fontello";
+
 // Overwrites
 .top-bar {
   padding: 0.5rem 0.5rem 0 0.5rem;
@@ -173,4 +178,34 @@ div.scw-box {
     width: auto !important;
   }
   padding-bottom: 1rem;
+}
+
+// Files
+ul.scw-files {
+  li {
+    padding: 0 0 0.5rem 1.7rem;
+    position: relative;
+  }
+  i {
+    @include fontello-init();
+    @include fontello-margin;
+    position: absolute;
+    left: 0;
+
+  }
+
+  i.scw-file-pdf {
+    @include fontello( 1c1 );
+  }
+
+  i.scw-file-jpg {
+    @include fontello( 1c5 );
+  }
+
+  i.scw-file-pdf:before, i.scw-file-jpg:before {
+    font-size: 1.2rem;
+  }
+
+  list-style: none;
+  margin: 0;
 }

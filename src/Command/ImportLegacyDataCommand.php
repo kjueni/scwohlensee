@@ -502,9 +502,20 @@ class ImportLegacyDataCommand extends Command
 
             if (array_key_exists('url', $fileData) === true && $importImages === true) {
                 $picturePath = self::BASE_PATH_FILES . 'uploads/';
+                $extension = 'jpg';
+
+                switch ($fileData['type']) {
+                    case 'application/pdf':
+                        $extension = 'pdf';
+                        break;
+                }
 
                 $file->setUrl(
-                    $this->moveFile($fileData['url'], $picturePath, $file->getTitle())
+                    $this->moveFile($fileData['url'], $picturePath, $file->getTitle(), $extension)
+                );
+
+                $file->setName(
+                    $this->createFileNameFromTitle($file->getTitle(), $extension)
                 );
             }
 
@@ -1097,23 +1108,15 @@ class ImportLegacyDataCommand extends Command
     /**
      * @param string $url
      * @param string $destination
+     * @param string $title
+     * @param string $extension
      * @return string
      */
-    protected function moveFile($url, $destination, $fileName)
+    protected function moveFile(string $url, string $destination, string $title, string $extension = 'jpg'): string
     {
         $content = file_get_contents($url);
 
-        $fileName = preg_replace(
-            array(
-                '/[^a-zA-Z0-9 \-]+/',
-                '/ /',
-            ),
-            array(
-                '-',
-                '',
-            ),
-            strtolower($fileName)
-        ) . '.jpg';
+        $fileName = $this->createFileNameFromTitle($title, $extension);
 
         $path = $destination . $fileName;
         $publicUrl = $this->getPublicUrl($path, $this->getFilesystem()->getAdapter());
@@ -1121,6 +1124,28 @@ class ImportLegacyDataCommand extends Command
         $this->getFilesystem()->put($path, $content);
 
         return $publicUrl;
+    }
+
+    /**
+     * @param $title
+     * @param string $extension
+     * @return string
+     */
+    protected function createFileNameFromTitle(string $title, string $extension = 'jpg'): string
+    {
+        $fileName = preg_replace(
+            array(
+                '/[^a-zA-Z0-9 \-]+/',
+                '/ /',
+            ),
+            array(
+                '-',
+                '_',
+            ),
+            strtolower($title)
+        ) . '.' . $extension;
+
+        return $fileName;
     }
 
     /**

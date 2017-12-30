@@ -26,9 +26,11 @@ class NavigationProvider
      */
     public function __construct(NavigationEntryRepository $navigationEntryRepository, RequestStack $requestStack)
     {
+        $masterRequest = $requestStack->getMasterRequest();
+
         $this->loadItems(
             $navigationEntryRepository,
-            $requestStack->getMasterRequest()->getPathInfo()
+            $masterRequest ? $masterRequest->getPathInfo() : ''
         );
     }
 
@@ -94,7 +96,10 @@ class NavigationProvider
         }
 
         $this->setEntries($entries);
-        $this->setActiveItem($activeItem);
+
+        if ($activeItem !== null) {
+            $this->setActiveItem($activeItem);
+        }
     }
 
     /**

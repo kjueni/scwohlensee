@@ -1,7 +1,12 @@
 {
-  "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
   "build/favicon.js": "/build/favicon.js",
   "build/images/favicon.ico": "/build/images/favicon.9c4ac701.ico",
-  "build/images/logo.svg": "/build/images/logo.b2c90411.svg"
+  "build/images/logo.svg": "/build/images/logo.b2c90411.svg",
+  "build/app.css": "/build/app.css",
+  "build/fonts/fontello.eot": "/build/fonts/fontello.5e7e8c6d.eot",
+  "build/fonts/fontello.ttf": "/build/fonts/fontello.f24a2045.ttf",
+  "build/fonts/fontello.woff": "/build/fonts/fontello.535afb2b.woff",
+  "build/fonts/fontello.woff2": "/build/fonts/fontello.6026e7c6.woff2",
+  "build/images/fontello.svg": "/build/images/fontello.6bd9a991.svg"
 }

@@ -1,0 +1,3 @@
+parameters:
+    aws_key: 'your aws key'
+    aws_secret: 'your aws secret'

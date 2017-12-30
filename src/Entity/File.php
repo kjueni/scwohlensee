@@ -236,4 +236,19 @@ class File implements
     {
         $this->navigationEntries = $navigationEntries;
     }
+
+    /**
+     * @return string
+     */
+    public function getExtension(): string
+    {
+        return substr(
+            $this->getName(),
+            strrpos(
+                $this->getName(),
+                '.'
+            ) + 1,
+            strlen($this->getName())
+        );
+    }
 }

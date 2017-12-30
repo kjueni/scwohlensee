@@ -42,10 +42,11 @@
                                 <section>
                                     <h1>{% trans %}Files{% endtrans %}</h1>
                                     <div class="scw-box grid-container fluid">
-                                        <ul>
+                                        <ul class="scw-files">
                                             {% for file in navigation.activeItem.files %}
                                                 <li>
-                                                    <a href="{{ file.url }}" target="_blank">{{ file.title }}</a>
+                                                    <i class="scw-file-{{ file.extension }}" href="{{ file.url }}"></i>
+                                                    <a target="_blank">{{ file.title }}</a>
                                                 </li>
                                             {% endfor %}
                                         </ul>
