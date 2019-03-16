@@ -1,0 +1,32 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name scwohlensee;
+    root /vagrant/public;
+    index index.php index.html;
+
+    location /phpmyadmin/ {
+        alias /usr/share/phpmyadmin/;
+    }
+
+    location / {
+        try_files $uri /index.php$is_args$args;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   Host      $http_host;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+    }
+
+    location ~ [^/]\.php(/|$) {
+        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+        # allow debugger to run
+        fastcgi_read_timeout 2400;
+    }
+
+    access_log /var/log/nginx/scwohlensee-access.log;
+    error_log /var/log/nginx/scwohlensee-error.log;
+}
