@@ -44,12 +44,6 @@ cp deploy/vagrant/xdebug.ini.off /etc/php/7.2/mods-available
 cp deploy/vagrant/php.ini /etc/php/7.2/fpm/php.ini
 cp deploy/vagrant/php.ini /etc/php/7.2/cli/php.ini
 cp deploy/vagrant/www.conf /etc/php/7.2/fpm/pool.d/www.conf
-sudo pecl channel-update pecl.php.net
-sudo apt-get -y install libssl-dev
-sudo apt-get -y install librabbitmq-dev
-echo "\n" | sudo pecl install amqp
-sudo bash -c "echo extension=/usr/lib/php/20170718/amqp.so > /etc/php/7.2/fpm/conf.d/amqp.ini"
-sudo bash -c "echo extension=/usr/lib/php/20170718/amqp.so > /etc/php/7.2/cli/conf.d/amqp.ini"
 
 #echo "Install phpmyadmin"
 #debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean true'
