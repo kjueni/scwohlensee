@@ -1,0 +1,13 @@
+clubster_admin_profile:
+    resource: |
+        alias: clubster.admin_profile
+        section: admin
+        path: profiles
+        templates: ClubsterAdminBundle:Crud
+        only: ['update']
+        redirect: index
+        permission: true
+        vars:
+            update:
+                subheader: clubster.ui.edit_user_profile
+    type: sylius.resource

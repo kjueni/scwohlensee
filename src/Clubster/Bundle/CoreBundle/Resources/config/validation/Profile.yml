@@ -1,0 +1,34 @@
+Clubster\Component\Core\Model\Profile:
+    properties:
+        firstName:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        lastName:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        gender:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Valid: ~
+        phoneNumber:
+            -   Length:
+                    min: 10
+                    max: 16
+                    minMessage: clubster.validators.phone_min_length
+                    maxMessage: clubster.validators.phone_max_length
+            -   Regex:
+                    pattern: '/^[0-9]+$/'
+        mobileNumber:
+            -   Length:
+                    min: 10
+                    max: 16
+                    minMessage: clubster.validators.phone_min_length
+                    maxMessage: clubster.validators.phone_max_length
+            -   Regex:
+                    pattern: '/^[0-9]+$/'

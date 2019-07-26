@@ -1,0 +1,20 @@
+clubster_admin_language:
+    resource: |
+        alias: clubster.language
+        section: admin
+        templates: ClubsterAdminBundle:Crud
+        only: ['show', 'index', 'update', 'delete', 'create']
+        redirect: index
+        grid: clubster_admin_language
+        form: Clubster\Bundle\CoreBundle\Form\Type\LanguageType
+        permission: true
+        vars:
+            all:
+                header: clubster.ui.languages
+            index:
+                subheader: clubster.ui.list_languages
+            update:
+                subheader: clubster.ui.edit_language
+            create:
+                subheader: clubster.ui.create_language
+    type: sylius.resource

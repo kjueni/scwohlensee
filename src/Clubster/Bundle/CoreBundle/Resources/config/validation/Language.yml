@@ -1,0 +1,15 @@
+Clubster\Component\Core\Model\Language:
+    constraints:
+        -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: code
+    properties:
+        name:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        code:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Regex:
+                    pattern: '/^[a-z]{2}_[A-Z]{2}$/'

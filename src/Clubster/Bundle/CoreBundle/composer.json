@@ -1,0 +1,73 @@
+{
+  "name": "kjueni/clubster-core-bundle",
+  "type": "symfony-bundle",
+  "description": "Core management for Symfony projects.",
+  "keywords": [
+    "core"
+  ],
+  "homepage": "https://github.com/kjueni",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Kevin Jüni",
+      "homepage": "https://github.com/kjueni"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "doctrine/orm": "^2.5",
+    "symfony/framework-bundle": "^3.4|^4.1.1",
+    "webmozart/assert": "^1.0",
+    "sylius/grid-bundle": "^1.4",
+    "sylius/resource-bundle": "^1.4",
+    "sylius/user-bundle": "^1.4",
+    "knplabs/knp-menu-bundle": "^2.0",
+    "nelmio/alice": "^3.5",
+    "kjueni/clubster-core": "self.version"
+  },
+  "require-dev": {
+    "matthiasnoback/symfony-dependency-injection-test": "^2.0",
+    "php-http/guzzle6-adapter": "^1.1",
+    "phpunit/phpunit": "^7.0",
+    "symfony/dependency-injection": "^3.4|^4.1.1",
+    "symfony/security-bundle": "^3.4|^4.1.1",
+    "symfony/swiftmailer-bundle": "^3.1"
+  },
+  "suggest": {
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Clubster\\Bundle\\CoreBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Clubster\\Bundle\\CoreBundle\\Tests\\": "tests/"
+    },
+    "files": [
+      "Tests/Functional/app/AppKernel.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": [
+      "@composer validate --strict",
+      "Tests/Functional/bin/console cache:clear --no-warmup --ansi --no-interaction",
+      "Tests/Functional/bin/console doctrine:database:create --if-not-exists --ansi --no-interaction",
+      "Tests/Functional/bin/console doctrine:schema:update --force --ansi --no-interaction",
+      "bin/phpunit --colors=always"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "master"
+    }
+  }
+}

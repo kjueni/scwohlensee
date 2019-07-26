@@ -1,0 +1,70 @@
+parameters:
+    clubster.security.api_regex: "^/api"
+    clubster.security.admin_regex: "^/(?!api/.*|api$|media/.*|_wdt|_profiler)[^/]*"
+
+security:
+    access_decision_manager:
+        strategy: consensus
+        allow_if_equal_granted_denied: false
+    role_hierarchy:
+        ROLE_SUPERADMIN: [ROLE_ADMIN]
+        ROLE_ADMIN: [ROLE_ALLOWED_TO_SWITCH, ROLE_USER]
+    providers:
+        admin_user_provider:
+            id: sylius.admin_user_provider.email_or_name_based
+    encoders:
+        Sylius\Component\User\Model\UserInterface: argon2i
+    firewalls:
+        website:
+            security: false
+        admin:
+            switch_user: true
+            context: admin
+            pattern: "%clubster.security.admin_regex%"
+            provider: admin_user_provider
+            form_login:
+                provider: admin_user_provider
+                login_path: clubster_admin_login
+                check_path: clubster_admin_login_check
+                failure_path: clubster_admin_login
+                default_target_path: clubster_admin_dashboard
+                use_forward: false
+                use_referer: true
+                csrf_token_generator: security.csrf.token_manager
+                csrf_parameter: _csrf_admin_security_token
+                csrf_token_id: admin_authenticate
+            remember_me:
+                secret: "%env(APP_SECRET)%"
+                path: /
+                name: APP_REMEMBER_ME
+                lifetime: 31536000
+                remember_me_parameter: _remember_me
+            logout:
+                path: clubster_admin_logout
+                target: clubster_admin_login
+            anonymous: true
+
+        oauth_token:
+            pattern: "%clubster.security.api_regex%/oauth/v2/token"
+            security: false
+
+        api:
+            pattern: "%clubster.security.api_regex%/.*"
+            provider: admin_user_provider
+            #            fos_oauth: true
+            stateless: true
+            anonymous: true
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+    access_control:
+        - { path: "%clubster.security.admin_regex%/_partial", role: IS_AUTHENTICATED_ANONYMOUSLY, ips: [127.0.0.1, ::1] }
+        - { path: "%clubster.security.admin_regex%/_partial", role: ROLE_NO_ACCESS }
+
+        - { path: "%clubster.security.admin_regex%/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: "%clubster.security.admin_regex%/forgotten-password", role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: "%clubster.security.api_regex%/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        - { path: "%clubster.security.admin_regex%", roles: [ROLE_SUPERADMIN, ROLE_ADMIN, ROLE_USER] }
+        - { path: "%clubster.security.api_regex%/.*", role: ROLE_API_ACCESS }

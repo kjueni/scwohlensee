@@ -1,0 +1,45 @@
+Clubster\Component\Core\Model\AdminUser:
+    constraints:
+        -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: username
+        -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        username:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        email:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+            -   Email:
+                    checkHost: true
+                    checkMX: true
+                    mode: strict
+        plainPassword:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+                    groups: password_change
+            -   Length:
+                    max: 128
+                    min: 8
+                    minMessage: clubster.validators.password_toshort
+                    maxMessage: clubster.validators.max_length
+            -   Regex:
+                    pattern: '/\d/'
+                    message: clubster.validator.password_nodigit
+            -   Regex:
+                    pattern: '([^a-zA-Z0-9])'
+                    message: clubster.validator.password_nospecial
+        profile:
+            -   Valid: ~
+
+        roles:
+            -   Valid: ~
+        language:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+            -   Valid: ~

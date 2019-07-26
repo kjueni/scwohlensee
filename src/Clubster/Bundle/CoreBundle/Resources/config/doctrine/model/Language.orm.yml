@@ -1,0 +1,31 @@
+Clubster\Component\Core\Model\Language:
+    table: cloudtec_language
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        code:
+            type: string
+            unique: true
+            nullable: false
+            length: 10
+        name:
+            type: string
+            unique: false
+            nullable: false
+            length: 128
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+        enabled:
+            type: boolean
+            nullable: false

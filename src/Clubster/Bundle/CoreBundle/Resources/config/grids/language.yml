@@ -1,0 +1,33 @@
+sylius_grid:
+    grids:
+        clubster_admin_language:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Clubster\Component\Core\Model\Language
+            fields:
+                name:
+                    position: 100
+                    sortable: true
+                    type: string
+                    label: clubster.ui.name
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: clubster.ui.create
+                        enabled: true
+                        position: 100
+                item:
+                    update:
+                        type: update
+                        label: clubster.ui.edit
+                        enabled: true
+                        position: 100
+                        options: { }
+                    delete:
+                        type: delete
+                        label: clubster.ui.delete
+                        enabled: true
+                        position: 100
+                        options: { }

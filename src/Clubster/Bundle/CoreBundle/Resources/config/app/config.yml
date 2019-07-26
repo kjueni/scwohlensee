@@ -1,0 +1,16 @@
+imports:
+    - { resource: "@ClubsterCoreBundle/Resources/config/resources.yml" }
+    - { resource: "@ClubsterCoreBundle/Resources/config/grids/user.yml" }
+    - { resource: "@ClubsterCoreBundle/Resources/config/grids/language.yml" }
+
+sylius_mailer:
+    emails:
+        user_invitation:
+            subject: clubster.mails.subject_001
+            template: "@ClubsterCore/Email/001_userInvitation.html.twig"
+        reset_password_token:
+            subject: clubster.mails.subject_002
+            template: "@ClubsterCore/Email/002_passwordReset.html.twig"
+
+clubster_core:
+    firewall_context_name: 'admin'

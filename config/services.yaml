@@ -4,6 +4,9 @@ parameters:
     locale: 'de'
     filesystem_adapter: 'default_local_adapter'
 
+imports:
+    - { resource: "@ClubsterCoreBundle/Resources/config/app/config.yml" }
+
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -17,7 +20,7 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/*'
-        exclude: '../src/{Entity,Migrations,Tests}'
+        exclude: '../src/{Clubster,DependencyInjection,EventListener,Entity,Migrations,Tests,Kernel.php}'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
@@ -36,3 +39,7 @@ services:
                 credentials:
                     key: '%env(AWS_KEY)%'
                     secret: '%env(AWS_SECRET)%'
+
+clubster_core:
+    tmp_dir: '/tmp'
+    stable_version: 0.1

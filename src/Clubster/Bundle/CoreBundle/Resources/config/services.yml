@@ -1,0 +1,7 @@
+services:
+  Clubster\Bundle\CoreBundle\Controller\AuthorizationChecker:
+    decorates: sylius.resource_controller.authorization_checker.disabled
+    arguments:
+      $baseAuthorizationChecker: '@security.authorization_checker'
+      $entityManager: '@doctrine.orm.default_entity_manager'
+      $requestStack: '@request_stack'

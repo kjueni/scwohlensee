@@ -1,0 +1,37 @@
+Clubster\Component\Core\Model\AdminUser:
+    repositoryClass: Clubster\Bundle\CoreBundle\Repository\ORM\AdminUserRepository
+    attributeOverride:
+        password:
+            nullable: true
+
+    table: clubster_admin_user
+    type: entity
+    fields:
+        loginCount:
+            type: integer
+            nullable: true
+            default: 0
+
+        failedLogins:
+            type: integer
+            nullable: true
+            default: 0
+
+        smsAuthentication:
+            type: boolean
+            nullable: false
+
+    oneToOne:
+        profile:
+            targetEntity: Clubster\Component\Core\Model\Profile
+            inversedBy: user
+            cascade: ['persist']
+            joinColumn:
+                name: profile_id
+                referencedColumnName: id
+    manyToOne:
+        language:
+            targetEntity: Cloudtec\Component\Core\Model\Language
+            joinColumn:
+                name: language_id
+                referencedColumnName: id

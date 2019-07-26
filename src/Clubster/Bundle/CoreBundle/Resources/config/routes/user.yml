@@ -1,0 +1,20 @@
+clubster_admin_user:
+    resource: |
+        alias: clubster.admin_user
+        section: admin
+        path: users
+        templates: ClubsterAdminBundle:Crud
+        only: ['index', 'update', 'delete', 'create']
+        redirect: index
+        grid: clubster_admin_user
+        permission: true
+        vars:
+            all:
+                header: clubster.ui.users
+            index:
+                subheader: clubster.ui.list_users
+            update:
+                subheader: clubster.ui.edit_user
+            create:
+                subheader: clubster.ui.create_user
+    type: sylius.resource

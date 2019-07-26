@@ -1,0 +1,119 @@
+sylius_grid:
+    grids:
+        clubster_admin_user:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Clubster\Component\Core\Model\AdminUser
+                    joins:
+                        - profile
+                    repository:
+                        method: createListQueryBuilder
+            sorting:
+                username: asc
+            limits: [10, 25, 50, 100]
+            fields:
+                locked:
+                    type: twig
+                    label: ':'
+                    path: 'profile'
+                    position: 100
+                    sortable: true
+                    options:
+                        vars:
+                            title: clubster.ui.status
+                        template: '@ClubsterAdmin/Grid/Field/userCard.html.twig'
+                username:
+                    type: twig
+                    label: clubster.ui.user
+                    path: '.'
+                    position: 100
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/user.html.twig'
+                language:
+                    type: twig
+                    label: clubster.ui.language
+                    path: language
+                    position: 200
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/name.html.twig'
+                roles:
+                    type: twig
+                    label: clubster.ui.roles
+                    position: 300
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/roles.html.twig'
+                loginCount:
+                    type: twig
+                    label: ':'
+                    sortable: true
+                    position: 400
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/string.html.twig'
+                        vars:
+                            title: clubster.ui.login_count
+                lastLogin:
+                    type: twig
+                    label: clubster.ui.last_login
+                    position: 500
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/date.html.twig'
+                updatedAt:
+                    type: twig
+                    label: clubster.ui.updated_at
+                    position: 600
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/date.html.twig'
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: clubster.ui.create
+                        enabled: true
+                        position: 100
+                item:
+                    update:
+                        type: update
+                        label: clubster.ui.update
+                        enabled: true
+                        position: 100
+                    impersonate:
+                        type: impersonate
+                        label: clubster.ui.impersonate
+                        enabled: true
+                        position: 200
+                        options: { }
+                    delete:
+                        type: delete
+                        label: clubster.ui.delete
+                        enabled: true
+                        position: 300
+                    reset:
+                        type: reset
+                        label: clubster.ui.reset_user
+                        enabled: true
+                        position: 300
+            filters:
+                fulltext:
+                    label: false
+                    type: fulltext
+                    form_options:
+                        size: m
+                    options:
+                        properties:
+                            - profile.firstName
+                            - profile.lastName
+                            - email
+                            - username
+                language:
+                    label: false
+                    type: entity
+                    form_options:
+                        class: 'Clubster\Component\Core\Model\Language'
+                        size: m
+                        placeholder: clubster.ui.choose_language

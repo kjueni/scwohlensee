@@ -1,0 +1,39 @@
+Clubster\Component\Core\Model\Profile:
+    table: clubster_admin_user_profile
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            nullable: false
+            length: 128
+        lastName:
+            type: string
+            nullable: false
+            length: 128
+        phoneNumber:
+            type: string
+            nullable: true
+            length: 16
+        mobileNumber:
+            type: string
+            nullable: true
+            length: 16
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+    oneToOne:
+        user:
+            cascade: ['persist']
+            targetEntity: Clubster\Component\Core\Model\AdminUser
+            mappedBy: profile
