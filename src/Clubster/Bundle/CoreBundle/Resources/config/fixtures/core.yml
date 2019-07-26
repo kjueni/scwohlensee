@@ -1,0 +1,32 @@
+Clubster\Component\Core\Model\Language:
+    german_ch:
+        code: de_CH
+        name: Deutsch
+    english_us:
+        code: en_US
+        name: Englisch
+
+Clubster\Component\Core\Model\Profile:
+    clubster_superadmin_profile:
+        firstName: Super
+        lastName: Admin
+        phoneNumber: '0311112233'
+        mobileNumber: '0791112233'
+
+Clubster\Component\Core\Model\AdminUser:
+    clubster_superadmin:
+        plainPassword: 'password'
+        username: superadmin@clubster.ch
+        usernameCanonical: superadmin@clubster.ch
+        enabled: true
+        verifiedAt: <(new DateTime("2019-01-01 00:00:01"))>
+        locked: 0
+        roles:
+            - ROLE_SUPERADMIN
+        email: superadmin@clubster.ch
+        email_canonical: superadmin@clubster.ch
+        createdAt: <(new DateTime("2019-01-01 00:00:01"))>
+        updatedAt: <(new DateTime("2019-01-01 00:00:01"))>
+        loginCount: 0
+        language: '@german_ch'
+        profile: '@clubster_superadmin_profile'

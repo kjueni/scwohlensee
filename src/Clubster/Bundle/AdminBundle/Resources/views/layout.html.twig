@@ -1,0 +1,54 @@
+{% extends '@ClubsterAdmin/Layout/sidebar.html.twig' %}
+
+{% block title %} | Sylius{% endblock %}
+
+{% block stylesheets %}
+    {% include '@ClubsterAdmin/_stylesheets.html.twig' with {'path': 'assets/admin/css/style.css'} %}
+
+    {{ sonata_block_render_event('clubster.adminlayout.stylesheets') }}
+{% endblock %}
+
+{% block flash_messages %}
+    {% include '@ClubsterAdmin/_flashes.html.twig' %}
+{% endblock %}
+
+{% block topbar %}
+    <a class="icon item" id="sidebar-toggle" title="{{ 'sylius.ui.toggle_sidebar'|trans }}">
+        <i class="sidebar icon"></i>
+    </a>
+
+    {{ sonata_block_render_event('clubster.adminlayout.topbar_left') }}
+
+    {{ render(url('sylius_admin_partial_channel_index', {'template': '@ClubsterAdmin/_channelLinks.html.twig'})) }}
+    {% include '@ClubsterAdmin/_search.html.twig' %}
+
+    <div class="ui left floated dividing empty item"></div>
+
+    {{ sonata_block_render_event('clubster.adminlayout.topbar_middle') }}
+
+    <div class="ui right floated dividing empty item"></div>
+
+    {{ sylius_render_notifications_widget() }}
+    {% include '@ClubsterAdmin/_security.html.twig' %}
+
+    {{ sonata_block_render_event('clubster.adminlayout.topbar_right') }}
+{% endblock %}
+
+{% block sidebar %}
+    {{ sonata_block_render_event('clubster.adminlayout.sidebar_top') }}
+
+    <a class="item" href="{{ path('sylius_admin_dashboard') }}"><b>Sylius</b></a>
+    {{ knp_menu_render('clubster.adminmain', {'template': '@ClubsterAdmin/Menu/sidebar.html.twig', 'currentClass': 'active'}) }}
+
+    {{ sonata_block_render_event('clubster.adminlayout.sidebar_down') }}
+{% endblock %}
+
+{% block footer %}
+    {{ 'sylius.ui.powered_by'|trans }} <a href="http://sylius.com" target="_blank">Sylius v{{ sylius_meta.version }}</a>
+{% endblock %}
+
+{% block javascripts %}
+    {% include '@ClubsterAdmin/_javascripts.html.twig' with {'path': 'assets/admin/js/app.js'} %}
+
+    {{ sonata_block_render_event('clubster.adminlayout.javascripts') }}
+{% endblock %}

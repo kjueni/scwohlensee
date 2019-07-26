@@ -3,6 +3,10 @@
 parameters:
     locale: 'de'
     filesystem_adapter: 'default_local_adapter'
+    version: 0.1.0
+    version_date: 01.04.2019
+    fixtures:
+        - '%kernel.project_dir%/config/fixtures/core.yaml'
 
 imports:
     - { resource: "@ClubsterCoreBundle/Resources/config/app/config.yml" }

@@ -10,3 +10,9 @@ news-detail:
 page-detail:
     path: /page/detail/{url}
     controller: 'App\Controller\PageController:detailAction'
+
+admin:
+    prefix: /{_locale}/admin
+    resource: "routes/admin.yaml"
+    requirements:
+        _locale: ^[a-z]{2}$

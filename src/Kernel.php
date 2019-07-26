@@ -14,14 +14,28 @@ class Kernel extends BaseKernel
 
     const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
-    public function getCacheDir()
+    /**
+     * @return string
+     */
+    public function getCacheDir(): string
     {
-        return $this->getProjectDir().'/var/cache/'.$this->environment;
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            return '/dev/shm/clubster/cache/' . $this->environment;
+        }
+
+        return $this->getProjectDir() . '/var/cache/' . $this->environment;
     }
 
-    public function getLogDir()
+    /**
+     * @return string
+     */
+    public function getLogDir(): string
     {
-        return $this->getProjectDir().'/var/log';
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            return '/dev/shm/clubster/logs/' . $this->environment;
+        }
+
+        return $this->getProjectDir() . '/var/log';
     }
 
     public function registerBundles()

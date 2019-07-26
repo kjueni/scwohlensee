@@ -25,7 +25,3 @@ Clubster\Component\Core\Model\Language:
         updatedAt:
             type: datetime
             nullable: true
-
-        enabled:
-            type: boolean
-            nullable: false

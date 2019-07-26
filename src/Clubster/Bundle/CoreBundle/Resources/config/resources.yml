@@ -4,7 +4,7 @@ sylius_resource:
             classes:
                 model: Clubster\Component\Core\Model\Language
 
-        cloudtec.profile:
+        clubster.profile:
             classes:
                 model: Clubster\Component\Core\Model\Profile
                 form: Clubster\Bundle\CoreBundle\Form\Type\ProfileType

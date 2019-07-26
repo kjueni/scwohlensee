@@ -7,3 +7,35 @@ services:
         # this means you cannot fetch services directly from the container via $container->get()
         # if you need to do this, you can override this setting on individual services
         public: false
+
+    Clubster\Bundle\AdminBundle\Controller\:
+        resource: '../../Controller'
+        tags: ['controller.service_arguments']
+
+    clubster.twig.extension.sort_by:
+        class: Clubster\Bundle\AdminBundle\Twig\SortByExtension
+        tags:
+            - { name: twig_extension }
+
+    clubster.twig.extension.locale:
+        class: Clubster\Bundle\AdminBundle\Twig\LocaleExtension
+        arguments:
+            $localeHelper: '@clubster.templating.helper.locale'
+        tags:
+            - { name: twig_extension }
+
+    clubster.templating.helper.locale:
+        class: Clubster\Bundle\AdminBundle\Templating\Helper\LocaleHelper
+        arguments:
+            $localeConverter: '@clubster.converter.locale'
+            $localeContext: '@clubster.context.locale'
+        tags:
+            - { name: templating.helper, alias: clubster_locale }
+
+    clubster.context.locale:
+        class: Clubster\Component\Core\Context\ImmutableLocaleContext
+        arguments:
+            $localeCode: '%locale%'
+
+    clubster.converter.locale:
+        class: Clubster\Component\Core\Converter\LocaleConverter

@@ -7,7 +7,7 @@ namespace Clubster\Component\Core\Model;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Component\Resource\Model\TimestampableTrait;
 
-class Language implements ResourceInterface
+class Language implements ResourceInterface, LocaleInterface
 {
     use TimestampableTrait;
 
@@ -51,9 +51,10 @@ class Language implements ResourceInterface
     }
 
     /**
+     * @param string|null $locale
      * @return string|null
      */
-    public function getName(): ?string
+    public function getName(?string $locale = null): ?string
     {
         return $this->name;
     }

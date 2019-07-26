@@ -1,6 +1,6 @@
 clubster_admin_profile:
     resource: |
-        alias: clubster.admin_profile
+        alias: clubster.profile
         section: admin
         path: profiles
         templates: ClubsterAdminBundle:Crud

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Clubster\Bundle\CoreBundle\DependencyInjection;
 
-use Clubster\Component\Core\Model\AdminUser;
+use Clubster\Component\Core\Fixture\FixtureAwareInterface;
 use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class ClubsterCoreExtension extends AbstractResourceExtension
+final class ClubsterCoreExtension extends AbstractResourceExtension implements FixtureAwareInterface
 {
     /**
      * @param array $config
@@ -54,5 +54,13 @@ final class ClubsterCoreExtension extends AbstractResourceExtension
         }
 
         return $resolvedResources;
+    }
+
+    /**
+     * @return string
+     */
+    public static function getFixturesPath(): string
+    {
+        return __DIR__ . '/../Resources/config/fixtures';
     }
 }

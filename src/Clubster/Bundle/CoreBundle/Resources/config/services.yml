@@ -5,3 +5,31 @@ services:
       $baseAuthorizationChecker: '@security.authorization_checker'
       $entityManager: '@doctrine.orm.default_entity_manager'
       $requestStack: '@request_stack'
+
+  clubster.fixtures.load:
+    class: Clubster\Bundle\CoreBundle\Command\LoadFixturesCommand
+    arguments:
+      $doctrine: '@doctrine.orm.default_entity_manager'
+    tags:
+      - { name: console.command }
+
+  clubster.voter.user:
+    class: Clubster\Bundle\CoreBundle\Security\Voter\AdminUserVoter
+    arguments:
+      $decisionManager: '@security.access.decision_manager'
+    tags:
+      - security.voter
+
+  clubster.voter.language:
+    class: Clubster\Bundle\CoreBundle\Security\Voter\LanguageVoter
+    arguments:
+      $decisionManager: '@security.access.decision_manager'
+    tags:
+      - security.voter
+
+  clubster.voter.profile:
+    class: Clubster\Bundle\CoreBundle\Security\Voter\ProfileVoter
+    arguments:
+      $decisionManager: '@security.access.decision_manager'
+    tags:
+      - security.voter

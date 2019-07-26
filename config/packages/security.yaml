@@ -1,6 +1,6 @@
 parameters:
     clubster.security.api_regex: "^/api"
-    clubster.security.admin_regex: "^/(?!api/.*|api$|media/.*|_wdt|_profiler)[^/]*"
+    clubster.security.admin_regex: "^/[a-z]{2}/admin"
 
 security:
     access_decision_manager:
@@ -15,8 +15,6 @@ security:
     encoders:
         Sylius\Component\User\Model\UserInterface: argon2i
     firewalls:
-        website:
-            security: false
         admin:
             switch_user: true
             context: admin

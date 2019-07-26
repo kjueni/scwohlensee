@@ -12,10 +12,6 @@ Clubster\Component\Core\Model\Profile:
             -   Length:
                     max: 128
                     maxMessage: clubster.validators.max_length
-        gender:
-            -   NotBlank:
-                    message: clubster.validators.not_blank
-            -   Valid: ~
         phoneNumber:
             -   Length:
                     min: 10

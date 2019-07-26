@@ -31,7 +31,7 @@ Clubster\Component\Core\Model\AdminUser:
                 referencedColumnName: id
     manyToOne:
         language:
-            targetEntity: Cloudtec\Component\Core\Model\Language
+            targetEntity: Clubster\Component\Core\Model\Language
             joinColumn:
                 name: language_id
                 referencedColumnName: id
