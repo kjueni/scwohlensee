@@ -16,7 +16,7 @@
             </div>
         {% endif %}
 
-        {{ form_start(form, {'action': action|default('/'), 'attr': {'class': 'ui large loadable form', 'novalidate': 'novalidate'}}) }}
+        {{ form_start(form, {'action': path('clubster_admin_login_check'), 'attr': {'class': 'ui large loadable form', 'novalidate': 'novalidate'}}) }}
             <div class="ui left aligned segment">
                 {{ form_row(form._username, {'value': last_username|default('')}) }}
                 {{ form_row(form._password) }}

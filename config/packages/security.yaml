@@ -33,7 +33,7 @@ security:
                 csrf_token_id: admin_authenticate
             remember_me:
                 secret: "%env(APP_SECRET)%"
-                path: /
+                path: /admin
                 name: APP_REMEMBER_ME
                 lifetime: 31536000
                 remember_me_parameter: _remember_me

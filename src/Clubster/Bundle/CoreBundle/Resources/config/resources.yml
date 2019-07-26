@@ -17,3 +17,10 @@ sylius_user:
                     repository: Clubster\Bundle\CoreBundle\Repository\ORM\AdminUserRepository
                     form: Clubster\Bundle\CoreBundle\Form\Type\AdminUserType
                     controller: Clubster\Bundle\CoreBundle\Controller\UserController
+        oauth:
+            user:
+                #                encoder: false
+                classes:
+                    model: Sylius\Component\User\Model\UserOAuth
+                    interface: Sylius\Component\User\Model\UserOAuthInterface
+                    controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
