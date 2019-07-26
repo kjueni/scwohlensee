@@ -1,0 +1,67 @@
+{
+    "name": "kjueni/clubster-admin-bundle",
+    "type": "symfony-bundle",
+    "description": "UI management for Symfony projects.",
+    "keywords": [
+    ],
+    "homepage": "https://github.com/kjueni",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Jüni",
+            "homepage": "https://github.com/kjueni"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/framework-bundle": "^3.4|^4.1.1",
+        "liip/imagine-bundle": "^2.0",
+        "sylius/grid-bundle": "^1.4",
+        "cloudtec/core-bundle": "self.version"
+    },
+    "require-dev": {
+        "matthiasnoback/symfony-dependency-injection-test": "^2.0",
+        "php-http/guzzle6-adapter": "^1.1",
+        "phpunit/phpunit": "^7.0",
+        "symfony/dependency-injection": "^3.4|^4.1.1",
+        "symfony/security-bundle": "^3.4|^4.1.1",
+        "symfony/swiftmailer-bundle": "^3.1"
+    },
+    "suggest": {
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clubster\\Bundle\\AdminBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Clubster\\Bundle\\AdminBundle\\Tests\\": "tests/"
+        },
+        "files": [
+            "Tests/Functional/app/AppKernel.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": [
+            "@composer validate --strict",
+            "Tests/Functional/bin/console cache:clear --no-warmup --ansi --no-interaction",
+            "Tests/Functional/bin/console doctrine:database:create --if-not-exists --ansi --no-interaction",
+            "Tests/Functional/bin/console doctrine:schema:update --force --ansi --no-interaction",
+            "bin/phpunit --colors=always"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}

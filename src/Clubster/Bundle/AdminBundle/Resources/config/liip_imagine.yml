@@ -1,0 +1,14 @@
+liip_imagine:
+    resolvers:
+        default:
+            web_path:
+                cache_prefix: 'img/cache'
+    filter_sets:
+        user_profile_mini_thumbnail:
+            quality: 90
+            filters:
+                thumbnail: { size: [60, 60], mode: outbound }
+        user_profile_medium_thumbnail:
+            quality: 90
+            filters:
+                thumbnail: { size: [300, 300], mode: outbound }

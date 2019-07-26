@@ -6,7 +6,7 @@
     "core"
   ],
   "homepage": "https://github.com/kjueni",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Kevin Jüni",

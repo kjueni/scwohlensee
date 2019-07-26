@@ -1,0 +1,27 @@
+imports:
+    - '@ClubsterAdminBundle/Resources/config/liip_imagine.yml'
+
+sylius_grid:
+    templates:
+        action:
+            default: "@ClubsterAdmin/Grid/Action/default.html.twig"
+            create: "@ClubsterAdmin/Grid/Action/create.html.twig"
+            delete: "@ClubsterAdmin/Grid/Action/delete.html.twig"
+            show: "@ClubsterAdmin/Grid/Action/show.html.twig"
+            update: "@ClubsterAdmin/Grid/Action/update.html.twig"
+            apply_transition: "@ClubsterAdmin/Grid/Action/applyTransition.html.twig"
+            links: "@ClubsterAdmin/Grid/Action/links.html.twig"
+            archive: "@ClubsterAdmin/Grid/Action/archive.html.twig"
+            impersonate: "@ClubsterAdmin/Grid/Action/impersonate.html.twig"
+            reset: "@ClubsterAdmin/Grid/Action/reset.html.twig"
+        filter:
+            string: "@ClubsterAdmin/Grid/Filter/string.html.twig"
+            boolean: "@ClubsterAdmin/Grid/Filter/boolean.html.twig"
+            date: "@ClubsterAdmin/Grid/Filter/date.html.twig"
+            entity: "@ClubsterAdmin/Grid/Filter/entity.html.twig"
+            money: "@ClubsterAdmin/Grid/Filter/money.html.twig"
+            exists: "@ClubsterAdmin/Grid/Filter/exists.html.twig"
+            fulltext: "@ClubsterAdmin/Grid/Filter/fulltext.html.twig"
+        bulk_action:
+            delete: "@ClubsterAdmin/Grid/BulkAction/delete.html.twig"
+
