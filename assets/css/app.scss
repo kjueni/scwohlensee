@@ -57,6 +57,11 @@ $fontello-font-name : "fontello";
   border-bottom: 0.5rem solid $scw-yellow;
 }
 
+.top-bar, .top-bar ul {
+  background-color: rgba(38, 56, 134, 0.7);
+  background: rgb(38, 56, 134);
+}
+
 // SCW-Styles
 //------------------------------
 // Header

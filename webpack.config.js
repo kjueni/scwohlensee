@@ -35,7 +35,10 @@ Encore
 
 //const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-var config = Encore.getWebpackConfig();
+const config = Encore.getWebpackConfig();
+config.watchOptions = {
+    poll: true,
+};
 
 /*config.plugins = [
     new UglifyJSPlugin()
