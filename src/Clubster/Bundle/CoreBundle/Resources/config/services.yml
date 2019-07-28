@@ -33,3 +33,12 @@ services:
       $decisionManager: '@security.access.decision_manager'
     tags:
       - security.voter
+
+  clubster.menu.admin_builder_main:
+    class: Clubster\Bundle\CoreBundle\Menu\MainMenuBuilder
+    arguments:
+      $factory: '@knp_menu.factory'
+      $eventDispatcher: '@event_dispatcher'
+      $authorizationChecker: '@security.authorization_checker'
+    tags:
+      - { name: knp_menu.menu_builder, method: createMenu, alias: clubster.admin.main }

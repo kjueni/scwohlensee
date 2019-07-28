@@ -1,5 +1,15 @@
 {% extends '@ClubsterAdmin/Layout/centered.html.twig' %}
 
+{% block stylesheets %}
+    {% include '@ClubsterAdmin/_stylesheets.html.twig' with {'path': 'build/app.css'} %}
+
+    {{ sonata_block_render_event('clubster.adminlayout.stylesheets') }}
+{% endblock %}
+
+{% block flash_messages %}
+    {% include '@ClubsterAdmin/_flashes.html.twig' %}
+{% endblock %}
+
 {% block content %}
 {% include '@ClubsterAdmin/Security/_login.html.twig' %}
 {% endblock %}

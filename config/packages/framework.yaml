@@ -14,6 +14,8 @@ framework:
     php_errors:
         log: true
 
+    templating: { engines: ['twig'] }
+
 oneup_flysystem:
     adapters:
         default_local_adapter:

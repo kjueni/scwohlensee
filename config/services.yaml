@@ -9,6 +9,7 @@ parameters:
         - '%kernel.project_dir%/config/fixtures/core.yaml'
 
 imports:
+    - { resource: "@ClubsterAdminBundle/Resources/config/app/config.yml" }
     - { resource: "@ClubsterCoreBundle/Resources/config/app/config.yml" }
 
 services:

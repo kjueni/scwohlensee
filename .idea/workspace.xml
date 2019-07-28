@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f702e07-10c9-41a6-9267-e1e7b8674d4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/_login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/_login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/ClubsterCoreBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/ClubsterCoreBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/resources.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/resources.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Create/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Create/_breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Update/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Update/_breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/centered.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/centered.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,38 +39,38 @@
           <entry key="_my_cnf" value="1" />
           <entry key="cnf" value="2" />
           <entry key="conf" value="2" />
-          <entry key="css" value="1" />
+          <entry key="css" value="2" />
           <entry key="dist" value="1" />
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="ico" value="1" />
           <entry key="ini" value="1" />
-          <entry key="js" value="5" />
-          <entry key="json" value="14" />
+          <entry key="js" value="6" />
+          <entry key="json" value="15" />
           <entry key="lock" value="1" />
           <entry key="off" value="1" />
-          <entry key="php" value="79" />
-          <entry key="scss" value="1" />
+          <entry key="php" value="81" />
+          <entry key="scss" value="3" />
           <entry key="scwohlensee" value="1" />
           <entry key="sh" value="2" />
-          <entry key="twig" value="12" />
-          <entry key="yaml" value="38" />
-          <entry key="yml" value="39" />
+          <entry key="twig" value="25" />
+          <entry key="yaml" value="40" />
+          <entry key="yml" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="2" />
           <entry key="Image" value="1" />
           <entry key="Ini" value="1" />
-          <entry key="JSON" value="14" />
-          <entry key="JavaScript" value="5" />
-          <entry key="PHP" value="79" />
+          <entry key="JSON" value="15" />
+          <entry key="JavaScript" value="6" />
+          <entry key="PHP" value="81" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="SCSS" value="1" />
+          <entry key="SCSS" value="3" />
           <entry key="SmartyConfig" value="2" />
-          <entry key="Twig" value="12" />
-          <entry key="YAML" value="77" />
+          <entry key="Twig" value="25" />
+          <entry key="YAML" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -77,24 +82,24 @@
           <entry key="env" value="46" />
           <entry key="js" value="2" />
           <entry key="json" value="156" />
-          <entry key="php" value="704" />
+          <entry key="php" value="780" />
           <entry key="scss" value="70" />
           <entry key="scwohlensee" value="24" />
           <entry key="sh" value="39" />
-          <entry key="twig" value="54" />
-          <entry key="yaml" value="171" />
-          <entry key="yml" value="1204" />
+          <entry key="twig" value="128" />
+          <entry key="yaml" value="183" />
+          <entry key="yml" value="1232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="156" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="704" />
+          <entry key="PHP" value="780" />
           <entry key="PLAIN_TEXT" value="174" />
           <entry key="SCSS" value="70" />
-          <entry key="Twig" value="54" />
-          <entry key="YAML" value="1375" />
+          <entry key="Twig" value="128" />
+          <entry key="YAML" value="1415" />
         </counts>
       </usages-collector>
     </session>
@@ -102,91 +107,83 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sylius/user/Model/UserOAuth.php">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+            <state relative-caret-position="265">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sylius/user/Model/UserOAuthInterface.php">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="120">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/bundles.php">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+            <state relative-caret-position="45">
+              <caret line="3" column="86" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="26" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="27" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/resources.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/ClubsterCoreBundle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes/admin.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/routes.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/app/config.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/_login.html.twig">
+        <entry file="file://$PROJECT_DIR$/config/services.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state relative-caret-position="150">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_search.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Menu/MainMenuBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/login.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="42" selection-start-column="34" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -204,11 +201,14 @@
       <find>gender</find>
       <find>sylius_locale_name</find>
       <find>UserOAuthInterface</find>
+      <find>cloud</find>
+      <find>sylius_admin_dashboard</find>
     </findStrings>
     <replaceStrings>
       <replace>vagrant</replace>
       <replace>ClubsterAdmin</replace>
       <replace>clubster.admin</replace>
+      <replace>clubster_admin_dashboard</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -216,6 +216,7 @@
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle</dir>
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -224,16 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/DependencyInjection/ClubsterAdminExtension.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/liip_imagine.yml" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/app/config.yml" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/composer.json" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/composer.json" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/routes/user.yml" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/routes/profile.yml" />
-        <option value="$PROJECT_DIR$/config/routes/admin.yaml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Controller/DashboardController.php" />
         <option value="$PROJECT_DIR$/config/packages/translation.yaml" />
         <option value="$PROJECT_DIR$/src/Kernel.php" />
@@ -264,17 +255,27 @@
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/fixtures/test.yml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/CompilerPass/CollectFixturesPass.php" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Command/LoadFixturesCommand.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Security/Voter/AdminUserVoter.php" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Security/Voter/LanguageVoter.php" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Security/Voter/ProfileVoter.php" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/config/bundles.php" />
         <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/resources.yml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/ClubsterCoreBundle.php" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/_login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/centered.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Dashboard/index.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Menu/Event/MenuBuilderEvent.php" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Menu/MainMenuBuilder.php" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
       </list>
     </option>
   </component>
@@ -473,6 +474,17 @@
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
               <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -501,6 +513,17 @@
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
               <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -523,15 +546,6 @@
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="DependencyInjection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -560,6 +574,17 @@
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -571,7 +596,7 @@
               <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
+              <item name="Crud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -582,7 +607,19 @@
               <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
+              <item name="Crud" type="462c0819:PsiDirectoryNode" />
+              <item name="Index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -665,6 +702,25 @@
               <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Form" type="462c0819:PsiDirectoryNode" />
               <item name="Type" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+              <item name="Event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -861,11 +917,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Command" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Command" />
       <recent name="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config" />
       <recent name="$PROJECT_DIR$/src/Clubster/Component/Core" />
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Security/Voter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -891,12 +947,12 @@
       <option name="presentableId" value="Default" />
       <updated>1552742795220</updated>
       <workItem from="1552742799030" duration="2084000" />
-      <workItem from="1564163099244" duration="11149000" />
+      <workItem from="1564163099244" duration="12472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14281000" />
+    <option name="totallyTimeSpent" value="15604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="195" y="42" width="1298" height="877" extended-state="0" />
@@ -930,142 +986,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Model/AdminUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Controller/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/translation.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security_checker.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/theme.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="171" column="14" lean-forward="true" selection-start-line="171" selection-start-column="14" selection-end-line="171" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Context/ProviderBasedLocaleContext.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Context/LocaleNotFoundException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Context/LocaleContextInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Context/CompositeLocaleContext.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Converter/LocaleConverter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Converter/LocaleConverterInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Provider/LocaleProviderInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Provider/LocaleProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="97" lean-forward="true" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Model/LocaleInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Core/Model/Language.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Templating/Helper/LocaleHelperInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Twig/SortByExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Templating/Helper/LocaleHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1163,13 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Security/Voter/AdminUserVoter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1193,13 +1106,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/fixtures/core.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sylius/user/Model/UserOAuth.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1259,8 +1165,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="153">
           <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2642" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/foundationSettings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12435" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67036" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_stylesheets.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/centered.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1268,6 +1205,95 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/theme.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Dashboard/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="55" selection-start-column="55" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Menu/Event/MenuBuilderEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Menu/MainMenuBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_notification.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_search.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="86" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/app/config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
     </entry>

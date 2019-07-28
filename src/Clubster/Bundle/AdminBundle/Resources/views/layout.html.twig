@@ -1,9 +1,9 @@
 {% extends '@ClubsterAdmin/Layout/sidebar.html.twig' %}
 
-{% block title %} | Sylius{% endblock %}
+{% block title %} | Clubster{% endblock %}
 
 {% block stylesheets %}
-    {% include '@ClubsterAdmin/_stylesheets.html.twig' with {'path': 'assets/admin/css/style.css'} %}
+    {% include '@ClubsterAdmin/_stylesheets.html.twig' with {'path': 'build/app.css'} %}
 
     {{ sonata_block_render_event('clubster.adminlayout.stylesheets') }}
 {% endblock %}
@@ -19,8 +19,7 @@
 
     {{ sonata_block_render_event('clubster.adminlayout.topbar_left') }}
 
-    {{ render(url('sylius_admin_partial_channel_index', {'template': '@ClubsterAdmin/_channelLinks.html.twig'})) }}
-    {% include '@ClubsterAdmin/_search.html.twig' %}
+    {#{% include '@ClubsterAdmin/_search.html.twig' %}#}
 
     <div class="ui left floated dividing empty item"></div>
 
@@ -28,7 +27,6 @@
 
     <div class="ui right floated dividing empty item"></div>
 
-    {{ sylius_render_notifications_widget() }}
     {% include '@ClubsterAdmin/_security.html.twig' %}
 
     {{ sonata_block_render_event('clubster.adminlayout.topbar_right') }}
@@ -37,8 +35,8 @@
 {% block sidebar %}
     {{ sonata_block_render_event('clubster.adminlayout.sidebar_top') }}
 
-    <a class="item" href="{{ path('sylius_admin_dashboard') }}"><b>Sylius</b></a>
-    {{ knp_menu_render('clubster.adminmain', {'template': '@ClubsterAdmin/Menu/sidebar.html.twig', 'currentClass': 'active'}) }}
+    <a class="item" href="{{ path('clubster_admin_dashboard') }}"><b>Clubster</b></a>
+    {{ knp_menu_render('clubster.admin.main', {'template': '@ClubsterAdmin/Menu/sidebar.html.twig', 'currentClass': 'active'}) }}
 
     {{ sonata_block_render_event('clubster.adminlayout.sidebar_down') }}
 {% endblock %}
