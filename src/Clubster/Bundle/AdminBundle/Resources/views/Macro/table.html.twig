@@ -10,12 +10,12 @@
             {% if field.isSortable %}
                 {{ sorting.tableHeader(grid, field, requestAttributes) }}
             {% else %}
-                <th class="sylius-table-column-{{ field.name }}">{{ field.label|trans }}</th>
+                <th class="clubster-table-column-{{ field.name }}">{{ field.label|trans }}</th>
             {% endif %}
         {% endif %}
     {% endfor %}
     {% if definition.actionGroups.item is defined and definition.getEnabledActions('item')|length > 0 %}
-        <th class="sylius-table-column-actions">{{ 'clubster.ui.actions'|trans }}</th>
+        <th class="clubster-table-column-actions">{{ 'clubster.ui.actions'|trans }}</th>
     {% endif %}
 {% endmacro %}
 

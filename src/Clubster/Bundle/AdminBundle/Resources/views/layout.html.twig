@@ -3,7 +3,7 @@
 {% block title %} | Clubster{% endblock %}
 
 {% block stylesheets %}
-    {% include '@ClubsterAdmin/_stylesheets.html.twig' with {'path': 'build/app.css'} %}
+    {% include '@ClubsterAdmin/_stylesheets.html.twig' with {'path': 'build/admin.css'} %}
 
     {{ sonata_block_render_event('clubster.adminlayout.stylesheets') }}
 {% endblock %}
@@ -42,11 +42,11 @@
 {% endblock %}
 
 {% block footer %}
-    {{ 'clubster.ui.powered_by'|trans }} <a href="http://sylius.com" target="_blank">Sylius v{{ sylius_meta.version }}</a>
+    {{ 'clubster.ui.powered_by'|trans }} <a href="http://sylius.com" target="_blank">Clubster v{{ sylius_meta.version }}</a>
 {% endblock %}
 
 {% block javascripts %}
-    {% include '@ClubsterAdmin/_javascripts.html.twig' with {'path': 'assets/admin/js/app.js'} %}
+    {% include '@ClubsterAdmin/_javascripts.html.twig' with {'path': 'build/admin.js'} %}
 
     {{ sonata_block_render_event('clubster.adminlayout.javascripts') }}
 {% endblock %}

@@ -10,6 +10,7 @@ Encore
     // will create public/build/app.js and public/build/app.css
     .addEntry('app', './assets/js/app.js')
     .addEntry('favicon', './assets/img/favicon.ico')
+    .addEntry('admin', './assets/js/admin.js')
 
     // allow sass/scss files to be processed
     .enableSassLoader(function(sassOptions) {

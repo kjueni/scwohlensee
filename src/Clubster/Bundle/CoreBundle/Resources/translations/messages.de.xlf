@@ -104,7 +104,7 @@
             </trans-unit>
             <trans-unit id="clubster.ui.filter">
                 <source>clubster.ui.filter</source>
-                <target>Filter</target>
+                <target>Anwenden</target>
             </trans-unit>
             <trans-unit id="clubster.ui.clear_filters">
                 <source>clubster.ui.clear_filters</source>
@@ -158,7 +158,7 @@
                 <source>clubster.ui.hour</source>
                 <target>Uhr</target>
             </trans-unit>
-            
+
             <trans-unit id="sylius.ui.admin_users">
                 <source>sylius.ui.admin_users</source>
                 <target>Benutzer</target>

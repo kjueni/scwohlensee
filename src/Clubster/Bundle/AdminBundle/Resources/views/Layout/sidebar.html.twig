@@ -17,41 +17,46 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
     {% endblock %}
 </head>
 
 <body>
-<div class="grid-x">
-    <div class="cell">
+<div class="container-fluid">
+    <div class="row">
         {% block topbar %}
         {% endblock %}
     </div>
 </div>
-<div class="grid-x">
-    <div class="cell medium-6 large-2">
-        {% block sidebar %}
-        {% endblock %}
-    </div>
-    <div class="cell medium-6 large-10">
-        <div id="content">
-            {% block flash_messages %}
-                {% include '@ClubsterAdmin/_flashes.html.twig' %}
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-sm-2" id="sidebar">
+            {% block sidebar %}
             {% endblock %}
+        </nav>
+        <div class="col-sm-8">
+            <div id="content">
+                {% block flash_messages %}
+                    {% include '@ClubsterAdmin/_flashes.html.twig' %}
+                {% endblock %}
 
-            {% block pre_content %}
-            {% endblock %}
+                {% block pre_content %}
+                {% endblock %}
 
-            {% block content %}
-            {% endblock %}
+                {% block content %}
+                {% endblock %}
 
-            {% block post_content %}
-            {% endblock %}
+                {% block post_content %}
+                {% endblock %}
+            </div>
         </div>
     </div>
 </div>
 
 {% include '@ClubsterAdmin/Modal/_confirmation.html.twig' %}
 
+<script src="{{ asset('build/admin.js') }}"></script>
+<script src="{{ asset('build/favicon.js') }}"></script>
 {% block javascripts %}
 {% endblock %}
 </body>
