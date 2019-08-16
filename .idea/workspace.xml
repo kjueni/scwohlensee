@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f702e07-10c9-41a6-9267-e1e7b8674d4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Create/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Create/_breadcrumb.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Update/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Update/_breadcrumb.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_cancel.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_cancel.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_update.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_update.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/imagesTheme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/imagesTheme.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/theme.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/archive.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/archive.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/date.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/date.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/label.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/label.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/logAction.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/logAction.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/state.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/state.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/userCard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/userCard.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_default.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_default.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_history.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_history.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/breadcrumb.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/buttons.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/buttons.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/labels.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/labels.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/messages.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/messages.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/pagination.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Modal/_confirmation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Modal/_confirmation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_flashes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_flashes.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_search.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +45,7 @@
           <entry key="scwohlensee" value="1" />
           <entry key="sh" value="2" />
           <entry key="twig" value="54" />
-          <entry key="xlf" value="3" />
+          <entry key="xlf" value="4" />
           <entry key="yaml" value="40" />
           <entry key="yml" value="47" />
         </counts>
@@ -84,7 +58,7 @@
           <entry key="JSON" value="15" />
           <entry key="JavaScript" value="6" />
           <entry key="PHP" value="106" />
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="PLAIN_TEXT" value="18" />
           <entry key="SCSS" value="3" />
           <entry key="SmartyConfig" value="2" />
           <entry key="Twig" value="54" />
@@ -105,7 +79,7 @@
           <entry key="scwohlensee" value="24" />
           <entry key="sh" value="39" />
           <entry key="twig" value="319" />
-          <entry key="xlf" value="57" />
+          <entry key="xlf" value="431" />
           <entry key="yaml" value="183" />
           <entry key="yml" value="1277" />
         </counts>
@@ -115,7 +89,7 @@
           <entry key="JSON" value="156" />
           <entry key="JavaScript" value="2" />
           <entry key="PHP" value="822" />
-          <entry key="PLAIN_TEXT" value="231" />
+          <entry key="PLAIN_TEXT" value="605" />
           <entry key="SCSS" value="70" />
           <entry key="Twig" value="319" />
           <entry key="YAML" value="1460" />
@@ -124,7 +98,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="160" column="12" selection-start-line="160" selection-start-column="12" selection-end-line="160" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -208,7 +192,6 @@
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/validators.de.xlf" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Menu/MainMenuBuilder.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Menu/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_default.html.twig" />
@@ -227,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/impersonate.html.twig" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/reset.html.twig" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/buttons.html.twig" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf" />
       </list>
     </option>
   </component>
@@ -496,219 +480,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Crud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Crud" type="462c0819:PsiDirectoryNode" />
-              <item name="Index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Grid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="Action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Macro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Templating" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Templating" type="462c0819:PsiDirectoryNode" />
-              <item name="Helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Twig" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CompilerPass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="DependencyInjection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Grid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="Filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -727,37 +499,7 @@
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="grids" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
-              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+              <item name="translations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -892,15 +634,16 @@
       <updated>1552742795220</updated>
       <workItem from="1552742799030" duration="2084000" />
       <workItem from="1564163099244" duration="14955000" />
-      <workItem from="1565980914470" duration="1127000" />
+      <workItem from="1565980914470" duration="1658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19214000" />
+    <option name="totallyTimeSpent" value="19745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-25" y="23" width="1298" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25796178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -948,13 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1204,6 +940,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/translations/messages.de.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="160" column="12" selection-start-line="160" selection-start-column="12" selection-end-line="160" selection-end-column="12" />
         </state>
       </provider>
     </entry>

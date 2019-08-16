@@ -10,6 +10,14 @@
                 <source>clubster.ui.no</source>
                 <target>Nein</target>
             </trans-unit>
+            <trans-unit id="clubster.ui.yes_label">
+                <source>clubster.ui.yes_label</source>
+                <target>Ja</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.no_label">
+                <source>clubster.ui.no_label</source>
+                <target>Nein</target>
+            </trans-unit>
             <trans-unit id="clubster.ui.type">
                 <source>clubster.ui.type</source>
                 <target>Typ</target>
@@ -77,6 +85,83 @@
             <trans-unit id="clubster.ui.code">
                 <source>clubster.ui.code</source>
                 <target>Code</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.users">
+                <source>clubster.ui.users</source>
+                <target>Benutzer</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.list_users">
+                <source>clubster.ui.list_users</source>
+                <target>Benutzer anzeigen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.logout">
+                <source>clubster.ui.logout</source>
+                <target>Abmelden</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.filters">
+                <source>clubster.ui.filters</source>
+                <target>Filter</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.filter">
+                <source>clubster.ui.filter</source>
+                <target>Filter</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.clear_filters">
+                <source>clubster.ui.clear_filters</source>
+                <target>Filter zurücksetzen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.administration">
+                <source>clubster.ui.administration</source>
+                <target>Administration</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.my_account">
+                <source>clubster.ui.my_account</source>
+                <target>Benutzerkonto</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.user">
+                <source>clubster.ui.user</source>
+                <target>Benutzer</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.language">
+                <source>clubster.ui.language</source>
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.roles">
+                <source>clubster.ui.roles</source>
+                <target>Rollen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.last_login">
+                <source>clubster.ui.last_login</source>
+                <target>Letzer Login</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.updated_at">
+                <source>clubster.ui.updated_at</source>
+                <target>Aktualisiert am</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.actions">
+                <source>clubster.ui.actions</source>
+                <target>Aktionen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.update">
+                <source>clubster.ui.update</source>
+                <target>Editieren</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.confirm_your_action">
+                <source>clubster.ui.confirm_your_action</source>
+                <target>Aktion bestätigen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.are_your_sure_you_want_to_perform_this_action">
+                <source>clubster.ui.are_your_sure_you_want_to_perform_this_action</source>
+                <target>Soll diese Aktion wirklich durchgeführt werden?</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.hour">
+                <source>clubster.ui.hour</source>
+                <target>Uhr</target>
+            </trans-unit>
+            
+            <trans-unit id="sylius.ui.admin_users">
+                <source>sylius.ui.admin_users</source>
+                <target>Benutzer</target>
             </trans-unit>
          </body>
     </file>
