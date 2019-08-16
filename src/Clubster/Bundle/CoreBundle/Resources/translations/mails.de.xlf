@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="clubster.mails.footer_no_reply">
+                <source>clubster.mails.footer_no_reply</source>
+                <target>(Dies ist eine automatisch vom System generierte Bestätigungs-E-Mail. Sie dient nur als Information und nicht zur Korrespondenz. Sollten Sie Fragen haben, wenden Sie sich bitte an %supportemail%)</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.footer_phone">
+                <source>clubster.mails.footer_phone</source>
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.footer_email">
+                <source>clubster.mails.footer_email</source>
+                <target>E-Mail</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.salutation_generic">
+                <source>clubster.mails.salutation_generic</source>
+                <target>Guten Tag</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.salutation_default">
+                <source>clubster.mails.salutation_default</source>
+                <target>Sehr geehrte Damen und Herren</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.salutation_male">
+                <source>clubster.mails.salutation_male</source>
+                <target>Sehr geehrter Herr</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.salutation_female">
+                <source>clubster.mails.salutation_female</source>
+                <target>Sehr geehrte Frau</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.subject_001">
+                <source>clubster.mails.subject_001</source>
+                <target>Zugangsdaten</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.welcome_001">
+                <source>clubster.mails.welcome_001</source>
+                <target>Willkommen bei %portal%!.</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.intro_001">
+                <source>clubster.mails.intro_001</source>
+                <target>Wir haben für Sie ein Benutzerkonto erstellt. Um das Konto zu aktivieren und ein individuelles Passwort festzulegen, klicken Sie bitte auf folgenden Link:</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.body_001">
+                <source>clubster.mails.body_001</source>
+                <target>Hinweis: Sie müssen die Aktivierung innerhalb von 14 Tagen vornehmen. Sie können jederzeit den Vorgang wiederholen und einen neuen Login-Link zum Aktivieren des Benutzerkontos anfordern.</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.outro_001">
+                <source>clubster.mails.outro_001</source>
+                <target>Als Benutzername dient Ihre E-Mail-Adresse: %email%</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.subject_002">
+                <source>clubster.mails.subject_002</source>
+                <target>Passwort zurücksetzen</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.intro_002">
+                <source>clubster.mails.intro_002</source>
+                <target>Ihr Antrag zum Zurücksetzen des Passwortes war erfolgreich.</target>
+            </trans-unit>
+            <trans-unit id="clubster.mails.body_002">
+                <source>clubster.mails.body_002</source>
+                <target>Um ein neues Passwort festzulegen klicken Sie bitte auf folgenden Link</target>
+            </trans-unit>
+         </body>
+    </file>
+</xliff>
+

@@ -66,12 +66,11 @@ class AdminUserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', TextType::class, ['size' => 'm', 'icon' => 'la la-user'])
-            ->add('email', TextType::class, ['size' => 'm', 'icon' => 'la la-envelope'])
+            ->add('username', TextType::class, ['icon' => 'la la-user'])
+            ->add('email', TextType::class, ['icon' => 'la la-envelope'])
             ->add('language', EntityType::class, [
                 'class' => Language::class,
                 'choice_label' => 'name',
-                'size' => 's',
             ]);
 
 
@@ -86,7 +85,6 @@ class AdminUserType extends AbstractType
                 ->add('roles', ChoiceType::class, [
                     'choices' => $roles,
                     'choice_translation_domain' => 'messages',
-                    'size' => 'm',
                     'multiple' => true,
                     'required' => false,
                 ]);
@@ -95,12 +93,12 @@ class AdminUserType extends AbstractType
                 ->add('smsAuthentication', CheckboxType::class, [
                     'switch' => true,
                     'required' => false,
-                    'hint' => 'cloudtec.ui.sms_hint',
+                    'hint' => 'clubster.ui.sms_hint',
                 ]);
         }
 
         $builder
-            ->add('profile', ProfileType::class, ['size' => 'm']);
+            ->add('profile', ProfileType::class);
     }
 
     /**
@@ -119,7 +117,7 @@ class AdminUserType extends AbstractType
         $roles = [];
 
         foreach ($this->availableRoles as $moduleKey => $availableRoles) {
-            $key = $this->translator->trans('cloudtec.ui.' . $moduleKey, [], 'messages');
+            $key = $this->translator->trans('clubster.ui.' . $moduleKey, [], 'messages');
             $roles[$key] = $availableRoles;
         }
 

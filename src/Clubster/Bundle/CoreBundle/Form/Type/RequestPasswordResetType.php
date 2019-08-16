@@ -28,7 +28,6 @@ class RequestPasswordResetType extends AbstractResourceType
     {
         $builder
             ->add('email', EmailType::class, [
-                'size' => 's',
             ]);
     }
 

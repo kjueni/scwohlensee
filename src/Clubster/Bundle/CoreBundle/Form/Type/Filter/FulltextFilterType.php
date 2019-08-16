@@ -31,17 +31,16 @@ class FulltextFilterType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $defaultOptions = [
-            'size' => 'm',
+        /*$defaultOptions = [
             'placeholder' => 'cloudtec.ui.search_placeholder',
             'icon' => 'la la-search',
-        ];
+        ];*/
 
-        $options = array_merge($defaultOptions, $options);
+        //$options = array_merge($defaultOptions, $options);
 
         unset($options['properties']);
 
-        $options['placeholder'] = $this->translator->trans($options['placeholder']);
+        //$options['placeholder'] = $this->translator->trans($options['placeholder']);
 
         $builder->add(
             'search',

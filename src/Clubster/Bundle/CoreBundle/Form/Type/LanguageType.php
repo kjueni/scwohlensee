@@ -32,7 +32,7 @@ class LanguageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class, ['size' => 'm']);
+            ->add('name', TextType::class);
     }
 
     /**

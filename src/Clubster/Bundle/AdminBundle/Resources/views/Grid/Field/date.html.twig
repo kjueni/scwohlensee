@@ -1,0 +1,6 @@
+{% if data %}
+    {{ data|date('d.m.Y') }}<br/>
+    {{ data|date('H:i') }} {{ 'cloudtec.ui.hour'|trans }}
+{% else %}
+    -
+{% endif %}

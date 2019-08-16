@@ -1,0 +1,6 @@
+{% form_theme form '@ClubsterAdmin/Form/theme.html.twig' %}
+
+{% if form.type is defined %}
+    {{ form_row(form.type) }}
+{% endif %}
+{{ form_row(form.search, {'label': form.type is defined ? form.search.vars.label : filter.label}) }}

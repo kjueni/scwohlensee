@@ -42,3 +42,17 @@ services:
       $authorizationChecker: '@security.authorization_checker'
     tags:
       - { name: knp_menu.menu_builder, method: createMenu, alias: clubster.admin.main }
+
+  clubster.grid.filter.fulltext:
+    class: Clubster\Bundle\CoreBundle\Grid\Filter\FulltextFilter
+    tags:
+      -   name: sylius.grid_filter
+          type: fulltext
+          form_type: Clubster\Bundle\CoreBundle\Form\Type\Filter\FulltextFilterType
+
+  clubster.form.admin_fulltext_filter_type:
+    class: Clubster\Bundle\CoreBundle\Form\Type\Filter\FulltextFilterType
+    arguments:
+      $translator: '@translator'
+    tags:
+      - form.type

@@ -1,0 +1,5 @@
+{% for roleString in data %}
+    {{ ('clubster.ui.' ~ roleString|lower)|trans }}{% if not loop.last and loop.length > 1 %}, {% endif %}
+{% else %}
+    -
+{% endfor %}

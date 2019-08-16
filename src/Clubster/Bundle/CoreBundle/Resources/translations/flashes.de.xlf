@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="sylius.admin_user.update">
+                <source>sylius.admin_user.update</source>
+                <target>Benutzer wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="sylius.admin_user.create">
+                <source>sylius.admin_user.create</source>
+                <target>Benutzer wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="sylius.admin_user.delete">
+                <source>sylius.admin_user.delete</source>
+                <target>Benutzer wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_user.reset">
+                <source>clubster.admin_user.reset</source>
+                <target>Der Benutzer wurde erfolgreich zurückgesetzt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_profile.update">
+                <source>clubster.admin_profile.update</source>
+                <target>Mitarbeiter wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_profile.create">
+                <source>clubster.admin_profile.create</source>
+                <target>Mitarbeiter wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_profile.delete">
+                <source>clubster.admin_profile.delete</source>
+                <target>Mitarbeiter wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement.update">
+                <source>clubster.admin_advertisement.update</source>
+                <target>Inserat wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement.create">
+                <source>clubster.admin_advertisement.create</source>
+                <target>Inserat wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement.delete">
+                <source>clubster.admin_advertisement.delete</source>
+                <target>Inserat wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement_type.update">
+                <source>clubster.admin_advertisement_type.update</source>
+                <target>Typ wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement_type.create">
+                <source>clubster.admin_advertisement_type.create</source>
+                <target>Typ wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement_type.delete">
+                <source>clubster.admin_advertisement_type.delete</source>
+                <target>Typ wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement_category.update">
+                <source>clubster.admin_advertisement_category.update</source>
+                <target>Kategorie wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement_category.create">
+                <source>clubster.admin_advertisement_category.create</source>
+                <target>Kategorie wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_advertisement_category.delete">
+                <source>clubster.admin_advertisement_category.delete</source>
+                <target>Kategorie wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_language.update">
+                <source>clubster.admin_language.update</source>
+                <target>Sprache wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_language.create">
+                <source>clubster.admin_language.create</source>
+                <target>Sprache wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_language.delete">
+                <source>clubster.admin_language.delete</source>
+                <target>Sprache wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_gender.update">
+                <source>clubster.admin_gender.update</source>
+                <target>Geschlecht wurde erfolgreich aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_gender.create">
+                <source>clubster.admin_gender.create</source>
+                <target>Geschlecht wurde erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="clubster.admin_gender.delete">
+                <source>clubster.admin_gender.delete</source>
+                <target>Geschlecht wurde erfolgreich gelöscht</target>
+            </trans-unit>
+         </body>
+    </file>
+</xliff>
+

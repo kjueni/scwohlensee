@@ -20,17 +20,19 @@
     {% endblock %}
 </head>
 
-<body class="pushable">
-<div class="ui sidebar vertical inverted menu visible left" id="sidebar">
-    {% block sidebar %}
-    {% endblock %}
+<body>
+<div class="grid-x">
+    <div class="cell">
+        {% block topbar %}
+        {% endblock %}
+    </div>
 </div>
-<div class="ui fixed inverted menu">
-    {% block topbar %}
-    {% endblock %}
-</div>
-<div class="pusher">
-    <div class="full height" id="wrapper">
+<div class="grid-x">
+    <div class="cell medium-6 large-2">
+        {% block sidebar %}
+        {% endblock %}
+    </div>
+    <div class="cell medium-6 large-10">
         <div id="content">
             {% block flash_messages %}
                 {% include '@ClubsterAdmin/_flashes.html.twig' %}

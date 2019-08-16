@@ -102,18 +102,9 @@ sylius_grid:
                 fulltext:
                     label: false
                     type: fulltext
-                    form_options:
-                        size: m
                     options:
                         properties:
                             - profile.firstName
                             - profile.lastName
                             - email
                             - username
-                language:
-                    label: false
-                    type: entity
-                    form_options:
-                        class: 'Clubster\Component\Core\Model\Language'
-                        size: m
-                        placeholder: clubster.ui.choose_language

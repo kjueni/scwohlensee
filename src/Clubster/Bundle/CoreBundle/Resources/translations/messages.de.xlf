@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="clubster.ui.yes">
+                <source>clubster.ui.yes</source>
+                <target>Ja</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.no">
+                <source>clubster.ui.no</source>
+                <target>Nein</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.type">
+                <source>clubster.ui.type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.back">
+                <source>clubster.ui.back</source>
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.start">
+                <source>clubster.ui.start</source>
+                <target>Start</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.more">
+                <source>clubster.ui.more</source>
+                <target>Mehr</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.edit">
+                <source>clubster.ui.edit</source>
+                <target>Bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.create">
+                <source>clubster.ui.create</source>
+                <target>Erstellen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.delete">
+                <source>clubster.ui.delete</source>
+                <target>Löschen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.name">
+                <source>clubster.ui.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.clubster_core">
+                <source>clubster.ui.clubster_core</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.role_superadmin">
+                <source>clubster.ui.role_superadmin</source>
+                <target>Superadmin</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.role_admin">
+                <source>clubster.ui.role_admin</source>
+                <target>Benutzer verwalten</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.role_user">
+                <source>clubster.ui.role_user</source>
+                <target>Standardbenutzer</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.confirmation_delete_resource_language">
+                <source>clubster.ui.confirmation_delete_resource_language</source>
+                <target>Sprache wirklich löschen?</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.confirmation_delete_resource_text_language">
+                <source>clubster.ui.confirmation_delete_resource_text_language</source>
+                <target>Soll diese Sprache wirklich gelöscht werden? Die Löschung kann nicht rückgängig gemacht werden.</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.confirmation_delete_resource_gender">
+                <source>clubster.ui.confirmation_delete_resource_gender</source>
+                <target>Geschlecht wirklich löschen?</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.confirmation_delete_resource_text_gender">
+                <source>clubster.ui.confirmation_delete_resource_text_gender</source>
+                <target>Soll dieses Geschlecht wirklich gelöscht werden? Die Löschung kann nicht rückgängig gemacht werden.</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.code">
+                <source>clubster.ui.code</source>
+                <target>Code</target>
+            </trans-unit>
+         </body>
+    </file>
+</xliff>

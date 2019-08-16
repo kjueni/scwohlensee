@@ -1,0 +1,7 @@
+{% import '@ClubsterAdmin/Macro/buttons.html.twig' as buttons %}
+
+{% set path = options.link.url|default(path(options.link.route|default('clubster_admin_reset_user'), options.link.parameters|default({'id': data.id}))) %}
+
+{% if is_granted(grid.metadata.permissionCode(action.name), data) %}
+    {{ buttons.reset(path, action.label) }}
+{% endif %}

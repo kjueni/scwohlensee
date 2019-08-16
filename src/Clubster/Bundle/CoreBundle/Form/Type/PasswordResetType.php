@@ -23,11 +23,9 @@ class PasswordResetType extends AbstractResourceType
                 'type' => PasswordType::class,
                 'first_options' => [
                     'label' => 'clubster.ui.password',
-                    'size' => 'm',
                 ],
                 'second_options' => [
                     'label' => 'clubster.ui.password_confirmation',
-                    'size' => 'm',
                 ],
             ]);
     }

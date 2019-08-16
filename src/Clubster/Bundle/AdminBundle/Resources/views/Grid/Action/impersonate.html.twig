@@ -1,0 +1,8 @@
+{% import '@ClubsterAdmin/Macro/buttons.html.twig' as buttons %}
+
+{% set path = options.link.url|default(path(options.link.route|default('clubster_admin_dashboard'), options.link.parameters|default({'_switch_user': data.username}))) %}
+
+
+{% if is_granted(grid.metadata.permissionCode(action.name), data) %}
+    {{ buttons.impersonate(path, action.label) }}
+{% endif %}

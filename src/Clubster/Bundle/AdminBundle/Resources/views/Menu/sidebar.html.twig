@@ -1,9 +1,11 @@
 {% extends 'knp_menu.html.twig' %}
 
 {% block list %}
+<ul class="vertical menu align-left">
 {% for item in item.children %}
     {{ block('item') }}
 {% endfor %}
+</ul>
 {% endblock %}
 
 {% block item %}
@@ -35,16 +37,18 @@
     {%- set attributes = attributes|merge({'class': classes|join(' ')}) %}
 {%- endif %}
 {% if item.level is same as(1) %}
-<div class="item {% if attributes.class is defined %}{{ attributes.class }}{% endif %}">
-    <div class="header">{{ item.label|trans }}</div>
-    <div class="menu">
-        {{ block('list') }}
-    </div>
-</div>
+<li class="menu-text {% if attributes.class is defined %}{{ attributes.class }}{% endif %}">
+    <a href="#">{{ item.label|trans({}, 'menu') }}</a>
+    <ul class="nested vertical menu">
+        {% for item in item.children %}
+            {{ block('item') }}
+        {% endfor %}
+    </ul>
+</li>
 {% else %}
-<a class="item {% if attributes.class is defined %}{{ attributes.class }}{% endif %}" href="{{ item.uri }}">
+<a class="{% if attributes.class is defined %}{{ attributes.class }}{% endif %}" href="{{ item.uri }}">
     {{ block('icon') }}
-    {{ item.label|trans }}
+    {{ item.label|trans({}, 'menu') }}
 </a>
 {% endif %}
 {% endblock %}

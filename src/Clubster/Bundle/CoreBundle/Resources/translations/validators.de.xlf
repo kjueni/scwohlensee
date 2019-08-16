@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="clubster.validators.not_blank">
+                <source>clubster.validators.not_blank</source>
+                <target>Feld darf nicht leer sein</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.max_length">
+                <source>clubster.validators.max_length</source>
+                <target>Maximal {{ limit }} Zeichen erlaubt</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.only_digits">
+                <source>clubster.validators.only_digits</source>
+                <target>Nur Ziffern erlaubt</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.email_invalid">
+                <source>clubster.validators.email_invalid</source>
+                <target>E-Mail {{ value }} ist nicht gültig</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.min_length">
+                <source>clubster.validators.min_length</source>
+                <target>Mindestens {{ limit }} Zeichen angeben</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.invalid_url">
+                <source>clubster.validators.invalid_url</source>
+                <target>Die URL (Internetadresse) ist nicht gültig</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.password_nodigit">
+                <source>clubster.validators.password_nodigit</source>
+                <target>Das Passwort muss mindestens eine Ziffer enthalten</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.password_noletter">
+                <source>clubster.validators.password_noletter</source>
+                <target>Passwort muss Buchstaben enthalten</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.password_nospecial">
+                <source>clubster.validators.password_nospecial</source>
+                <target>Das Passwort muss mindestens ein Sonderzeichen enthalten. Erlaubte Sonderzeichen: # % &amp; ? ! . : , ; _ $</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.password_toshort">
+                <source>clubster.validators.password_toshort</source>
+                <target>Passwort zu kurz. Mindestens 8 Zeichen angeben (z.B. Ziffern und Buchstaben)</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.password_wrong_current">
+                <source>clubster.validators.password_wrong_current</source>
+                <target>Ihr aktuelles Passwort ist falsch</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.email_exists">
+                <source>clubster.validators.email_exists</source>
+                <target>E-Mail (Benutzername) ist bereits vorhanden</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.password_nomatch">
+                <source>clubster.validators.password_nomatch</source>
+                <target>Passwort-Kontrollfeld stimmt nicht mit gewünschtem Passwort überein</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.phone_min_length">
+                <source>clubster.validators.phone_min_length</source>
+                <target>Eine Telefonnummer besteht aus mindestens {{ limit }} Ziffern</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.invalid_sms_code">
+                <source>clubster.validators.invalid_sms_code</source>
+                <target>Ungültiger SMS-Code</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.not_blank_sms">
+                <source>clubster.validators.not_blank_sms</source>
+                <target>Dieses Feld darf bei aktivierter SMS Authentifizierung nicht leer sein</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.phone_max_length">
+                <source>clubster.validators.phone_max_length</source>
+                <target>Eine Telefonnummer besteht aus maximal {{ limit }} Ziffern</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.minimum_roles">
+                <source>clubster.validators.minimum_roles</source>
+                <target>Ein Benutzer muss mindestens {{ limit }} Rolle besitzen</target>
+            </trans-unit>
+            <trans-unit id="clubster.validators.code_format">
+                <source>clubster.validators.code_format</source>
+                <target>Der Code darf nur aus Kleinbuchstaben und Underlines(_) bestehen</target>
+            </trans-unit>
+         </body>
+    </file>
+</xliff>
+

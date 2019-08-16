@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="clubster.menu.admin.main_users">
+                <source>clubster.menu.admin.main_users</source>
+                <target>Benutzerverwaltung</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_users_user">
+                <source>clubster.menu.admin.main_users_user</source>
+                <target>Benutzer</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_users_locked">
+                <source>clubster.menu.admin.main_users_locked</source>
+                <target>Gesperrt</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_administration">
+                <source>clubster.menu.admin.main_administration</source>
+                <target>Administration</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_administration_languages">
+                <source>clubster.menu.admin.main_administration_languages</source>
+                <target>Sprachen</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_administration_genders">
+                <source>clubster.menu.admin.main_administration_genders</source>
+                <target>Geschlechter</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_users_expired">
+                <source>clubster.menu.admin.main_users_expired</source>
+                <target>Abgelaufen</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_dashboard">
+                <source>clubster.menu.admin.main_dashboard</source>
+                <target>Dashboard</target>
+            </trans-unit>
+         </body>
+    </file>
+</xliff>

@@ -9,6 +9,16 @@
     </a>
 {% endmacro %}
 
+{% macro defaultAsIcon(url, message, id, icon, class) %}
+    <a{% if messager is defined %} title="{{ message }}"{% endif %}
+            class="btn btn-icon btn-icon-md {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %}
+            href="{{ url }}" title="{{ message|trans }}">
+        {% if icon is not empty %}
+            <i class="{{ icon }}"></i>
+        {% endif %}
+    </a>
+{% endmacro %}
+
 {% macro show(url, message, id, class, labeled = true) %}
     {% import _self as buttons %}
 
@@ -69,4 +79,16 @@
         </button>
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('bulk_delete') }}" />
     </form>
+{% endmacro %}
+
+{% macro reset(url, message, id) %}
+    {% import _self as buttons %}
+
+    {{ buttons.defaultAsIcon(url, message, id, 'la la-refresh', 'btn-clean') }}
+{% endmacro %}
+
+{% macro impersonate(url, message, id) %}
+    {% import _self as buttons %}
+
+    {{ buttons.defaultAsIcon(url, message, id, 'la la-sign-in', 'btn-clean') }}
 {% endmacro %}

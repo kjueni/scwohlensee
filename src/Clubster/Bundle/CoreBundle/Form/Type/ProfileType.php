@@ -29,11 +29,11 @@ class ProfileType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstName', TextType::class, ['size' => 'm'])
-            ->add('lastName', TextType::class, ['size' => 'm'])
-            ->add('phoneNumber', TextType::class, ['required' => false, 'size' => 's', 'icon' => 'la la-phone'])
+            ->add('firstName', TextType::class)
+            ->add('lastName', TextType::class)
+            ->add('phoneNumber', TextType::class, ['required' => false, 'icon' => 'la la-phone'])
             ->add('mobileNumber', TextType::class,
-                ['required' => false, 'size' => 's', 'icon' => 'la la-mobile-phone']);
+                ['required' => false, 'icon' => 'la la-mobile-phone']);
     }
 
     /**
