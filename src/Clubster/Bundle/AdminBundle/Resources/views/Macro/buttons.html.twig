@@ -1,7 +1,7 @@
 {% macro default(url, message, id, icon, class) %}
-    <a class="ui {% if message is not empty %}labeled {% endif %}{% if icon is not empty %}icon {% endif %}button {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %} href="{{ url }}">
+    <a class="btn btn-light {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %} href="{{ url }}">
         {% if icon is not empty %}
-            <i class="icon {{ icon }}"></i>
+            <i class="{{ icon }}"></i>
         {% endif %}
         {% if message is not empty %}
             {{ message|trans }}
@@ -11,7 +11,7 @@
 
 {% macro defaultAsIcon(url, message, id, icon, class) %}
     <a{% if messager is defined %} title="{{ message }}"{% endif %}
-            class="btn btn-icon btn-icon-md {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %}
+            class="btn btn-light {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %}
             href="{{ url }}" title="{{ message|trans }}">
         {% if icon is not empty %}
             <i class="{{ icon }}"></i>
@@ -26,7 +26,7 @@
         {% set message = 'clubster.ui.show' %}
     {% endif %}
 
-    {{ buttons.default(url, message, id, 'search') }}
+    {{ buttons.defaultAsIcon(url, message, id, 'fa fa-search') }}
 {% endmacro %}
 
 {% macro create(url, message, id, labeled = true) %}
@@ -36,7 +36,7 @@
         {% set message = 'clubster.ui.create' %}
     {% endif %}
 
-    {{ buttons.default(url, message, id, 'plus', 'primary') }}
+    {{ buttons.defaultAsIcon(url, message, id, 'fa fa-plus', 'btn-primary') }}
 {% endmacro %}
 
 {% macro edit(url, message, id, labeled = true) %}
@@ -46,26 +46,26 @@
         {% set message = 'clubster.ui.edit' %}
     {% endif %}
 
-    {{ buttons.default(url, message, id, 'pencil') }}
+    {{ buttons.defaultAsIcon(url, message, id, 'fa fa-edit') }}
 {% endmacro %}
 
 {% macro filter(message) %}
-    <button class="ui blue labeled icon button" type="submit">
+    <button class="btn btn-primary" type="submit">
         <i class="icon search"></i> {{ message is empty ? 'clubster.ui.filter'|trans : message }}
     </button>
 {% endmacro %}
 
 {% macro resetFilters(url, message) %}
-    <a class="ui labeled icon button" href="{{ url }}">
-        <i class="icon remove"></i> {{ message is empty ? 'clubster.ui.clear_filters'|trans : message }}
+    <a class="btn btn-secondary" href="{{ url }}">
+        <i class="fa fa-trash"></i> {{ message is empty ? 'clubster.ui.clear_filters'|trans : message }}
     </a>
 {% endmacro %}
 
-{% macro delete(url, message, labeled = true, resourceId = null) %}
+{% macro delete(url, message, labeled = false, resourceId = null) %}
     <form action="{{ url }}" method="post">
         <input type="hidden" name="_method" value="DELETE">
-        <button class="ui red {% if labeled %}labeled {% endif %}icon button" type="submit" data-requires-confirmation>
-            <i class="icon trash"></i> {{ (message is empty and labeled) ? 'clubster.ui.delete'|trans : message }}
+        <button class="btn btn-light" type="submit" data-requires-confirmation>
+            <i class="fa fa-trash"></i> {{ (message is empty and labeled == true) ? 'clubster.ui.delete'|trans : (labeled == true ? message : '') }}
         </button>
         <input type="hidden" name="_csrf_token" value="{{ csrf_token(resourceId) }}" />
     </form>
@@ -74,8 +74,8 @@
 {% macro bulkDelete(url, message, labeled = true) %}
     <form action="{{ url }}" method="post">
         <input type="hidden" name="_method" value="DELETE">
-        <button class="ui red {% if labeled %}labeled {% endif %}icon button" type="submit" data-bulk-action-requires-confirmation>
-            <i class="icon trash"></i> {{ (message is empty and labeled) ? 'clubster.ui.delete'|trans : message }}
+        <button class="btn btn-light{% if labeled %}labeled {% endif %}" type="submit" data-bulk-action-requires-confirmation title="{{ (message ? message: 'clubster.ui.delete'|trans) }}">
+            <i class="fa fa-trash"></i> {{ (message is empty and labeled) ? 'clubster.ui.delete'|trans : message }}
         </button>
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('bulk_delete') }}" />
     </form>
@@ -84,11 +84,11 @@
 {% macro reset(url, message, id) %}
     {% import _self as buttons %}
 
-    {{ buttons.defaultAsIcon(url, message, id, 'la la-refresh', 'btn-clean') }}
+    {{ buttons.defaultAsIcon(url, message, id, 'fa fa-key', 'btn-clean') }}
 {% endmacro %}
 
 {% macro impersonate(url, message, id) %}
     {% import _self as buttons %}
 
-    {{ buttons.defaultAsIcon(url, message, id, 'la la-sign-in', 'btn-clean') }}
+    {{ buttons.defaultAsIcon(url, message, id, 'fa fa-sign-in-alt', 'btn-clean') }}
 {% endmacro %}

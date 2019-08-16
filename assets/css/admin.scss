@@ -1,4 +1,10 @@
 $scw-blue: #263886;
 $scw-yellow: #feeb35;
 
+$enable-responsive-font-sizes: true;
+$fa-font-path: "../fonts";
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
