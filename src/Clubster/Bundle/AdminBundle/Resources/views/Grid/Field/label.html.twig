@@ -1,4 +1,4 @@
-{% set value = 'sylius.ui.' ~ data %}
+{% set value = 'clubster.ui.' ~ data %}
 
 {% if options.vars.labels is defined %}
     {% include [(options.vars.labels ~ '/' ~ data ~ '.html.twig'), '@ClubsterAdmin/Label/_default.html.twig'] with {'value': value} %}

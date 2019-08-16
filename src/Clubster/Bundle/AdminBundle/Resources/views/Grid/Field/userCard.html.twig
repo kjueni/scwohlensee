@@ -2,10 +2,10 @@
     {% if data.user %}
         {% if data.user.enabled is same as(true) and data.user.isAccountNonLocked is same as (true) %}
             <span class="kt-badge kt-badge--success"
-                  title="{{ 'cloudtec.ui.user_active'|trans }}"></span>
+                  title="{{ 'clubster.ui.user_active'|trans }}"></span>
         {% else %}
             <span class="kt-badge kt-badge--danger"
-                  title="{{ 'cloudtec.ui.user_locked'|trans }}"></span>
+                  title="{{ 'clubster.ui.user_locked'|trans }}"></span>
         {% endif %}
     {% endif %}
     <div class="kt-user-card-v2__pic">

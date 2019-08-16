@@ -2,21 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f702e07-10c9-41a6-9267-e1e7b8674d4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Create/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Create/_breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Index/_breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Update/_breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Crud/Update/_breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_cancel.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_cancel.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_update.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/Buttons/_update.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/imagesTheme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/imagesTheme.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form/theme.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/archive.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/archive.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/date.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/date.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/label.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/label.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/logAction.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/logAction.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/state.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/state.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/userCard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/userCard.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_default.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_default.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Layout/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_history.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/_history.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/breadcrumb.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/buttons.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/buttons.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Menu/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Menu/sidebar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/AdminUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/AdminUserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/Filter/FulltextFilterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/Filter/FulltextFilterType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/LanguageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/LanguageType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/PasswordResetType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/PasswordResetType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/ProfileType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/ProfileType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/RequestPasswordResetType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type/RequestPasswordResetType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/grids/user.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/grids/user.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ubuntu-bionic-18.04-cloudimg-console.log" beforeDir="false" afterPath="$PROJECT_DIR$/ubuntu-bionic-18.04-cloudimg-console.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/labels.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/labels.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/messages.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/messages.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/pagination.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Modal/_confirmation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Modal/_confirmation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_flashes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_flashes.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_search.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/_security.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/layout.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,78 +124,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/name.html.twig">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/grids/user.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/user.html.twig">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Field/userCard.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/impersonate.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Grid/Action/reset.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="80" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro/buttons.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/liip_imagine.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/config/app/config.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -198,12 +139,13 @@
       <find>UserOAuthInterface</find>
       <find>cloud</find>
       <find>sylius_admin_dashboard</find>
-      <find>cloudtec</find>
       <find>list</find>
       <find>clubster.menu.admin.main_dashboard</find>
       <find>lis</find>
       <find>sylius_grid_render_filter</find>
       <find>size</find>
+      <find>cloudtec</find>
+      <find>sylius.ui</find>
     </findStrings>
     <replaceStrings>
       <replace>vagrant</replace>
@@ -211,6 +153,7 @@
       <replace>clubster.admin</replace>
       <replace>clubster_admin_dashboard</replace>
       <replace>clubster</replace>
+      <replace>clubster.ui</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -220,11 +163,11 @@
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form/Type</dir>
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Form</dir>
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views/Macro</dir>
-      <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views</dir>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Form</dir>
       <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle</dir>
       <dir>$PROJECT_DIR$/src/Clubster</dir>
+      <dir>$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/Resources/views</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -949,16 +892,15 @@
       <updated>1552742795220</updated>
       <workItem from="1552742799030" duration="2084000" />
       <workItem from="1564163099244" duration="14955000" />
-      <workItem from="1565980914470" duration="719000" />
+      <workItem from="1565980914470" duration="1127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18806000" />
+    <option name="totallyTimeSpent" value="19214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-25" y="23" width="1298" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25796178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

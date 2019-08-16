@@ -14,15 +14,15 @@
 
 {% macro info(message) %}
     {% import _self as messages %}
-    {{ messages.default(message, 'info circle', 'info', 'sylius.ui.info') }}
+    {{ messages.default(message, 'info circle', 'info', 'clubster.ui.info') }}
 {% endmacro %}
 
 {% macro success(message) %}
     {% import _self as messages %}
-    {{ messages.default(message, 'checkmark', 'success', 'sylius.ui.success') }}
+    {{ messages.default(message, 'checkmark', 'success', 'clubster.ui.success') }}
 {% endmacro %}
 
 {% macro error(message) %}
     {% import _self as messages %}
-    {{ messages.default(message, 'remove', 'negative', 'sylius.ui.error') }}
+    {{ messages.default(message, 'remove', 'negative', 'clubster.ui.error') }}
 {% endmacro %}

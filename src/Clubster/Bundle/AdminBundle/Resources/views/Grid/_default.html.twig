@@ -13,7 +13,7 @@
     <div class="ui styled fluid accordion">
         <div class="title active">
             <i class="dropdown icon"></i>
-            {{ 'sylius.ui.filters'|trans }}
+            {{ 'clubster.ui.filters'|trans }}
         </div>
         <div class="content active">
             <form method="get" action="{{ path }}" class="ui loadable form">
@@ -39,7 +39,7 @@
     <div class="ui styled fluid accordion">
         <div class="title active">
             <i class="dropdown icon"></i>
-            {{ 'sylius.ui.bulk_actions'|trans }}
+            {{ 'clubster.ui.bulk_actions'|trans }}
         </div>
         <div class="content active">
             {% for action in definition.getEnabledActions('bulk') %}
@@ -81,7 +81,7 @@
             </table>
         </div>
     {% else %}
-        {{ messages.info('sylius.ui.no_results_to_display') }}
+        {{ messages.info('clubster.ui.no_results_to_display') }}
     {% endif %}
     {{ pagination.simple(data) }}
 </div>

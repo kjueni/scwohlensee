@@ -6,7 +6,7 @@
 
 {% macro perPage(paginator, paginationLimits) %}
     <div class="ui simple fluid dropdown item">
-        {{ 'sylius.ui.show'|trans }} {{ paginator.maxPerPage }}
+        {{ 'clubster.ui.show'|trans }} {{ paginator.maxPerPage }}
         <i class="dropdown icon"></i>
         <div class="menu">
         {% for limit in paginationLimits if limit != paginator.maxPerPage %}

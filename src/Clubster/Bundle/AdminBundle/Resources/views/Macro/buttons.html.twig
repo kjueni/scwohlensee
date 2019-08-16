@@ -23,7 +23,7 @@
     {% import _self as buttons %}
 
     {% if message is empty and labeled %}
-        {% set message = 'sylius.ui.show' %}
+        {% set message = 'clubster.ui.show' %}
     {% endif %}
 
     {{ buttons.default(url, message, id, 'search') }}
@@ -33,7 +33,7 @@
     {% import _self as buttons %}
 
     {% if message is empty and labeled %}
-        {% set message = 'sylius.ui.create' %}
+        {% set message = 'clubster.ui.create' %}
     {% endif %}
 
     {{ buttons.default(url, message, id, 'plus', 'primary') }}
@@ -43,7 +43,7 @@
     {% import _self as buttons %}
 
     {% if message is empty and labeled %}
-        {% set message = 'sylius.ui.edit' %}
+        {% set message = 'clubster.ui.edit' %}
     {% endif %}
 
     {{ buttons.default(url, message, id, 'pencil') }}
@@ -51,13 +51,13 @@
 
 {% macro filter(message) %}
     <button class="ui blue labeled icon button" type="submit">
-        <i class="icon search"></i> {{ message is empty ? 'sylius.ui.filter'|trans : message }}
+        <i class="icon search"></i> {{ message is empty ? 'clubster.ui.filter'|trans : message }}
     </button>
 {% endmacro %}
 
 {% macro resetFilters(url, message) %}
     <a class="ui labeled icon button" href="{{ url }}">
-        <i class="icon remove"></i> {{ message is empty ? 'sylius.ui.clear_filters'|trans : message }}
+        <i class="icon remove"></i> {{ message is empty ? 'clubster.ui.clear_filters'|trans : message }}
     </a>
 {% endmacro %}
 
@@ -65,7 +65,7 @@
     <form action="{{ url }}" method="post">
         <input type="hidden" name="_method" value="DELETE">
         <button class="ui red {% if labeled %}labeled {% endif %}icon button" type="submit" data-requires-confirmation>
-            <i class="icon trash"></i> {{ (message is empty and labeled) ? 'sylius.ui.delete'|trans : message }}
+            <i class="icon trash"></i> {{ (message is empty and labeled) ? 'clubster.ui.delete'|trans : message }}
         </button>
         <input type="hidden" name="_csrf_token" value="{{ csrf_token(resourceId) }}" />
     </form>
@@ -75,7 +75,7 @@
     <form action="{{ url }}" method="post">
         <input type="hidden" name="_method" value="DELETE">
         <button class="ui red {% if labeled %}labeled {% endif %}icon button" type="submit" data-bulk-action-requires-confirmation>
-            <i class="icon trash"></i> {{ (message is empty and labeled) ? 'sylius.ui.delete'|trans : message }}
+            <i class="icon trash"></i> {{ (message is empty and labeled) ? 'clubster.ui.delete'|trans : message }}
         </button>
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('bulk_delete') }}" />
     </form>
