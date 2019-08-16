@@ -1,5 +1,5 @@
-{% macro default(url, message, id, icon, class) %}
-    <a class="btn btn-light {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %} href="{{ url }}">
+{% macro default(url, message, id, icon, class = 'btn-light') %}
+    <a class="btn {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %} href="{{ url }}">
         {% if icon is not empty %}
             <i class="{{ icon }}"></i>
         {% endif %}
@@ -36,7 +36,7 @@
         {% set message = 'clubster.ui.create' %}
     {% endif %}
 
-    {{ buttons.defaultAsIcon(url, message, id, 'fa fa-plus', 'btn-primary') }}
+    {{ buttons.default(url, message, id, 'fa fa-plus', 'btn-primary') }}
 {% endmacro %}
 
 {% macro edit(url, message, id, labeled = true) %}
@@ -56,7 +56,7 @@
 {% endmacro %}
 
 {% macro resetFilters(url, message) %}
-    <a class="btn btn-secondary" href="{{ url }}">
+    <a class="btn btn-light" href="{{ url }}">
         <i class="fa fa-trash"></i> {{ message is empty ? 'clubster.ui.clear_filters'|trans : message }}
     </a>
 {% endmacro %}
