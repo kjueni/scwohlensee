@@ -1,0 +1,53 @@
+{
+    "name": "kjueni/clubster-team",
+    "type": "library",
+    "description": "Team handling for PHP applications.",
+    "keywords": [
+        "team"
+    ],
+    "homepage": "https://github.com/kjueni",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Jüni",
+            "homepage": "https://github.com/kjueni"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "doctrine/collections": "^1.1",
+        "symfony/polyfill-mbstring": "^1.6",
+        "symfony/security": "^3.4|^4.1.1",
+        "sylius/resource": "^1.4"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clubster\\Component\\Team\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Clubster\\Component\\Team\\spec\\": "spec/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}

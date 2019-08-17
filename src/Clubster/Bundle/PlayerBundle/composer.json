@@ -1,0 +1,69 @@
+{
+  "name": "kjueni/clubster-player-bundle",
+  "type": "symfony-bundle",
+  "description": "Player management for Symfony projects.",
+  "keywords": [
+    "player"
+  ],
+  "homepage": "https://github.com/kjueni",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kevin Jüni",
+      "homepage": "https://github.com/kjueni"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "doctrine/orm": "^2.5",
+    "symfony/framework-bundle": "^3.4|^4.1.1",
+    "webmozart/assert": "^1.0",
+    "sylius/resource-bundle": "^1.4",
+    "kjueni/clubster-player": "self.version"
+  },
+  "require-dev": {
+    "matthiasnoback/symfony-dependency-injection-test": "^2.0",
+    "php-http/guzzle6-adapter": "^1.1",
+    "phpunit/phpunit": "^7.0",
+    "symfony/dependency-injection": "^3.4|^4.1.1",
+    "symfony/security-bundle": "^3.4|^4.1.1",
+    "symfony/swiftmailer-bundle": "^3.1"
+  },
+  "suggest": {
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Clubster\\Bundle\\PlayerBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Clubster\\Bundle\\PlayerBundle\\Tests\\": "tests/"
+    },
+    "files": [
+      "Tests/Functional/app/AppKernel.php"
+    ]
+  },
+  "conflict": {
+    "twig/twig": "^1.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../../*/*"
+    }
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "master"
+    }
+  }
+}

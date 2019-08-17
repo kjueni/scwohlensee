@@ -13,23 +13,26 @@
 {% endblock %}
 
 {% block topbar %}
-    <a class="icon item" id="sidebar-toggle" title="{{ 'clubster.ui.toggle_sidebar'|trans }}">
-        <i class="sidebar icon"></i>
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    {{ sonata_block_render_event('clubster.adminlayout.topbar_left') }}
+        {{ sonata_block_render_event('clubster.adminlayout.topbar_left') }}
 
-    {#{% include '@ClubsterAdmin/_search.html.twig' %}#}
+        {#{% include '@ClubsterAdmin/_search.html.twig' %}#}
 
-    <div class="ui left floated dividing empty item"></div>
+        <div class="ui left floated dividing empty item"></div>
 
-    {{ sonata_block_render_event('clubster.adminlayout.topbar_middle') }}
+        {{ sonata_block_render_event('clubster.adminlayout.topbar_middle') }}
 
-    <div class="ui right floated dividing empty item"></div>
+        <div class="ui right floated dividing empty item"></div>
 
-    {% include '@ClubsterAdmin/_security.html.twig' %}
+        {% include '@ClubsterAdmin/_security.html.twig' %}
 
-    {{ sonata_block_render_event('clubster.adminlayout.topbar_right') }}
+        {{ sonata_block_render_event('clubster.adminlayout.topbar_right') }}
+    </nav>
 {% endblock %}
 
 {% block sidebar %}
