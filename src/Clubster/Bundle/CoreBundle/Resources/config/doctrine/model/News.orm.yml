@@ -1,0 +1,3 @@
+Clubster\Component\Core\Model\News:
+    table: clubster_news
+    type: entity

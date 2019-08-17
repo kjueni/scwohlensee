@@ -2,7 +2,9 @@
 
 namespace Clubster\Component\Player\Model;
 
-interface PlayerPositionInterface
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface PlayerPositionInterface extends ResourceInterface
 {
 
 }

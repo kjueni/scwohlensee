@@ -1,6 +1,6 @@
 Clubster\Component\Match\Model\Match:
     table: clubster_match
-    type: entity
+    type: mappedSuperclass
     id:
         id:
             type: integer

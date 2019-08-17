@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        clubster.match:
+            classes:
+                model: Clubster\Component\Core\Model\Match
+                form: Clubster\Bundle\MatchBundle\Form\Type\MatchType
+
+        clubster.competition:
+            classes:
+                model: Clubster\Component\Match\Model\Competition
+                form: Clubster\Bundle\MatchBundle\Form\Type\CompetitionType

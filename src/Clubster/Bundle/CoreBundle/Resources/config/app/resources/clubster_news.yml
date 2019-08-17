@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        clubster.news:
+            classes:
+                model: Clubster\Component\Core\Model\News
+                form: Clubster\Bundle\NewsBundle\Form\Type\NewsType
+
+        clubster.news_type:
+            classes:
+                model: Clubster\Component\News\Model\NewsType
+                form: Clubster\Bundle\NewsBundle\Form\Type\NewsTypeType

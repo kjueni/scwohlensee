@@ -1,0 +1,11 @@
+Clubster\Component\Core\Model\Player:
+    table: clubster_player
+    type: entity
+
+    manyToOne:
+        team:
+            targetEntity: Clubster\Component\Core\Model\Team
+            inversedBy: players
+            joinColumn:
+                name: team_id
+                referencedColumnName: id

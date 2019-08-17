@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        clubster.ad:
+            classes:
+                model: Clubster\Component\Core\Model\Ad
+                form: Clubster\Bundle\AdBundle\Form\Type\AdType
+
+        clubster.ad_type:
+            classes:
+                model: Clubster\Component\Ad\Model\AdType
+                form: Clubster\Bundle\AdBundle\Form\Type\AdTypeType

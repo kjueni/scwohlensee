@@ -1,0 +1,18 @@
+Clubster\Component\Core\Model\Ad:
+    table: clubster_ad
+    type: entity
+
+    manyToMany:
+        teams:
+            cascade:
+                - persist
+            targetEntity: Clubster\Component\Core\Model\Team
+            joinTable:
+                name: clubster_ad_team
+                joinColumns:
+                    ad_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    team_id:
+                        referencedColumnName: id
+                        unique: true

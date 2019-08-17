@@ -2,7 +2,9 @@
 
 namespace Clubster\Component\Match\Model;
 
-interface CompetitionInterface
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface CompetitionInterface extends ResourceInterface
 {
 
 }

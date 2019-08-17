@@ -1,0 +1,6 @@
+sylius_resource:
+    resources:
+        clubster.team:
+            classes:
+                model: Clubster\Component\Core\Model\Team
+                form: Clubster\Bundle\TeamBundle\Form\Type\TeamType

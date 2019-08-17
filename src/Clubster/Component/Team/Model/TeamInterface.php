@@ -2,7 +2,9 @@
 
 namespace Clubster\Component\Team\Model;
 
-interface TeamInterface
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface TeamInterface extends ResourceInterface
 {
 
 }

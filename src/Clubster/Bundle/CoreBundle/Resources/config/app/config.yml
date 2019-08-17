@@ -3,6 +3,12 @@ imports:
     - { resource: "@ClubsterCoreBundle/Resources/config/grids/user.yml" }
     - { resource: "@ClubsterCoreBundle/Resources/config/grids/language.yml" }
 
+    - { resource: "@ClubsterCoreBundle/Resources/config/app/resources/clubster_ad.yml" }
+    - { resource: "@ClubsterCoreBundle/Resources/config/app/resources/clubster_match.yml" }
+    - { resource: "@ClubsterCoreBundle/Resources/config/app/resources/clubster_news.yml" }
+    - { resource: "@ClubsterCoreBundle/Resources/config/app/resources/clubster_player.yml" }
+    - { resource: "@ClubsterCoreBundle/Resources/config/app/resources/clubster_team.yml" }
+
 sylius_mailer:
     emails:
         user_invitation:

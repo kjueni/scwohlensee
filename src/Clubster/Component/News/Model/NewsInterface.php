@@ -2,7 +2,9 @@
 
 namespace Clubster\Component\News\Model;
 
-interface NewsInterface
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface NewsInterface extends ResourceInterface
 {
 
 }

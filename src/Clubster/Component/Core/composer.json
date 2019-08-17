@@ -18,7 +18,12 @@
         "doctrine/collections": "^1.1",
         "symfony/polyfill-mbstring": "^1.6",
         "symfony/security": "^3.4|^4.1.1",
-        "sylius/resource": "^1.4"
+        "sylius/resource": "^1.4",
+        "kjueni/clubster-ad": "dev-master",
+        "kjueni/clubster-match": "dev-master",
+        "kjueni/clubster-news": "dev-master",
+        "kjueni/clubster-player": "dev-master",
+        "kjueni/clubster-team": "dev-master"
     },
     "require-dev": {
     },

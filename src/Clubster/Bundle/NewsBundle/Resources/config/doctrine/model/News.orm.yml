@@ -1,6 +1,6 @@
 Clubster\Component\News\Model\News:
     table: clubster_news
-    type: entity
+    type: mappedSuperclass
     id:
         id:
             type: integer

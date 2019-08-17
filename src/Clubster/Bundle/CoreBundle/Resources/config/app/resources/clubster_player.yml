@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        clubster.player:
+            classes:
+                model: Clubster\Component\Core\Model\Player
+                form: Clubster\Bundle\PlayerBundle\Form\Type\PlayerType
+
+        clubster.player_position:
+            classes:
+                model: Clubster\Component\Player\Model\PlayerPosition
+                form: Clubster\Bundle\PlayerBundle\Form\Type\PlayerPositionType

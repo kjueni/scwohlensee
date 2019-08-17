@@ -2,7 +2,9 @@
 
 namespace Clubster\Component\Ad\Model;
 
-interface AdInterface
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface AdInterface extends ResourceInterface
 {
 
 }

@@ -1,0 +1,11 @@
+Clubster\Component\Core\Model\Match:
+    table: clubster_match
+    type: entity
+
+    manyToOne:
+        team:
+            targetEntity: Clubster\Component\Core\Model\Team
+            mappedBy: matches
+            joinColumn:
+                name: team_id
+                referencedColumnName: id
