@@ -158,6 +158,26 @@
                 <source>clubster.ui.hour</source>
                 <target>Uhr</target>
             </trans-unit>
+            <trans-unit id="clubster.ui.cancel">
+                <source>clubster.ui.cancel</source>
+                <target>Abbrechen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.save_changes">
+                <source>clubster.ui.save_changes</source>
+                <target>Änderungen speichern</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.edit_user">
+                <source>clubster.ui.edit_user</source>
+                <target>Benutzer bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.new">
+                <source>clubster.ui.new</source>
+                <target>Erstellen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.languages">
+                <source>clubster.ui.languages</source>
+                <target>Sprachen</target>
+            </trans-unit>
 
             <trans-unit id="sylius.ui.admin_users">
                 <source>sylius.ui.admin_users</source>

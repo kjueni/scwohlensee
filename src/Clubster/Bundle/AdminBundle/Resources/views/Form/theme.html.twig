@@ -1,9 +1,9 @@
 {% extends 'form_div_layout.html.twig' %}
 
 {% block form_row -%}
-    <div class="{% if required %}required {% endif %}field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
+    <div class="form-group {% if required %}required {% endif %}{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
         {{- form_label(form) -}}
-        {{- form_widget(form) -}}
+        {{- form_widget(form, {attr: {class: not compound ? 'form-control' : ''}}) -}}
         {{- form_errors(form) -}}
     </div>
 {%- endblock form_row %}
@@ -19,9 +19,9 @@
 {%- endblock form_errors -%}
 
 {% block checkbox_row -%}
-    <div class="{% if required %}required {% endif %}field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
+    <div class="{% if required %}required {% endif %}form-group{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
         <div class="ui toggle checkbox">
-            {{- form_widget(form) -}}
+            {{- form_widget(form, {attr: {class: 'form-control'}}) -}}
             {{- form_label(form) -}}
             {{- form_errors(form) -}}
         </div>
@@ -29,19 +29,19 @@
 {%- endblock checkbox_row %}
 
 {% block radio_row -%}
-    <div class="field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
+    <div class="form-group{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
         <div class="ui radio checkbox">
             {{- form_label(form) -}}
-            {{- form_widget(form) -}}
+            {{- form_widget(form, {attr: {class: 'form-control'}}) -}}
             {{- form_errors(form) -}}
         </div>
     </div>
 {%- endblock radio_row %}
 
 {% block choice_row -%}
-    <div class="{% if required %}required {% endif %}field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
+    <div class="{% if required %}required {% endif %}form-group{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
         {{- form_label(form) -}}
-        {% set attr = attr|merge({'class': attr.class|default ~ ' ui dropdown'}) %}
+        {% set attr = attr|merge({'class': attr.class|default ~ ' form-control dropdown'}) %}
         {{- form_widget(form, {'attr': attr}) -}}
         {{- form_errors(form) -}}
     </div>
@@ -117,108 +117,3 @@
         </div>
     {% endspaceless %}
 {% endmacro %}
-
-{% block sylius_province_widget %}
-<div class="ui compact segment">
-    <div class="inline fields">
-        {{ form_row(form.code) }}
-        {{ form_row(form.name) }}
-        {{ form_row(form.abbreviation) }}
-    </div>
-</div>
-{% endblock %}
-
-{% block sylius_zone_member_widget %}
-    <div class="ui compact segment">
-        <div class="inline fields">
-            {{ form_row(form.code) }}
-        </div>
-    </div>
-{% endblock %}
-
-{% block sylius_promotion_rule_widget %}
-    <div class="ui segment">
-        {{ form_widget(form) }}
-    </div>
-{% endblock %}
-
-{% block sylius_promotion_action_widget %}
-    <div class="ui segment">
-        {{ form_widget(form) }}
-    </div>
-{% endblock %}
-
-{% block sylius_promotion_configuration_widget %}
-    <div class="configuration">
-        {% for child in form %}
-            <hr/>{{ form_row(child) }}<hr/>
-        {% endfor %}
-    </div>
-{% endblock %}
-
-{% block sylius_product_option_value_widget %}
-    <div class="ui segment">
-        {{ form_row(form.code) }}
-            <div class="five fields">
-            {% for locale, translationForm in form.translations %}
-                {{ form_row(translationForm.value, {'label': locale|sylius_locale_name}) }}
-                {% if 0 == loop.index % 5 %}
-                </div>
-                <div class="five fields">
-                {% endif %}
-            {% endfor %}
-            </div>
-    </div>
-{% endblock %}
-
-{% block sylius_translations_row -%}
-    <h4 class="ui dividing header">{{ form_label(form) }}</h4>
-    <div class="ui grid">
-        {% for translation in form %}
-            <div class="four wide column">
-                {{ form_label(translation, translation.vars.name|sylius_locale_name) }}
-            </div>
-            <div class="twelve wide column">
-                {{ form_widget(translation) }}
-            </div>
-            {{- form_errors(form) -}}
-        {% endfor %}
-    </div>
-{%- endblock sylius_translations_row %}
-
-{% block sylius_resource_autocomplete_choice_row %}
-    <div class="{% if required %}required {% endif %}field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
-        {{- form_label(form) -}}
-        <div
-            class="sylius-autocomplete ui fluid search selection dropdown {% if multiple %}multiple{% endif %}"
-            data-url="{{ remote_url }}"
-            data-choice-name="{{ choice_name }}"
-            data-choice-value="{{ choice_value }}"
-            data-criteria-type="{{ remote_criteria_type }}"
-            data-criteria-name="{{ remote_criteria_name }}"
-            data-load-edit-url="{{ load_edit_url }}"
-        >
-            {{- form_widget(form, {'attr': {'class' : 'autocomplete'}}) -}}
-            <i class="dropdown icon"></i>
-            <div class="default text">{% if placeholder is defined %} {{ placeholder|trans }} {% endif %}</div>
-            <div class="menu"></div>
-        </div>
-        {{- form_errors(form) -}}
-    </div>
-{% endblock %}
-
-{% block sylius_product_variant_generation_widget %}
-    <div class="ui segment">
-        <div class="ui two column stackable grid">
-            <div class="column">
-                {{ form_row(form.optionValues, {'label': false}) }}
-            </div>
-            <div class="column">
-                {{ form_row(form.code) }}
-                {{ form_row(form.name) }}
-            </div>
-        </div>
-        <h4 class="ui dividing header">{{ 'clubster.ui.pricing'|trans }}</h4>
-        {{ form_row(form.channelPricings, {'label': false}) }}
-    </div>
-{% endblock %}

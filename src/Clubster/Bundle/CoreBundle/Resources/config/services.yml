@@ -56,3 +56,11 @@ services:
       $translator: '@translator'
     tags:
       - form.type
+
+  clubster.form.admin_user_type:
+    class: Clubster\Bundle\CoreBundle\Form\Type\AdminUserType
+    arguments:
+      $authorizationChecker: '@security.authorization_checker'
+      $translator: '@translator'
+    tags:
+      - form.type

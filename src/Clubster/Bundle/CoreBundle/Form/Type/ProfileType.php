@@ -31,9 +31,9 @@ class ProfileType extends AbstractType
         $builder
             ->add('firstName', TextType::class)
             ->add('lastName', TextType::class)
-            ->add('phoneNumber', TextType::class, ['required' => false, 'icon' => 'la la-phone'])
+            ->add('phoneNumber', TextType::class, ['required' => false])
             ->add('mobileNumber', TextType::class,
-                ['required' => false, 'icon' => 'la la-mobile-phone']);
+                ['required' => false]);
     }
 
     /**

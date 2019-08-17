@@ -10,6 +10,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -30,23 +31,15 @@ class AdminUserType extends AbstractType
     protected $translator;
 
     /**
-     * @var array
-     */
-    protected $availableRoles;
-
-    /**
      * @param AuthorizationChecker $authorizationChecker
      * @param TranslatorInterface $translator
-     * @param array $availableRoles
      */
     public function __construct(
         AuthorizationChecker $authorizationChecker,
-        TranslatorInterface $translator,
-        array $availableRoles = []
+        TranslatorInterface $translator
     ) {
         $this->authorizationChecker = $authorizationChecker;
         $this->translator = $translator;
-        $this->availableRoles = $availableRoles;
     }
 
     /**
@@ -66,24 +59,21 @@ class AdminUserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', TextType::class, ['icon' => 'la la-user'])
-            ->add('email', TextType::class, ['icon' => 'la la-envelope'])
+            ->add('username', TextType::class)
+            ->add('email', EmailType::class)
             ->add('language', EntityType::class, [
                 'class' => Language::class,
                 'choice_label' => 'name',
             ]);
 
-
-        if ($this->authorizationChecker->isGranted(AdminUser::ROLE_SUPERADMIN)) {
-            $this->availableRoles['cloudtec_core']['cloudtec.ui.superadmin'] = AdminUser::ROLE_SUPERADMIN;
-        }
-
         if ($this->authorizationChecker->isGranted(AdminUser::ROLE_ADMIN)) {
-            $roles = $this->getRoles();
-
             $builder
                 ->add('roles', ChoiceType::class, [
-                    'choices' => $roles,
+                    'choices' => [
+                        AdminUser::ROLE_SUPERADMIN => $this->translator->trans('clubster.ui.superadmin', [], 'messages'),
+                        AdminUser::ROLE_ADMIN => $this->translator->trans('clubster.ui.admin', [], 'messages'),
+                        AdminUser::ROLE_USER => $this->translator->trans('clubster.ui.user', [], 'messages'),
+                    ],
                     'choice_translation_domain' => 'messages',
                     'multiple' => true,
                     'required' => false,
@@ -91,9 +81,7 @@ class AdminUserType extends AbstractType
 
             $builder
                 ->add('smsAuthentication', CheckboxType::class, [
-                    'switch' => true,
                     'required' => false,
-                    'hint' => 'clubster.ui.sms_hint',
                 ]);
         }
 
@@ -107,21 +95,6 @@ class AdminUserType extends AbstractType
     public function getBlockPrefix(): string
     {
         return 'adminUser';
-    }
-
-    /**
-     * @return array
-     */
-    protected function getRoles(): array
-    {
-        $roles = [];
-
-        foreach ($this->availableRoles as $moduleKey => $availableRoles) {
-            $key = $this->translator->trans('clubster.ui.' . $moduleKey, [], 'messages');
-            $roles[$key] = $availableRoles;
-        }
-
-        return $roles;
     }
 }
 
