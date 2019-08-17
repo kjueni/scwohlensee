@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f702e07-10c9-41a6-9267-e1e7b8674d4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/NewsType.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/NewsType.orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/doctrine/model/PlayerPosition.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/doctrine/model/PlayerPosition.orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model/Team.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model/Team.orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Ad/Model/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Ad/Model/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Ad/Model/AdType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Ad/Model/AdType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Match/Model/Competition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Match/Model/Competition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Match/Model/Match.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Match/Model/Match.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/News/Model/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/News/Model/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/News/Model/NewsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/News/Model/NewsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Player/Model/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Player/Model/Player.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Player/Model/PlayerPosition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Player/Model/PlayerPosition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clubster/Component/Team/Model/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clubster/Component/Team/Model/Team.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +48,7 @@
           <entry key="twig" value="88" />
           <entry key="xlf" value="6" />
           <entry key="yaml" value="43" />
-          <entry key="yml" value="81" />
+          <entry key="yml" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -76,7 +64,7 @@
           <entry key="SCSS" value="8" />
           <entry key="SmartyConfig" value="2" />
           <entry key="Twig" value="88" />
-          <entry key="YAML" value="124" />
+          <entry key="YAML" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -95,7 +83,7 @@
           <entry key="twig" value="1331" />
           <entry key="xlf" value="536" />
           <entry key="yaml" value="188" />
-          <entry key="yml" value="2219" />
+          <entry key="yml" value="2623" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -106,36 +94,36 @@
           <entry key="PLAIN_TEXT" value="932" />
           <entry key="SCSS" value="129" />
           <entry key="Twig" value="1331" />
-          <entry key="YAML" value="2407" />
+          <entry key="YAML" value="2811" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Ad/Model/Ad.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/validation/Team.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="360">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/validation/Player.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="195">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/NewsType.orm.yml">
+        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/validation/News.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="24" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -143,62 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model/Team.orm.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
+            <state relative-caret-position="600">
               <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/doctrine/model/PlayerPosition.orm.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="46" selection-start-column="46" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/News.orm.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="41" selection-start-line="41" selection-end-line="54" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Player/Model/Player.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Player/Model/PlayerPosition.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Team/Model/Team.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Clubster/Component/News/Model/NewsType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -256,15 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/DependencyInjection/ClubsterAdExtension.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/DependencyInjection/ClubsterMatchExtension.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/DependencyInjection/ClubsterNewsExtension.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/DependencyInjection/ClubsterPlayerExtension.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/DependencyInjection/ClubsterTeamExtension.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/composer.json" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/composer.json" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/composer.json" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/composer.json" />
@@ -303,10 +228,19 @@
         <option value="$PROJECT_DIR$/src/Clubster/Component/Player/Model/Player.php" />
         <option value="$PROJECT_DIR$/src/Clubster/Component/Player/Model/PlayerPosition.php" />
         <option value="$PROJECT_DIR$/src/Clubster/Component/Team/Model/Team.php" />
-        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/NewsType.orm.yml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model/Team.orm.yml" />
         <option value="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/doctrine/model/PlayerPosition.orm.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/validation/Ad.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/validation/AdType.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/validation/Competition.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/validation/Match.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/validation/NewsType.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/validation/News.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/validation/PlayerPosition.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/validation/Player.yml" />
+        <option value="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/validation/Team.yml" />
       </list>
     </option>
   </component>
@@ -486,6 +420,18 @@
     <option name="width" value="1298" />
     <option name="height" value="877" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>General</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -634,6 +580,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="AdBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -661,6 +618,36 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="MatchBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -730,6 +717,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="MatchBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="NewsBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -799,6 +797,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="NewsBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="PlayerBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -868,6 +877,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Clubster" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="TeamBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -930,6 +950,17 @@
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="doctrine" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scwohlensee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubster" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="TeamBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scwohlensee" type="b2602c69:ProjectViewProjectNode" />
@@ -1068,15 +1099,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.YAML" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle" />
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle" />
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle" />
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle" />
-      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config" />
+      <recent name="$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/validation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1103,12 +1134,12 @@
       <updated>1552742795220</updated>
       <workItem from="1552742799030" duration="2084000" />
       <workItem from="1564163099244" duration="14955000" />
-      <workItem from="1565980914470" duration="18332000" />
+      <workItem from="1565980914470" duration="19498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36419000" />
+    <option name="totallyTimeSpent" value="37585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="142" y="23" width="1298" height="877" extended-state="0" />
@@ -1163,79 +1194,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Player/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Component/Team/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-327" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdminBundle/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-349" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Ad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="56" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/AdType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/GameType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="68" column="21" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="68" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="52" column="24" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="52" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/PlayerPosition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="15" selection-start-line="15" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Team.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -1253,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/doctrine/model/Match.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/doctrine/model/AdminUser.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1267,24 +1218,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/doctrine/model/Competition.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/AdType.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/doctrine/model/Player.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1444,7 +1381,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Clubster/Component/News/Model/NewsType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="120">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
@@ -1477,17 +1414,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/News.orm.yml">
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="41" selection-start-line="41" selection-end-line="54" selection-end-column="36" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/doctrine/model/Ad.orm.yml">
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/validation/Ad.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/validation/AdminUser.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/AdBundle/Resources/config/validation/AdType.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/doctrine/model/Competition.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/CoreBundle/Resources/config/validation/Profile.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/doctrine/model/Match.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/validation/Match.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/MatchBundle/Resources/config/validation/Competition.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/validation/NewsType.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1498,10 +1487,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model/Team.orm.yml">
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/doctrine/model/News.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="54" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1509,6 +1498,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="46" selection-start-column="46" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/doctrine/model/Player.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/validation/PlayerPosition.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="46" selection-start-column="46" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/doctrine/model/Team.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/PlayerBundle/Resources/config/validation/Player.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/NewsBundle/Resources/config/validation/News.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clubster/Bundle/TeamBundle/Resources/config/validation/Team.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
         </state>
       </provider>
     </entry>

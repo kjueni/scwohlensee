@@ -1,0 +1,25 @@
+Clubster\Component\News\Model\News:
+    properties:
+        author:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        title:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        lead:
+            -   Length:
+                    max: 200
+                    maxMessage: clubster.validators.max_length
+
+        text: ~
+
+        url:
+            -   Url: ~

@@ -10,12 +10,15 @@ Clubster\Component\Ad\Model\Ad:
         description:
             type: string
             nullable: true
+
         address:
             type: string
             nullable: true
+
         pictureUrl:
             type: string
             nullable: true
+
         url:
             type: string
             nullable: true

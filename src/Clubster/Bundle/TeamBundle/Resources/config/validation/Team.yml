@@ -1,0 +1,26 @@
+Clubster\Component\Team\Model\Team:
+    properties:
+        name:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        description:
+            -   Length:
+                    max: 500
+                    maxMessage: clubster.validators.max_length
+        league:
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+
+        url:
+            -   Url: ~
+
+        gamesUrl:
+            -   Url: ~
+
+        resultsUrl:
+            -   Url: ~

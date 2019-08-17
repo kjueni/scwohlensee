@@ -1,0 +1,21 @@
+Clubster\Component\Match\Model\Match:
+    properties:
+        opponent:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+
+        startsOn:
+            -   DateTime: ~
+
+        homeScore:
+            -   Positive: ~
+
+        awayScore:
+            -   Positive: ~
+
+        url:
+            -   Url: ~

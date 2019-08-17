@@ -1,0 +1,9 @@
+Clubster\Component\Match\Model\Competition:
+    properties:
+        name:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+
+            -   Length:
+                    max: 256
+                    maxMessage: clubster.validators.max_length

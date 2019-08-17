@@ -1,0 +1,14 @@
+Clubster\Component\Player\Model\Player:
+    properties:
+        name:
+            -   NotBlank:
+                    message: clubster.validators.not_blank
+
+            -   Length:
+                    max: 128
+                    maxMessage: clubster.validators.max_length
+        number:
+            -   Positive: ~
+
+        birthDate:
+            -   DateTime: ~

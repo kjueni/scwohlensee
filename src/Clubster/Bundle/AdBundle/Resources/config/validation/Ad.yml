@@ -1,0 +1,14 @@
+Clubster\Component\Ad\Model\Ad:
+    properties:
+        description:
+            -   Length:
+                max: 256
+                maxMessage: clubster.validators.max_length
+
+        address:
+            -   Length:
+                max: 256
+                maxMessage: clubster.validators.max_length
+
+        url:
+            -   Url: ~
