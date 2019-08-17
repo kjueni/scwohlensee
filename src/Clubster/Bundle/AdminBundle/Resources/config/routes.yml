@@ -1,0 +1,11 @@
+clubster_language:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/language.yml'
+
+clubster_admin_user:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/user.yml'
+
+clubster_admin_profile:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/profile.yml'
+
+clubster_team:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/team.yml'

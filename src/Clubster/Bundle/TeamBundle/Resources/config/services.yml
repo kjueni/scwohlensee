@@ -3,3 +3,10 @@ services:
     class: Clubster\Bundle\TeamBundle\Form\Type\TeamType
     tags:
       - form.type
+
+  clubster.voter.team:
+      class: Clubster\Bundle\TeamBundle\Security\Voter\TeamVoter
+      arguments:
+          $decisionManager: '@security.access.decision_manager'
+      tags:
+        - security.voter

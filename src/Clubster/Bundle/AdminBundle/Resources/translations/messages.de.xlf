@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="clubster.ui.info">
+                <source>clubster.ui.info</source>
+                <target>Info</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.no_results_to_display">
+                <source>clubster.ui.no_results_to_display</source>
+                <target>Keine Einträge gefunden</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.teams">
+                <source>clubster.ui.teams</source>
+                <target>Teams</target>
+            </trans-unit>
+         </body>
+    </file>
+</xliff>

@@ -1,5 +1,8 @@
 clubster:
     resource: "@ClubsterCoreBundle/Resources/config/routes.yml"
 
+clubster_admin:
+    resource: "@ClubsterAdminBundle/Resources/config/routes.yml"
+
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.yaml"

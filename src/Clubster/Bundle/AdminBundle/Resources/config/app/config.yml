@@ -1,5 +1,8 @@
 imports:
     - '@ClubsterAdminBundle/Resources/config/liip_imagine.yml'
+    - { resource: "@ClubsterAdminBundle/Resources/config/grids/user.yml" }
+    - { resource: "@ClubsterAdminBundle/Resources/config/grids/language.yml" }
+    - { resource: "@ClubsterAdminBundle/Resources/config/grids/team.yml" }
 
 sylius_grid:
     templates:

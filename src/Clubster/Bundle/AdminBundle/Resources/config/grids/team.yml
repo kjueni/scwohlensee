@@ -1,0 +1,59 @@
+sylius_grid:
+    grids:
+        clubster_admin_team:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Clubster\Component\Core\Model\Team
+            sorting:
+                name: asc
+            limits: [10, 25, 50, 100]
+            fields:
+                name:
+                    type: string
+                    label: clubster.ui.name
+                    path: name
+                    position: 100
+                    sortable: true
+
+                language:
+                    type: string
+                    label: clubster.ui.league
+                    path: league
+                    position: 200
+                    sortable: true
+
+                updatedAt:
+                    type: twig
+                    label: clubster.ui.updated_at
+                    position: 600
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/date.html.twig'
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: clubster.ui.create
+                        enabled: true
+                        position: 100
+                item:
+                    update:
+                        type: update
+                        label: clubster.ui.update
+                        enabled: true
+                        position: 100
+                    delete:
+                        type: delete
+                        label: clubster.ui.delete
+                        enabled: true
+                        position: 200
+            filters:
+                fulltext:
+                    label: false
+                    type: fulltext
+                    options:
+                        properties:
+                            - name
+                            - league
+                            - description

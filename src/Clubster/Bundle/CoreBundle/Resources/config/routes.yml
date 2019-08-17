@@ -59,12 +59,3 @@ clubster_admin_reset_user:
     methods: [GET, POST]
     defaults:
         _controller: sylius.controller.admin_user:resetUser
-
-clubster_language:
-    resource: '@ClubsterCoreBundle/Resources/config/routes/language.yml'
-
-clubster_admin_user:
-    resource: '@ClubsterCoreBundle/Resources/config/routes/user.yml'
-
-clubster_admin_profile:
-    resource: '@ClubsterCoreBundle/Resources/config/routes/profile.yml'
