@@ -1,0 +1,5 @@
+services:
+  clubster.form.team_type:
+    class: Clubster\Bundle\TeamBundle\Form\Type\TeamType
+    tags:
+      - form.type

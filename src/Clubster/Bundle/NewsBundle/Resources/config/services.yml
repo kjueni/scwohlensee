@@ -1,0 +1,10 @@
+services:
+  clubster.form.news_Type:
+    class: Clubster\Bundle\NewsBundle\Form\Type\NewsType
+    tags:
+      - form.type
+
+  clubster.form.news_type_type:
+    class: Clubster\Bundle\NewsBundle\Form\Type\NewsTypeType
+    tags:
+      - form.type

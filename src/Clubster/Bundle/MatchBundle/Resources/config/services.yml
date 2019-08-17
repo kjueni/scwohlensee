@@ -1,0 +1,10 @@
+services:
+  clubster.form.match_type:
+    class: Clubster\Bundle\MatchBundle\Form\Type\MatchType
+    tags:
+      - form.type
+
+  clubster.form.competition:
+    class: Clubster\Bundle\MatchBundle\Form\Type\CompetitionType
+    tags:
+      - form.type

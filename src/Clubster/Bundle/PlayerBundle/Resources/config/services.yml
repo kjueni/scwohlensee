@@ -1,0 +1,10 @@
+services:
+  clubster.form.player_type:
+    class: Clubster\Bundle\PlayerBundle\Form\Type\PlayerType
+    tags:
+      - form.type
+
+  clubster.form.player_type_type:
+    class: Clubster\Bundle\PlayerBundle\Form\Type\PlayerTypeType
+    tags:
+      - form.type

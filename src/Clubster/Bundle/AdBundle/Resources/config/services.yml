@@ -1,0 +1,10 @@
+services:
+  clubster.form.ad_type:
+    class: Clubster\Bundle\AdBundle\Form\Type\AdType
+    tags:
+      - form.type
+
+  clubster.form.ad_type_type:
+    class: Clubster\Bundle\AdBundle\Form\Type\AdTypeType
+    tags:
+      - form.type
