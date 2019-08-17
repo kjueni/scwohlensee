@@ -1,5 +1,5 @@
-Clubster\Component\Match\Model\Competition:
-    table: clubster_competition
+Clubster\Component\News\Model\NewsType:
+    table: clubster_news_type
     type: entity
     id:
         id:

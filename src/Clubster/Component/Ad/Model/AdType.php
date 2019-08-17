@@ -2,8 +2,12 @@
 
 namespace Clubster\Component\Ad\Model;
 
+use Sylius\Component\Resource\Model\TimestampableTrait;
+
 class AdType implements AdTypeInterface
 {
+    use TimestampableTrait;
+
     /**
      * @var int
      */

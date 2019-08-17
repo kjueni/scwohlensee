@@ -3,9 +3,12 @@
 namespace Clubster\Component\News\Model;
 
 use Doctrine\Common\Collections\Collection;
+use Sylius\Component\Resource\Model\TimestampableTrait;
 
 class News implements NewsInterface
 {
+    use TimestampableTrait;
+
     /**
      * @var int
      */

@@ -1,4 +1,4 @@
-Clubster\Component\Player\Model\Position:
+Clubster\Component\Player\Model\PlayerPosition:
     table: clubster_player_position
     type: entity
     id:

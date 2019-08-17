@@ -2,8 +2,12 @@
 
 namespace Clubster\Component\Team\Model;
 
+use Sylius\Component\Resource\Model\TimestampableTrait;
+
 class Team implements TeamInterface
 {
+    use TimestampableTrait;
+
     /**
      * @var int
      */

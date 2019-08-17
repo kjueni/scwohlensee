@@ -2,8 +2,12 @@
 
 namespace Clubster\Component\Match\Model;
 
+use Sylius\Component\Resource\Model\TimestampableTrait;
+
 class Match implements MatchInterface
 {
+    use TimestampableTrait;
+
     /**
      * @var int
      */

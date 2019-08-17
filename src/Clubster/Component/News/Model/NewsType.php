@@ -2,8 +2,12 @@
 
 namespace Clubster\Component\News\Model;
 
+use Sylius\Component\Resource\Model\TimestampableTrait;
+
 class NewsType implements NewsTypeInterface
 {
+    use TimestampableTrait;
+
     /**
      * @var integer
      */

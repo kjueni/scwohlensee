@@ -28,9 +28,17 @@ Clubster\Component\Ad\Model\Ad:
             type: datetime
             nullable: true
 
-    manyToOne:
-        type:
+    manyToMany:
+        types:
+            cascade:
+                - persist
             targetEntity: Clubster\Component\Ad\Model\AdType
-            joinColumn:
-                name: type_id
-                referencedColumnName: id
+            joinTable:
+                name: clubster_ad_ad_type
+                joinColumns:
+                    ad_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    type_id:
+                        referencedColumnName: id
+                        unique: true

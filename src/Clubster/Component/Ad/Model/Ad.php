@@ -3,9 +3,12 @@
 namespace Clubster\Component\Ad\Model;
 
 use Doctrine\Common\Collections\Collection;
+use Sylius\Component\Resource\Model\TimestampableTrait;
 
 class Ad implements AdInterface
 {
+    use TimestampableTrait;
+
     /**
      * @var int
      */
