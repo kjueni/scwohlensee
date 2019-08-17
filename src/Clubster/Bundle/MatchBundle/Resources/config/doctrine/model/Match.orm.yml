@@ -1,0 +1,47 @@
+Clubster\Component\Match\Model\Match:
+    table: clubster_match
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        opponent:
+            type: string
+            nullable: false
+
+        startsOn:
+            type: datetime
+            nullable: true
+
+        isAway:
+            type: boolean
+            nullable: false
+
+        homeScore:
+            type: integer
+            nullable: true
+
+        awayScore:
+            type: integer
+            nullable: true
+
+        url:
+            type: string
+            nullable: true
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+    manyToOne:
+        competition:
+            targetEntity: Clubster\Component\Match\Model\Competition
+            joinColumn:
+                name: competition_id
+                referencedColumnName: id

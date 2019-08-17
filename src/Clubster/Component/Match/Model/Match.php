@@ -20,7 +20,7 @@ class Match implements MatchInterface
     protected $startsOn;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $isAway;
 

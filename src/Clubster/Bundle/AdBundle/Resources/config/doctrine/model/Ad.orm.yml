@@ -1,0 +1,36 @@
+Clubster\Component\Ad\Model\Ad:
+    table: clubster_ad
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            nullable: true
+        address:
+            type: string
+            nullable: true
+        pictureUrl:
+            type: string
+            nullable: true
+        url:
+            type: string
+            nullable: true
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+    manyToOne:
+        type:
+            targetEntity: Clubster\Component\Ad\Model\AdType
+            joinColumn:
+                name: type_id
+                referencedColumnName: id

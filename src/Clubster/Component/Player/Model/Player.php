@@ -15,17 +15,17 @@ class Player implements PlayerInterface
     protected $name;
 
     /**
-     * @var integer
+     * @var int|null
      */
     protected $number;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $birthDate;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $pictureUrl;
 
@@ -59,49 +59,49 @@ class Player implements PlayerInterface
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getNumber(): int
+    public function getNumber(): ?int
     {
         return $this->number;
     }
 
     /**
-     * @param int $number
+     * @param int|null $number
      */
-    public function setNumber(int $number): void
+    public function setNumber(?int $number): void
     {
         $this->number = $number;
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface|null
      */
-    public function getBirthDate(): string
+    public function getBirthDate(): ?\DateTimeInterface
     {
         return $this->birthDate;
     }
 
     /**
-     * @param string $birthDate
+     * @param \DateTimeInterface|null $birthDate
      */
-    public function setBirthDate(string $birthDate): void
+    public function setBirthDate(?\DateTimeInterface $birthDate): void
     {
         $this->birthDate = $birthDate;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPictureUrl(): string
+    public function getPictureUrl(): ?string
     {
         return $this->pictureUrl;
     }
 
     /**
-     * @param string $pictureUrl
+     * @param string|null $pictureUrl
      */
-    public function setPictureUrl(string $pictureUrl): void
+    public function setPictureUrl(?string $pictureUrl): void
     {
         $this->pictureUrl = $pictureUrl;
     }

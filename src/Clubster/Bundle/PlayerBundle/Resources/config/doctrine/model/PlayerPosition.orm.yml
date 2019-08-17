@@ -1,5 +1,5 @@
-Clubster\Component\Core\Model\Language:
-    table: clubster_language
+Clubster\Component\Player\Model\Position:
+    table: clubster_player_position
     type: entity
     id:
         id:
@@ -7,16 +7,9 @@ Clubster\Component\Core\Model\Language:
             generator:
                 strategy: AUTO
     fields:
-        code:
-            type: string
-            unique: true
-            nullable: false
-            length: 10
         name:
             type: string
-            unique: false
             nullable: false
-            length: 128
 
         createdAt:
             type: datetime

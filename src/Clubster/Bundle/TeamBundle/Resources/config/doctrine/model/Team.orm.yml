@@ -1,0 +1,51 @@
+Clubster\Component\Team\Model\Team:
+    table: clubster_team
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: false
+
+        description:
+            type: string
+            nullable: true
+
+        league:
+            type: string
+            nullable: true
+
+        pictureUrl:
+            type: string
+            nullable: true
+
+        url:
+            type: string
+            nullable: true
+
+        gamesUrl:
+            type: string
+            nullable: true
+
+        resultsUrl:
+            type: string
+            nullable: true
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+    manyToOne:
+        position:
+            targetEntity: Clubster\Component\Player\Model\PlayerPosition
+            joinColumn:
+                name: position_id
+                referencedColumnName: id

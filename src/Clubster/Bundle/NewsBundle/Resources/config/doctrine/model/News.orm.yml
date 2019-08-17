@@ -1,0 +1,55 @@
+Clubster\Component\News\Model\News:
+    table: clubster_news
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        author:
+            type: string
+            nullable: false
+
+        title:
+            type: string
+            nullable: false
+
+        lead:
+            type: string
+            nullable: true
+
+        text:
+            type: string
+            nullable: true
+
+        pictureUrl:
+            type: string
+            nullable: true
+
+        url:
+            type: string
+            nullable: true
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+    manyToMany:
+        types:
+            cascade:
+                - persist
+            targetEntity: Clubster\Component\News\Model\NewsType
+            joinTable:
+                name: clubster_news_news_type
+                joinColumns:
+                    news_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    type_id:
+                        referencedColumnName: id
+                        unique: true

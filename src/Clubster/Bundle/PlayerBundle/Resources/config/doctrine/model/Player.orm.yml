@@ -1,0 +1,39 @@
+Clubster\Component\Player\Model\Player:
+    table: clubster_player
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: false
+
+        number:
+            type: integer
+            nullable: true
+
+        birthDate:
+            type: datetime
+            nullable: true
+
+        pictureUrl:
+            type: string
+            nullable: true
+
+        createdAt:
+            type: datetime
+            nullable: true
+
+        updatedAt:
+            type: datetime
+            nullable: true
+
+    manyToOne:
+        position:
+            targetEntity: Clubster\Component\Player\Model\PlayerPosition
+            joinColumn:
+                name: position_id
+                referencedColumnName: id
