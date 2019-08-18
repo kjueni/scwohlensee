@@ -64,3 +64,11 @@ services:
       $translator: '@translator'
     tags:
       - form.type
+
+  clubster.form.player_type:
+    class: Clubster\Bundle\CoreBundle\Form\Type\PlayerType
+    arguments:
+      $authorizationChecker: '@security.authorization_checker'
+      $translator: '@translator'
+    tags:
+      - form.type

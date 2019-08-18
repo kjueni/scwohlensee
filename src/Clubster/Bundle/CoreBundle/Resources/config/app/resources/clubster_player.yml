@@ -3,7 +3,7 @@ sylius_resource:
         clubster.player:
             classes:
                 model: Clubster\Component\Core\Model\Player
-                form: Clubster\Bundle\PlayerBundle\Form\Type\PlayerType
+                form: Clubster\Bundle\CoreBundle\Form\Type\PlayerType
 
         clubster.player_position:
             classes:
