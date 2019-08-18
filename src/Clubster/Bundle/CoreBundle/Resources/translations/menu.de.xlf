@@ -34,6 +34,46 @@
                 <source>clubster.menu.admin.main_dashboard</source>
                 <target>Dashboard</target>
             </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_ads">
+                <source>clubster.menu.admin.main_ads</source>
+                <target>Anzeigen</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_matches">
+                <source>clubster.menu.admin.main_matches</source>
+                <target>Spiele</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_news">
+                <source>clubster.menu.admin.main_news</source>
+                <target>News</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_players">
+                <source>clubster.menu.admin.main_players</source>
+                <target>Spieler</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_teams">
+                <source>clubster.menu.admin.main_teams</source>
+                <target>Teams</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_ads_ad">
+                <source>clubster.menu.admin.main_ads_ad</source>
+                <target>Alle Anzeigen</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_matches_match">
+                <source>clubster.menu.admin.main_matches_match</source>
+                <target>Alle Spiele</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_players_player">
+                <source>clubster.menu.admin.main_players_player</source>
+                <target>Alle Spieler</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_news_news">
+                <source>clubster.menu.admin.main_news_news</source>
+                <target>Alle News</target>
+            </trans-unit>
+            <trans-unit id="clubster.menu.admin.main_teams_team">
+                <source>clubster.menu.admin.main_teams_team</source>
+                <target>Alle Teams</target>
+            </trans-unit>
          </body>
     </file>
 </xliff>

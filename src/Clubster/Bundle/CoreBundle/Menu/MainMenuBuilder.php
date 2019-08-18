@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace Clubster\Bundle\CoreBundle\Menu;
 
+use Clubster\Bundle\AdBundle\Security\Voter\AdVoter;
 use Clubster\Bundle\CoreBundle\Menu\Event\MenuBuilderEvent;
 use Clubster\Bundle\CoreBundle\Security\Voter\AdminUserVoter;
 use Clubster\Bundle\CoreBundle\Security\Voter\LanguageVoter;
+use Clubster\Bundle\MatchBundle\Security\Voter\MatchVoter;
+use Clubster\Bundle\NewsBundle\Security\Voter\NewsVoter;
+use Clubster\Bundle\PlayerBundle\Security\Voter\PlayerVoter;
+use Clubster\Bundle\TeamBundle\Security\Voter\TeamVoter;
 use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -56,6 +61,11 @@ final class MainMenuBuilder
 
         $this->addDashboardSubMenu($menu);
         $this->addUsersSubMenu($menu);
+        $this->addAdsSubMenu($menu);
+        $this->addMatchesSubMenu($menu);
+        $this->addNewsSubMenu($menu);
+        $this->addPlayersSubMenu($menu);
+        $this->addTeamsSubMenu($menu);
         $this->addAdministrationSubMenu($menu);
 
         $this->eventDispatcher->dispatch(self::EVENT_NAME, new MenuBuilderEvent($this->factory, $menu));
@@ -99,6 +109,116 @@ final class MainMenuBuilder
                     'sylius_admin_admin_user_index',
                     'sylius_admin_admin_user_create',
                     'sylius_admin_admin_user_update',
+                ]);
+        }
+    }
+
+    /**
+     * @param ItemInterface $menu
+     */
+    public function addAdsSubMenu(ItemInterface $menu): void
+    {
+        if ($this->authorizationChecker->isGranted(AdVoter::LIST)) {
+            $items = $menu
+                ->addChild('ads')
+                ->setLabel('clubster.menu.admin.main_ads')
+                ->setLabelAttribute('icon', 'fa fa-users');
+
+            $items
+                ->addChild('ads', ['route' => 'clubster_admin_ad_index'])
+                ->setLabel('clubster.menu.admin.main_ads_ad')
+                ->setExtra('routes', [
+                    'clubster_admin_ad_index',
+                    'clubster_admin_ad_create',
+                    'clubster_admin_ad_update',
+                ]);
+        }
+    }
+
+    /**
+     * @param ItemInterface $menu
+     */
+    public function addMatchesSubMenu(ItemInterface $menu): void
+    {
+        if ($this->authorizationChecker->isGranted(MatchVoter::LIST)) {
+            $items = $menu
+                ->addChild('matches')
+                ->setLabel('clubster.menu.admin.main_matches')
+                ->setLabelAttribute('icon', 'fa fa-users');
+
+            $items
+                ->addChild('ads', ['route' => 'clubster_admin_match_index'])
+                ->setLabel('clubster.menu.admin.main_matches_match')
+                ->setExtra('routes', [
+                    'clubster_admin_match_index',
+                    'clubster_admin_match_create',
+                    'clubster_admin_match_update',
+                ]);
+        }
+    }
+
+    /**
+     * @param ItemInterface $menu
+     */
+    public function addNewsSubMenu(ItemInterface $menu): void
+    {
+        if ($this->authorizationChecker->isGranted(NewsVoter::LIST)) {
+            $items = $menu
+                ->addChild('news')
+                ->setLabel('clubster.menu.admin.main_news')
+                ->setLabelAttribute('icon', 'fa fa-users');
+
+            $items
+                ->addChild('ads', ['route' => 'clubster_admin_news_index'])
+                ->setLabel('clubster.menu.admin.main_news_news')
+                ->setExtra('routes', [
+                    'clubster_admin_news_index',
+                    'clubster_admin_news_create',
+                    'clubster_admin_news_update',
+                ]);
+        }
+    }
+
+    /**
+     * @param ItemInterface $menu
+     */
+    public function addPlayersSubMenu(ItemInterface $menu): void
+    {
+        if ($this->authorizationChecker->isGranted(PlayerVoter::LIST)) {
+            $items = $menu
+                ->addChild('players')
+                ->setLabel('clubster.menu.admin.main_players')
+                ->setLabelAttribute('icon', 'fa fa-users');
+
+            $items
+                ->addChild('ads', ['route' => 'clubster_admin_player_index'])
+                ->setLabel('clubster.menu.admin.main_players_player')
+                ->setExtra('routes', [
+                    'clubster_admin_player_index',
+                    'clubster_admin_player_create',
+                    'clubster_admin_player_update',
+                ]);
+        }
+    }
+
+    /**
+     * @param ItemInterface $menu
+     */
+    public function addTeamsSubMenu(ItemInterface $menu): void
+    {
+        if ($this->authorizationChecker->isGranted(TeamVoter::LIST)) {
+            $items = $menu
+                ->addChild('ads')
+                ->setLabel('clubster.menu.admin.main_teams')
+                ->setLabelAttribute('icon', 'fa fa-users');
+
+            $items
+                ->addChild('ads', ['route' => 'clubster_admin_team_index'])
+                ->setLabel('clubster.menu.admin.main_teams_team')
+                ->setExtra('routes', [
+                    'clubster_admin_team_index',
+                    'clubster_admin_team_create',
+                    'clubster_admin_team_update',
                 ]);
         }
     }
