@@ -8,3 +8,10 @@ services:
     class: Clubster\Bundle\NewsBundle\Form\Type\NewsTypeType
     tags:
       - form.type
+
+  clubster.voter.news:
+      class: Clubster\Bundle\NewsBundle\Security\Voter\NewsVoter
+      arguments:
+          $decisionManager: '@security.access.decision_manager'
+      tags:
+        - security.voter

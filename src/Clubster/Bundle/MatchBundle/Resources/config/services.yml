@@ -8,3 +8,10 @@ services:
     class: Clubster\Bundle\MatchBundle\Form\Type\CompetitionType
     tags:
       - form.type
+
+  clubster.voter.match:
+    class: Clubster\Bundle\MatchBundle\Security\Voter\MatchVoter
+    arguments:
+      $decisionManager: '@security.access.decision_manager'
+    tags:
+        - security.voter

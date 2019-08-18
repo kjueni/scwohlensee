@@ -7,5 +7,17 @@ clubster_admin_user:
 clubster_admin_profile:
     resource: '@ClubsterAdminBundle/Resources/config/routes/profile.yml'
 
+clubster_ad:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/ad.yml'
+
+clubster_match:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/match.yml'
+
+clubster_news:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/news.yml'
+
+clubster_player:
+    resource: '@ClubsterAdminBundle/Resources/config/routes/player.yml'
+
 clubster_team:
     resource: '@ClubsterAdminBundle/Resources/config/routes/team.yml'

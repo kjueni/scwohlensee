@@ -6,10 +6,10 @@ namespace Clubster\Bundle\NewsBundle\Form\Type;
 
 use Clubster\Component\News\Model\News;
 use Clubster\Component\News\Model\NewsType as NewsTypeModel;
-use Doctrine\DBAL\Types\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -38,10 +38,11 @@ class NewsType extends AbstractType
             ->add('title', TextType::class, ['required' => true,])
             ->add('lead', TextareaType::class)
             ->add('text', TextareaType::class)
-            ->add('type', EntityType::class, [
+            ->add('types', EntityType::class, [
                 'required' => true,
                 'class' => NewsTypeModel::class,
                 'choice_label' => 'name',
+                'multiple' => true,
             ]);
     }
 

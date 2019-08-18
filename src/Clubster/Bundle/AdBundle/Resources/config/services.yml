@@ -8,3 +8,10 @@ services:
     class: Clubster\Bundle\AdBundle\Form\Type\AdTypeType
     tags:
       - form.type
+
+  clubster.voter.ad:
+    class: Clubster\Bundle\AdBundle\Security\Voter\AdVoter
+    arguments:
+      $decisionManager: '@security.access.decision_manager'
+    tags:
+        - security.voter

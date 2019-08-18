@@ -15,12 +15,12 @@ class News implements NewsInterface
     protected $id;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $author;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $title;
 
@@ -58,33 +58,33 @@ class News implements NewsInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getAuthor(): string
+    public function getAuthor(): ?string
     {
         return $this->author;
     }
 
     /**
-     * @param string $author
+     * @param string|null $author
      */
-    public function setAuthor(string $author): void
+    public function setAuthor(?string $author): void
     {
         $this->author = $author;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @param string $title
+     * @param string|null $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }

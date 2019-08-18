@@ -1,0 +1,79 @@
+sylius_grid:
+    grids:
+        clubster_admin_match:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Clubster\Component\Core\Model\Match
+            sorting:
+                opponent: asc
+            limits: [10, 25, 50, 100]
+            fields:
+                opponent:
+                    type: opponent
+                    label: clubster.ui.opponent
+                    path: name
+                    position: 100
+                    sortable: true
+
+                startsOn:
+                    type: twig
+                    label: clubster.ui.starts_on
+                    position: 200
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/date.html.twig'
+
+                homeScore:
+                    type: string
+                    label: clubster.ui.home_score
+                    position: 300
+                    sortable: true
+
+                awayScore:
+                    type: string
+                    label: clubster.ui.away_score
+                    position: 400
+                    sortable: true
+
+                competition:
+                    type: twig
+                    label: clubster.ui.competition
+                    position: 500
+                    path: competition
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/name.html.twig'
+
+                updatedAt:
+                    type: twig
+                    label: clubster.ui.updated_at
+                    position: 600
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/date.html.twig'
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: clubster.ui.create
+                        enabled: true
+                        position: 100
+                item:
+                    update:
+                        type: update
+                        label: clubster.ui.update
+                        enabled: true
+                        position: 100
+                    delete:
+                        type: delete
+                        label: clubster.ui.delete
+                        enabled: true
+                        position: 200
+            filters:
+                fulltext:
+                    label: false
+                    type: fulltext
+                    options:
+                        properties:
+                            - opponent

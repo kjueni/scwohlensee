@@ -10,6 +10,22 @@
                 <source>clubster.ui.no_results_to_display</source>
                 <target>Keine Einträge gefunden</target>
             </trans-unit>
+            <trans-unit id="clubster.ui.ads">
+                <source>clubster.ui.ads</source>
+                <target>Anzeigen</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.matches">
+                <source>clubster.ui.matches</source>
+                <target>Spiele</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.players">
+                <source>clubster.ui.players</source>
+                <target>Spieler</target>
+            </trans-unit>
+            <trans-unit id="clubster.ui.news">
+                <source>clubster.ui.news</source>
+                <target>News</target>
+            </trans-unit>
             <trans-unit id="clubster.ui.teams">
                 <source>clubster.ui.teams</source>
                 <target>Teams</target>

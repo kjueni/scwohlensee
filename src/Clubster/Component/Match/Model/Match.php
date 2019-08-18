@@ -14,7 +14,7 @@ class Match implements MatchInterface
     protected $id;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $opponent;
 
@@ -26,7 +26,7 @@ class Match implements MatchInterface
     /**
      * @var bool
      */
-    protected $isAway;
+    protected $isAway = false;
 
     /**
      * @var integer|null
@@ -44,7 +44,7 @@ class Match implements MatchInterface
     protected $url;
 
     /**
-     * @var Competition
+     * @var Competition|null
      */
     protected $competition;
 
@@ -57,17 +57,17 @@ class Match implements MatchInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getOpponent(): string
+    public function getOpponent(): ?string
     {
         return $this->opponent;
     }
 
     /**
-     * @param string $opponent
+     * @param string|null $opponent
      */
-    public function setOpponent(string $opponent): void
+    public function setOpponent(?string $opponent): void
     {
         $this->opponent = $opponent;
     }
@@ -153,17 +153,17 @@ class Match implements MatchInterface
     }
 
     /**
-     * @return Competition
+     * @return Competition|null
      */
-    public function getCompetition(): Competition
+    public function getCompetition(): ?Competition
     {
         return $this->competition;
     }
 
     /**
-     * @param Competition $competition
+     * @param Competition|null $competition
      */
-    public function setCompetition(Competition $competition): void
+    public function setCompetition(?Competition $competition): void
     {
         $this->competition = $competition;
     }

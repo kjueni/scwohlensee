@@ -1,19 +1,19 @@
-clubster_admin_team:
+clubster_admin_player:
     resource: |
-        alias: clubster.team
+        alias: clubster.player
         section: admin
         templates: ClubsterAdminBundle:Crud
         only: ['index', 'update', 'delete', 'create']
         redirect: index
-        grid: clubster_admin_team
+        grid: clubster_admin_player
         permission: true
         vars:
             all:
-                header: clubster.ui.teams
+                header: clubster.ui.players
             index:
-                subheader: clubster.ui.list_teams
+                subheader: clubster.ui.list_players
             update:
-                subheader: clubster.ui.edit_team
+                subheader: clubster.ui.edit_player
             create:
-                subheader: clubster.ui.create_team
+                subheader: clubster.ui.create_player
     type: sylius.resource

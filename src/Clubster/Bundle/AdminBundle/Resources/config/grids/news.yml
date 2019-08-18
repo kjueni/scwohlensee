@@ -1,0 +1,64 @@
+sylius_grid:
+    grids:
+        clubster_admin_news:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Clubster\Component\Core\Model\News
+            sorting:
+                title: asc
+            limits: [10, 25, 50, 100]
+            fields:
+                author:
+                    type: string
+                    label: clubster.ui.author
+                    position: 100
+                    sortable: true
+
+                title:
+                    type: string
+                    label: clubster.ui.title
+                    position: 200
+                    sortable: true
+
+                lead:
+                    type: string
+                    label: clubster.ui.lead
+                    position: 200
+                    sortable: true
+
+                updatedAt:
+                    type: twig
+                    label: clubster.ui.updated_at
+                    position: 600
+                    sortable: true
+                    options:
+                        template: '@ClubsterAdmin/Grid/Field/date.html.twig'
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: clubster.ui.create
+                        enabled: true
+                        position: 100
+                item:
+                    update:
+                        type: update
+                        label: clubster.ui.update
+                        enabled: true
+                        position: 100
+                    delete:
+                        type: delete
+                        label: clubster.ui.delete
+                        enabled: true
+                        position: 200
+            filters:
+                fulltext:
+                    label: false
+                    type: fulltext
+                    options:
+                        properties:
+                            - title
+                            - author
+                            - lead
+                            - text

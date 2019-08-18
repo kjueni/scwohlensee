@@ -17,22 +17,22 @@ class Ad implements
     protected $id;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $description;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $address;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $pictureUrl;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $url;
 
@@ -50,65 +50,65 @@ class Ad implements
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
     /**
-     * @param string $description
+     * @param null|string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description): void
     {
         $this->description = $description;
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getAddress(): string
+    public function getAddress(): ?string
     {
         return $this->address;
     }
 
     /**
-     * @param string $address
+     * @param null|string $address
      */
-    public function setAddress(string $address): void
+    public function setAddress(?string $address): void
     {
         $this->address = $address;
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getPictureUrl(): string
+    public function getPictureUrl(): ?string
     {
         return $this->pictureUrl;
     }
 
     /**
-     * @param string $pictureUrl
+     * @param null|string $pictureUrl
      */
-    public function setPictureUrl(string $pictureUrl): void
+    public function setPictureUrl(?string $pictureUrl): void
     {
         $this->pictureUrl = $pictureUrl;
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
 
     /**
-     * @param string $url
+     * @param null|string $url
      */
-    public function setUrl(string $url): void
+    public function setUrl(?string $url): void
     {
         $this->url = $url;
     }

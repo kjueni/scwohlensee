@@ -8,3 +8,10 @@ services:
     class: Clubster\Bundle\PlayerBundle\Form\Type\PlayerTypeType
     tags:
       - form.type
+
+  clubster.voter.player:
+      class: Clubster\Bundle\PlayerBundle\Security\Voter\PlayerVoter
+      arguments:
+          $decisionManager: '@security.access.decision_manager'
+      tags:
+        - security.voter
