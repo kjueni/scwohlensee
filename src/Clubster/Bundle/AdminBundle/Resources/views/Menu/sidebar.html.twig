@@ -52,7 +52,7 @@
             </a>
 
             {% if item.hasChildren %}
-            <ul class="collapse list-unstyled" id="menu-{{ item.name }}" data-parent="#sidebar">
+            <ul class="collapse{% if 'current_ancestor' in classes %} show{% endif %} list-unstyled" id="menu-{{ item.name }}" data-parent="#sidebar">
                 {% for item in item.children %}
                     {{ block('item') }}
                 {% endfor %}
