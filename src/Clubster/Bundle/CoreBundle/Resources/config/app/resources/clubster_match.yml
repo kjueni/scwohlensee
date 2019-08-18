@@ -3,7 +3,7 @@ sylius_resource:
         clubster.match:
             classes:
                 model: Clubster\Component\Core\Model\Match
-                form: Clubster\Bundle\MatchBundle\Form\Type\MatchType
+                form: Clubster\Bundle\CoreBundle\Form\Type\MatchType
 
         clubster.competition:
             classes:

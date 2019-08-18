@@ -74,3 +74,13 @@ services:
     class: Clubster\Bundle\CoreBundle\Form\Type\NewsType
     tags:
       - form.type
+
+  clubster.form.match_type:
+      class: Clubster\Bundle\CoreBundle\Form\Type\MatchType
+      tags:
+        - form.type
+
+  clubster.form.ad_type:
+      class: Clubster\Bundle\CoreBundle\Form\Type\AdType
+      tags:
+        - form.type

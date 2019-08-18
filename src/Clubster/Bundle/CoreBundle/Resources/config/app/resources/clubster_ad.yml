@@ -3,7 +3,7 @@ sylius_resource:
         clubster.ad:
             classes:
                 model: Clubster\Component\Core\Model\Ad
-                form: Clubster\Bundle\AdBundle\Form\Type\AdType
+                form: Clubster\Bundle\CoreBundle\Form\Type\AdType
 
         clubster.ad_type:
             classes:

@@ -11,22 +11,22 @@ class Match extends BaseMatch implements
     ResourceInterface
 {
     /**
-     * @var Team
+     * @var Team|null
      */
     protected $team;
 
     /**
-     * @return Team
+     * @return Team|null
      */
-    public function getTeam(): Team
+    public function getTeam(): ?Team
     {
         return $this->team;
     }
 
     /**
-     * @param Team $team
+     * @param Team|null $team
      */
-    public function setTeam(Team $team): void
+    public function setTeam(?Team $team): void
     {
         $this->team = $team;
     }
