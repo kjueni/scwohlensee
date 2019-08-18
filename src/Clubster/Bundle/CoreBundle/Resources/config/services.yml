@@ -67,8 +67,10 @@ services:
 
   clubster.form.player_type:
     class: Clubster\Bundle\CoreBundle\Form\Type\PlayerType
-    arguments:
-      $authorizationChecker: '@security.authorization_checker'
-      $translator: '@translator'
+    tags:
+      - form.type
+
+  clubster.form.news_type:
+    class: Clubster\Bundle\CoreBundle\Form\Type\NewsType
     tags:
       - form.type

@@ -3,7 +3,7 @@ sylius_resource:
         clubster.news:
             classes:
                 model: Clubster\Component\Core\Model\News
-                form: Clubster\Bundle\NewsBundle\Form\Type\NewsType
+                form: Clubster\Bundle\CoreBundle\Form\Type\NewsType
 
         clubster.news_type:
             classes:
